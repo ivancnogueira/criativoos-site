@@ -17,7 +17,6 @@ body {
   color: #f8fafc;
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 .font-display {
@@ -29,9 +28,23 @@ body {
 }
 
 .text-gradient-volt {
-  background: linear-gradient(135deg, #b9fc01 0%, #6ee7b7 55%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #b9fc01;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #b9fc01;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
 }
 
 /* ==========================================================================
@@ -108,9 +121,7 @@ body {
   transform: translate3d(0, 0, 0.01px);
   display: grid;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: var(--card-bg, rgba(14, 18, 30, 0.65));
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--card-bg, rgba(14, 18, 30, 0.88));
   overflow: visible;
   box-shadow:
     0 14px 40px rgba(0, 0, 0, 0.5),
@@ -348,13 +359,26 @@ body {
 @keyframes mascotePulse {
   0%,
   100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 12px rgba(185, 252, 1, 0.25));
+    transform: translate3d(0, 0, 0) scale(1);
   }
   50% {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 24px rgba(185, 252, 1, 0.55));
+    transform: translate3d(0, -3px, 0) scale(1.03);
   }
+}
+
+@keyframes mascotFloatGPU {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
+
+.mascot-float-gpu {
+  animation: mascotFloatGPU 1.9s ease-in-out infinite;
+  will-change: transform;
 }
 
 .mascote-idle {

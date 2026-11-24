@@ -17,11 +17,11 @@ export const RoiCalculatorSection: React.FC = () => {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-4 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[#B9FC01]">
-              // 11A · MATEMÁTICA SIMPLES DE ROI
+              // 11A · MATEMÁTICA SIMPLES DE ECONOMIA
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
               Quanto Você Economiza Centralizando Operação e Criação{" "}
-              <span className="text-gradient-volt">No Seu Computador?</span>
+              <span className="text-[#B9FC01]">No Seu Computador?</span>
             </h2>
           </div>
           <div className="lg:col-span-4">

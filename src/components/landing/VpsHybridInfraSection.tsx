@@ -4,40 +4,40 @@ import { BorderGlow } from "../fx/BorderGlow";
 
 const INFRA_NODES = [
   {
-    tag: "CAMADA 01 · DESKTOP NATIVO",
+    tag: "CAMADA 01 · NO SEU COMPUTADOR",
     title: "Seu Computador (Windows, Mac e Linux)",
     icon: Laptop,
     color: "#38bdf8",
-    desc: "Instale o aplicativo com 2 cliques para começar na hora. Ideal para quem cria perto das próprias pastas de fotos, usa Computer Use na tela do PC e quer controle visual imediato.",
+    desc: "Instale o aplicativo com 2 cliques para começar na hora. Ideal para quem cria perto das próprias pastas de fotos, usa o Operador de Computador na tela do PC e quer controle visual imediato.",
     bullets: [
-      "Instaladores oficiais .exe, .dmg e .AppImage",
+      "Instaladores oficiais para Windows, Mac e Linux",
       "Acesso direto às suas pastas locais de clientes e vídeos",
       "Atualização automática integrada no próprio aplicativo",
     ],
   },
   {
-    tag: "CAMADA 02 · INFRAESTRUTURA 24/7",
-    title: "Servidor VPS Linux & Container Docker",
+    tag: "CAMADA 02 · NA NUVEM 24 HORAS",
+    title: "Servidor na Nuvem 24 Horas (VPS)",
     icon: Server,
     color: "#B9FC01",
-    desc: "Quer deixar pesquisas de concorrentes, rotinas matinais, envio no WhatsApp e agendamentos rodando de madrugada mesmo com o notebook fechado? Suba seu núcleo em VPS própria ou Docker.",
+    desc: "Quer deixar pesquisas de concorrentes, rotinas matinais, envio no WhatsApp e agendamentos rodando de madrugada mesmo com o notebook fechado? Rode no seu servidor na nuvem 24h.",
     bullets: [
-      "Operação ininterrupta 24 horas por dia, 7 dias por semana",
-      "Recuperação segura contra quedas (fila persistente em disco)",
-      "Pareamento criptografado com seu painel via token CRIATIVO_CLAIM",
+      "Operação contínua 24 horas por dia, 7 dias por semana",
+      "Recuperação segura contra quedas com fila salva no computador",
+      "Conexão segura em 1 clique com o seu painel principal",
     ],
     featured: true,
   },
   {
-    tag: "CAMADA 03 · ESCALA MULTI-MÁQUINA",
+    tag: "CAMADA 03 · ESCALA EM EQUIPE",
     title: "Até 5 Computadores & Troca Instantânea",
     icon: Cpu,
     color: "#a855f7",
-    desc: "Comande múltiplas máquinas locais e servidores VPS remotos dentro da mesma interface Cockpit. Troque de instância com 1 clique mantendo histórico, marca e automações sincronizados.",
+    desc: "Comande múltiplos computadores locais e servidores na nuvem dentro da mesma tela. Troque de computador com 1 clique mantendo histórico, marca e rotinas sincronizados.",
     bullets: [
-      "Unifica máquina do escritório, casa e servidor VPS em 1 tela",
-      "Até 5 máquinas liberadas no plano Agência Ilimitada",
-      "Pronto para times comerciais e equipes de social media",
+      "Unifica máquina do escritório, casa e nuvem 24h em 1 tela",
+      "Até 5 computadores liberados no plano Agência Ilimitada",
+      "Pronto para times comerciais e equipes de redes sociais",
     ],
   },
 ];
@@ -52,21 +52,21 @@ export const VpsHybridInfraSection: React.FC = () => {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-4 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[#B9FC01]">
-              // 04 · ARQUITETURA HÍBRIDA 24/7
+              // 04 · FUNCIONA NO PC OU NA NUVEM 24H
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl">
               Rode No Seu Computador Hoje.{" "}
-              <span className="text-gradient-volt">
-                Escale 24/7 Em Servidor VPS / Docker.
+              <span className="text-[#B9FC01]">
+                Escale 24h Em Servidor na Nuvem.
               </span>
             </h2>
           </div>
 
           <div className="lg:col-span-4">
             <p className="text-sm leading-relaxed text-slate-400 sm:text-base">
-              Você não fica refém de um único dispositivo. O CriativoOS funciona
-              como programa comum no seu Desktop e se conecta perfeitamente ao
-              seu próprio servidor VPS quando você quiser operação contínua.
+              Você não fica preso a um único aparelho. O CriativoOS funciona
+              como programa comum no seu computador e se conecta ao seu servidor
+              na nuvem 24h quando quiser operação sem parar.
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ export const VpsHybridInfraSection: React.FC = () => {
                 </div>
 
                 <div className="mt-6 flex items-center justify-between rounded-xl border border-white/10 bg-[#050608] px-3.5 py-2.5 font-mono text-[10px] text-slate-400">
-                  <span>Nó 0{idx + 1} · Conectável no Cockpit</span>
+                  <span>Etapa 0{idx + 1} · Conectável no Painel</span>
                   <span
                     className="inline-flex items-center gap-1 font-bold"
                     style={{ color: node.color }}

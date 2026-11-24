@@ -60,7 +60,7 @@ const SCENARIOS: Record<
     ],
   },
   selfchat: {
-    label: "4. Ordens de OS & Relatórios",
+    label: "4. Pedidos Gerais & Relatórios",
     messages: [
       {
         sender: "user",
@@ -70,7 +70,7 @@ const SCENARIOS: Record<
       {
         sender: "criativo",
         time: "21:31",
-        text: "📊 Browser finalizou a pesquisa, planilha atualizada no seu PC e Google Drive! Post de destaque teve 38% mais alcance. Já deixei 3 sugestões prontas para amanhã cedo.",
+        text: "📊 Navegador Inteligente finalizou a pesquisa, planilha atualizada no seu PC e Google Drive! Post de destaque teve 38% mais alcance. Já deixei 3 sugestões prontas para amanhã cedo.",
       },
     ],
   },
@@ -86,23 +86,23 @@ export const WhatsAppApprovalSimulator: React.FC = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-4 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[#B9FC01]">
-              // 09 · COMANDO 24/7 NO BOLSO
+              // 09 · COMANDO 24H NO BOLSO
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
-              Comande Seu PC ou VPS e Aprove Posts Pelo{" "}
-              <span className="text-gradient-volt">Seu WhatsApp</span>
+              Comande Seu PC ou Nuvem 24h e Aprove Posts Pelo{" "}
+              <span className="text-[#B9FC01]">Seu WhatsApp</span>
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-300 sm:text-lg">
               Mesmo longe da mesa, mande um texto ou áudio no seu próprio
               WhatsApp: peça posts, dispare pesquisas no navegador, execute
-              fluxos nos seus aplicativos ou responda apenas{" "}
+              rotinas nos seus aplicativos ou responda apenas{" "}
               <strong className="text-[#B9FC01]">1</strong> para publicar no
               Instagram.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
               {[
-                "WhatsApp Self-Chat",
+                "No seu próprio WhatsApp",
                 "Áudio / Voz",
                 "Telegram",
                 "Slack",

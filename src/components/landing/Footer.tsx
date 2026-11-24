@@ -18,11 +18,11 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-400">
-          <a href="#motores-os" className="hover:text-[#B9FC01]">
-            Motores OS
+          <a href="#motor-computador" className="hover:text-[#B9FC01]">
+            Operador de PC
           </a>
           <a href="#infra-vps" className="hover:text-[#B9FC01]">
-            PC + VPS 24/7
+            PC + Nuvem 24h
           </a>
           <a href="#para-quem-e" className="hover:text-[#B9FC01]">
             Agências &amp; Empresas

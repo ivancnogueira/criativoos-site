@@ -34,48 +34,48 @@ const VIEWS: readonly StudioViewSpec[] = [
     id: "conversa",
     shortLabel: "1. 15 Criativos & Chat",
     icon: MessageCircle,
-    statusText: "Mestre de Carrosséis e Consistência Facial gerando lâminas com suas fotos",
+    statusText: "Mestre de Carrosséis e Rosto Real gerando lâminas com suas fotos",
     headline: "Peça em português claro para seus 15 Criativos especializados",
     description:
-      "Você digita ou manda áudio dizendo o que precisa. A equipe planeja os ganchos, puxa suas fotos reais no seu computador e entrega carrosséis, posts, stories e anúncios com a identidade visual da sua marca.",
+      "Você digita ou manda áudio dizendo o que precisa. A equipe planeja as ideias, puxa suas fotos reais no seu computador e entrega carrosséis, posts, stories e anúncios com a identidade visual da sua marca.",
     previewMode: "image",
     previewImage: "/images/criativo-ia-operacao-v1-dark.webp",
     highlights: [
       "Usa as fotos reais do seu computador sem deformar seu rosto",
       "Aplica automaticamente o logotipo e a paleta da sua empresa",
-      "10 modelos gratuitos no OpenCode ou conecte seu ChatGPT, Claude, Gemini ou Grok",
+      "10 inteligências artificiais gratuitas já inclusas ou conecte seu ChatGPT, Claude, Gemini ou Grok",
     ],
   },
   {
     id: "computer-use",
-    shortLabel: "2. Operador PC & VPS",
+    shortLabel: "2. Operador PC & Nuvem",
     icon: Monitor,
-    statusText: "Computer Use & VPS 24/7 ativos: organizando pastas locais e rotinas remotas",
-    headline: "Operação autônoma de PC, mouse e servidor VPS no mesmo lugar",
+    statusText: "Operador de Computador & Nuvem 24h ativos: organizando pastas e rotinas",
+    headline: "Operação autônoma no computador e na nuvem 24h no mesmo lugar",
     description:
-      "Muito além de um chat na web: o CriativoOS vê a tela com segurança, abre programas no Windows, Mac ou Linux, organiza pastas de clientes e também roda 24/7 no seu servidor VPS ou Docker via pareamento criptografado.",
+      "Muito além de um chat comum: o CriativoOS vê a tela com segurança, abre programas no Windows, Mac ou Linux, organiza pastas de clientes e também roda 24 horas na nuvem com conexão segura em 1 clique.",
     previewMode: "desktop",
     previewImage: "/images/01.webp",
     highlights: [
-      "Controla aplicativos do desktop com confirmação humana e histórico auditável",
-      "Gerencie PC local e servidor VPS Linux / Docker no mesmo Cockpit",
+      "Controla aplicativos do computador com confirmação humana e histórico claro",
+      "Gerencie computador local e servidor na nuvem 24h no mesmo painel",
       "Roda rotinas programadas diariamente mesmo com seu notebook fechado",
     ],
   },
   {
     id: "apps-browser",
-    shortLabel: "3. Browser & 253+ Apps",
+    shortLabel: "3. Navegador & 253+ Apps",
     icon: Workflow,
-    statusText: "Navegador Chromium pesquisando concorrentes e sincronizando Notion + CRM",
-    headline: "Navegador Chromium autônomo + 253+ apps conectados em grafo",
+    statusText: "Navegador Inteligente pesquisando concorrentes e sincronizando seus apps",
+    headline: "Navegador Inteligente + 253+ aplicativos em rotinas visuais",
     description:
-      "Conecte Google Drive, Notion, Gmail, CRM, Planilhas, Slack e mais em workflows visuais em grafo. O navegador interno navega em sites reais, extrai tendências da concorrência e alimenta seus fluxos sem intervenção.",
+      "Conecte Google Drive, Notion, Gmail, planilhas, atendimento e mais em rotinas visuais automáticas. O Navegador Inteligente pesquisa sites reais, coleta ideias da concorrência e alimenta seus fluxos sem trabalho manual.",
     previewMode: "graph",
     previewImage: "/images/01.webp",
     highlights: [
-      "Mais de 253 conectores nativos prontos para acionar por chat ou agenda",
-      "Editor de fluxos em grafo visual com histórico, pausas e logs auditáveis",
-      "Radar automático que lê formatos virais do seu mercado em segundos",
+      "Mais de 253 aplicativos conectados prontos para acionar por chat ou agenda",
+      "Editor de rotinas visuais automáticas com pausas e histórico claro",
+      "Radar automático que lê formatos em alta do seu mercado em segundos",
     ],
   },
   {
@@ -85,13 +85,13 @@ const VIEWS: readonly StudioViewSpec[] = [
     statusText: "Estúdio de Vídeo finalizando Reels + publicações agendadas na semana",
     headline: "Calendário visual integrado e Estúdio de Reels em 1 painel",
     description:
-      "Visualize seu mês inteiro antes de ir ao ar, inspecione prévias fiéis do feed e stories, acompanhe métricas reais e produza roteiros e vídeos verticais editados com legendas dinâmicas.",
+      "Visualize seu mês inteiro antes de ir ao ar, inspecione prévias fiéis do feed e stories, acompanhe resultados reais e produza roteiros e vídeos verticais editados com legendas dinâmicas.",
     previewMode: "reels",
     previewImage: "/images/criativo-ia-stories.webp",
     highlights: [
       "Grade visual de feed e stories com aprovação humana em 1 clique no WhatsApp",
-      "Roteiros Talking Head ou Faceless com renderização vertical automática",
-      "Acompanhamento de alcance, salvamentos e resultados direto no cockpit",
+      "Roteiros gravando na câmera ou sem aparecer com edição vertical pronta",
+      "Acompanhamento de alcance, salvamentos e resultados direto no painel",
     ],
   },
 ];
@@ -151,12 +151,12 @@ export const InsideCockpitSimulator: React.FC = () => {
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
               Conheça o Seu{" "}
-              <span className="text-gradient-volt">CriativoOS Por Dentro</span>
+              <span className="text-[#B9FC01]">CriativoOS Por Dentro</span>
             </h2>
             <p className="mt-3 text-base text-slate-400 sm:text-lg">
-              Um sistema operacional visual, rápido e intuitivo no seu PC ou VPS.
+              Um sistema visual, rápido e fácil no seu PC ou na nuvem 24h.
               Navegue pelas 4 centrais abaixo para ver como você comanda do
-              Desktop aos Reels:
+              seu computador aos Reels:
             </p>
           </div>
 
@@ -286,9 +286,9 @@ export const InsideCockpitSimulator: React.FC = () => {
               <div className="flex flex-wrap items-center gap-3 pt-3">
                 {[
                   { shape: "hex" as const, color: "#31cf76", label: "Operador PC" },
-                  { shape: "blob" as const, color: "#38bdf8", label: "Browser 253+" },
+                  { shape: "blob" as const, color: "#38bdf8", label: "Navegador 253+" },
                   { shape: "rounded_square" as const, color: "#2dd4bf", label: "Carrossel" },
-                  { shape: "blob" as const, color: "#a855f7", label: "Consistência" },
+                  { shape: "blob" as const, color: "#a855f7", label: "Rosto Real" },
                 ].map((m, idx) => (
                   <div
                     key={m.label}
@@ -322,7 +322,7 @@ export const InsideCockpitSimulator: React.FC = () => {
                 >
                   <div className="flex items-center justify-between border-b border-current/10 pb-3 font-mono text-[11px]">
                     <span className={`font-bold ${accentText}`}>
-                      // COMPUTER_USE.EXE
+                      // OPERADOR DE PC
                     </span>
                     <span className="rounded bg-[#B9FC01]/15 px-2 py-0.5 text-[10px] font-bold text-[#B9FC01]">
                       MOUSE ATIVO
@@ -342,7 +342,7 @@ export const InsideCockpitSimulator: React.FC = () => {
                       },
                       {
                         step: "09:02",
-                        cmd: "Preencher planilha ERP e salvar backup",
+                        cmd: "Preencher planilha de vendas e salvar cópia",
                         ok: "EM EXECUÇÃO",
                       },
                       {
@@ -396,7 +396,7 @@ export const InsideCockpitSimulator: React.FC = () => {
                 >
                   <div className="flex items-center justify-between border-b border-current/10 pb-3 font-mono text-[11px]">
                     <span className={`font-bold ${accentText}`}>
-                      // GRAFO DE FLUXO VISUAL
+                      // ROTINA AUTOMÁTICA
                     </span>
                     <span className="rounded bg-sky-500/15 px-2 py-0.5 text-[10px] font-bold text-sky-400">
                       253+ APPS
@@ -405,23 +405,23 @@ export const InsideCockpitSimulator: React.FC = () => {
                   <div className="mt-4 space-y-2.5">
                     {[
                       {
-                        node: "1. Chromium Browser",
-                        detail: "Monitorar 5 concorrentes + capturar ganchos",
+                        node: "1. Navegador Inteligente",
+                        detail: "Monitorar 5 concorrentes + coletar ideias",
                         badge: "Web Ao Vivo",
                       },
                       {
-                        node: "2. Notion + Google Drive + CRM",
-                        detail: "Atualizar tabela, puxar fotos reais e leads",
-                        badge: "Conector MCP",
+                        node: "2. Notion + Google Drive + Planilhas",
+                        detail: "Atualizar tabela, puxar fotos reais e contatos",
+                        badge: "Integração Nativa",
                       },
                       {
                         node: "3. 15 Criativos Studio",
                         detail: "Gerar Carrossel 1080x1350 + Roteiro Reels",
-                        badge: "IA Multi-Agente",
+                        badge: "Equipe 15 Criativos",
                       },
                       {
-                        node: "4. WhatsApp + Instagram API",
-                        detail: "Enviar prévia -> [1] Aprovar e publicar",
+                        node: "4. WhatsApp + Conexão oficial do Instagram",
+                        detail: "Enviar prévia para [1] Aprovar e publicar",
                         badge: "1 Clique",
                       },
                     ].map((n, idx) => (

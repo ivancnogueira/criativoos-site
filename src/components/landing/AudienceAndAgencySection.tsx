@@ -15,6 +15,8 @@ const PROFILES = [
   {
     badge: "PERFIL 01 · INDIVIDUAL",
     title: "Criadores, Especialistas & Infoprodutores",
+    image: "/images/perfis/perfil-criador.webp",
+    imageAlt: "Criador e especialista produzindo conteúdo em estúdio escuro",
     icon: Sparkles,
     color: "#38bdf8",
     fit: "Plano Individual",
@@ -29,27 +31,31 @@ const PROFILES = [
   {
     badge: "PERFIL 02 · EMPRESAS",
     title: "Negócios Locais & Operações Comerciais",
+    image: "/images/perfis/perfil-empresa.webp",
+    imageAlt: "Empreendedor em escritório moderno com painel operacional escuro",
     icon: Building2,
     color: "#a855f7",
     fit: "Individual ou Agência 10",
     summary:
-      "Para empresas que querem unir produção criativa de vendas com automação de rotinas, CRM, Google Drive, planilhas e operação de desktop.",
+      "Para empresas que querem unir produção criativa de vendas com rotinas automáticas no Google Drive, planilhas, atendimento e programas do computador.",
     gains: [
-      "Computer Use operando sistemas internos e organizando arquivos",
-      "253+ aplicativos conectados em fluxos visuais sem mensalidade extra",
-      "Pode rodar no PC da equipe ou em VPS própria 24 horas por dia",
+      "Operador de Computador operando sistemas internos e organizando arquivos",
+      "+253 aplicativos conectados em rotinas visuais sem mensalidade extra",
+      "Pode rodar no PC da equipe ou em servidor na nuvem 24h por dia",
     ],
   },
   {
     badge: "PERFIL 03 · ESCALA MÁXIMA",
     title: "Agências, Social Medias & Gestores de Tráfego",
+    image: "/images/perfis/perfil-agencia.webp",
+    imageAlt: "Diretor criativo gerenciando múltiplas marcas em telas escuras",
     icon: Briefcase,
     color: "#B9FC01",
     fit: "Agência 10 ou Ilimitada",
     summary:
       "Para profissionais e agências que atendem múltiplas contas e querem dobrar a carteira de clientes mantendo entrega premium e margem alta.",
     gains: [
-      "Workspaces e identidades visuais 100% isolados cliente por cliente",
+      "Pastas separadas por cliente e identidades visuais 100% isoladas",
       "Relatórios PDF executivos gerados automaticamente toda semana",
       "Estúdio de Vídeo Reels e até 5 computadores na mesma licença",
     ],
@@ -60,8 +66,8 @@ const PROFILES = [
 const AGENCY_PILLARS = [
   {
     icon: FolderLock,
-    title: "Workspaces Isolados por Cliente",
-    desc: "Fotos de rosto, logotipo, paleta, tom de voz e histórico de cada cliente ficam em compartimentos separados que nunca se misturam.",
+    title: "Pastas Separadas por Cliente",
+    desc: "Fotos de rosto, logotipo, paleta, tom de voz e histórico de cada cliente ficam em compartimentos isolados que nunca se misturam.",
   },
   {
     icon: FileSpreadsheet,
@@ -71,7 +77,7 @@ const AGENCY_PILLARS = [
   {
     icon: Users,
     title: "Até 5 Computadores na Equipe",
-    desc: "Instale no seu notebook, na máquina da equipe de atendimento ou em servidor VPS compartilhado para produção contínua.",
+    desc: "Instale no seu notebook, na máquina da equipe de atendimento ou em servidor na nuvem 24h compartilhado para produção contínua.",
   },
   {
     icon: Layers,
@@ -94,7 +100,7 @@ export const AudienceAndAgencySection: React.FC = () => {
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl">
               Feito Para Quem Produz Sozinho e Para{" "}
-              <span className="text-gradient-volt">
+              <span className="text-[#B9FC01]">
                 Agências Que Escalam Carteira
               </span>
             </h2>
@@ -116,56 +122,74 @@ export const AudienceAndAgencySection: React.FC = () => {
             return (
               <div
                 key={p.badge}
-                className={`flex flex-col justify-between rounded-3xl border p-6 transition sm:p-8 ${
+                className={`group flex flex-col overflow-hidden rounded-3xl border transition ${
                   p.featured
                     ? "border-[#B9FC01]/45 bg-[#0A130D] shadow-[0_0_45px_rgba(185,252,1,0.08)]"
                     : "border-white/10 bg-[#0B0E15]"
                 }`}
               >
-                <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <span
-                      className="font-mono text-[10px] font-bold uppercase tracking-wider"
-                      style={{ color: p.color }}
-                    >
-                      {p.badge}
-                    </span>
-                    <div
-                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-[#050608]"
-                      style={{ color: p.color }}
-                    >
-                      <Icon className="h-5 w-5" />
-                    </div>
-                  </div>
-
-                  <h3 className="mt-4 font-display text-xl font-bold text-white sm:text-2xl">
-                    {p.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                    {p.summary}
-                  </p>
-
-                  <ul className="mt-5 space-y-2.5 border-t border-white/10 pt-4">
-                    {p.gains.map((g) => (
-                      <li
-                        key={g}
-                        className="flex items-start gap-2.5 text-xs leading-relaxed text-slate-200 sm:text-sm"
-                      >
-                        <CheckCircle2
-                          className="mt-0.5 h-4 w-4 shrink-0"
-                          style={{ color: p.color }}
-                        />
-                        <span>{g}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="relative h-48 w-full overflow-hidden border-b border-white/10 sm:h-52">
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    className={`pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t to-transparent ${
+                      p.featured
+                        ? "from-[#0A130D] via-[#0A130D]/55"
+                        : "from-[#0B0E15] via-[#0B0E15]/55"
+                    }`}
+                  />
                 </div>
 
-                <div className="mt-6 flex items-center justify-between rounded-xl border border-white/10 bg-[#050608] px-3.5 py-2.5 font-mono text-[11px]">
-                  <span className="text-slate-400">Indicação ideal:</span>
-                  <span className="font-bold" style={{ color: p.color }}>
-                    {p.fit}
-                  </span>
+                <div className="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                  <div>
+                    <div className="flex items-center justify-between gap-2">
+                      <span
+                        className="font-mono text-[10px] font-bold uppercase tracking-wider"
+                        style={{ color: p.color }}
+                      >
+                        {p.badge}
+                      </span>
+                      <div
+                        className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-[#050608]"
+                        style={{ color: p.color }}
+                      >
+                        <Icon className="h-5 w-5" />
+                      </div>
+                    </div>
+
+                    <h3 className="mt-4 font-display text-xl font-bold text-white sm:text-2xl">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                      {p.summary}
+                    </p>
+
+                    <ul className="mt-5 space-y-2.5 border-t border-white/10 pt-4">
+                      {p.gains.map((g) => (
+                        <li
+                          key={g}
+                          className="flex items-start gap-2.5 text-xs leading-relaxed text-slate-200 sm:text-sm"
+                        >
+                          <CheckCircle2
+                            className="mt-0.5 h-4 w-4 shrink-0"
+                            style={{ color: p.color }}
+                          />
+                          <span>{g}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-between rounded-xl border border-white/10 bg-[#050608] px-3.5 py-2.5 font-mono text-[11px]">
+                    <span className="text-slate-400">Indicação ideal:</span>
+                    <span className="font-bold" style={{ color: p.color }}>
+                      {p.fit}
+                    </span>
+                  </div>
                 </div>
               </div>
             );
@@ -210,16 +234,16 @@ export const AudienceAndAgencySection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Box Lateral de Payback Matemático */}
+              {/* Box Lateral de Conta Simples */}
               <div className="rounded-3xl border border-[#B9FC01]/40 bg-[#050608] p-6 shadow-[0_0_45px_rgba(185,252,1,0.12)] lg:col-span-4">
                 <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#B9FC01]">
-                  Matemática de Payback (Agência)
+                  Conta Simples: Se Paga no 1º Mês
                 </div>
                 <div className="mt-3 font-display text-2xl font-extrabold leading-snug text-white sm:text-3xl">
                   1 Único Cliente Paga o Ano Inteiro Logo No 1º Mês
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  Com um contrato padrão de social media entre{" "}
+                  Com um contrato padrão de gestão de redes entre{" "}
                   <strong className="text-white">R$ 1.500 e R$ 2.500/mês</strong>,
                   você quita sua licença anual completa em semanas. Os outros 11
                   meses e todos os novos clientes entram como margem líquida no

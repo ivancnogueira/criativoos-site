@@ -239,6 +239,7 @@ export const HeroConcept1Frontier: React.FC = () => {
     const el = rootRef.current;
     if (!el) return;
 
+    let floaterTween: gsap.core.Tween | null = null;
     const ctx = gsap.context(() => {
       gsap.from("[data-f1-reveal]", {
         y: 16,
@@ -246,13 +247,15 @@ export const HeroConcept1Frontier: React.FC = () => {
         duration: 0.7,
         stagger: 0.07,
         ease: "power3.out",
+        clearProps: "transform",
       });
 
-      gsap.to("[data-orbit-floater]", {
+      floaterTween = gsap.to("[data-orbit-floater]", {
         y: -11,
         rotation: 4,
         duration: 1.9,
         ease: "sine.inOut",
+        force3D: true,
         stagger: {
           each: 0.16,
           repeat: -1,
@@ -261,7 +264,17 @@ export const HeroConcept1Frontier: React.FC = () => {
       });
     }, el);
 
+    const onScrollToggleFloat = () => {
+      if (!floaterTween) return;
+      if (window.scrollY > 36) {
+        if (!floaterTween.paused()) floaterTween.pause();
+      } else {
+        if (floaterTween.paused()) floaterTween.resume();
+      }
+    };
+
     const onMove = (e: PointerEvent) => {
+      if (window.scrollY > 18) return;
       const nx = (e.clientX / window.innerWidth - 0.5) * 2;
       const ny = (e.clientY / window.innerHeight - 0.5) * 2;
 
@@ -271,12 +284,15 @@ export const HeroConcept1Frontier: React.FC = () => {
           y: ny * 7,
           duration: 0.5,
           ease: "power2.out",
+          force3D: true,
         });
       }
     };
 
+    window.addEventListener("scroll", onScrollToggleFloat, { passive: true });
     window.addEventListener("pointermove", onMove, { passive: true });
     return () => {
+      window.removeEventListener("scroll", onScrollToggleFloat);
       window.removeEventListener("pointermove", onMove);
       ctx.revert();
     };
@@ -339,7 +355,7 @@ export const HeroConcept1Frontier: React.FC = () => {
             ▸ SISTEMA OPERACIONAL AUTÔNOMO NO SEU COMPUTADOR
           </span>
           <span className="hidden shrink-0 whitespace-nowrap text-zinc-400 md:inline">
-            DESKTOP · BROWSER · 253+ APPS · ESTÚDIO · WHATSAPP
+            DESKTOP · NAVEGADOR · 253+ APPS · ESTÚDIO · WHATSAPP
           </span>
         </div>
 
@@ -388,6 +404,7 @@ export const HeroConcept1Frontier: React.FC = () => {
         {/* 15 MASCOTES CRIATIVOS EM 3 PLANOS DE PROFUNDIDADE (GRANDES, MÉDIOS E PEQUENOS) */}
         <div
           ref={orbitLayerRef}
+          data-hero-orbit-layer
           className="pointer-events-none absolute inset-0 z-40 hidden md:block"
         >
           {HERO_15_MASCOT_SLOTS.map((slot) => {
@@ -397,6 +414,8 @@ export const HeroConcept1Frontier: React.FC = () => {
               <div
                 key={spec.id}
                 data-orbit-floater
+                data-hero-slot={slot.idx}
+                data-hero-size={slot.size}
                 className={`pointer-events-auto group absolute flex flex-col items-center ${slot.posClass} ${slot.depthClass}`}
               >
                 <LiveCriativoMascot
@@ -404,6 +423,7 @@ export const HeroConcept1Frontier: React.FC = () => {
                   color={spec.color}
                   size={slot.size}
                   label={spec.nome}
+                  trackCursor={false}
                   working
                 />
                 <span className="mt-1 whitespace-nowrap rounded-full border border-[#B9FC01]/35 bg-[#06090C]/95 px-2 py-0.5 font-mono text-[9px] font-bold text-[#B9FC01] opacity-0 backdrop-blur-md transition group-hover:opacity-100">
@@ -452,7 +472,7 @@ export const HeroConcept1Frontier: React.FC = () => {
             {/* CARD ESQUERDO COM LARGURA ORIGINAL (4 COLS) E ALTURA AUMENTADA */}
             <div
               data-f1-reveal
-              className="flex flex-col justify-between rounded-2xl border border-white/15 bg-[#07090E]/92 p-5 shadow-[0_24px_65px_rgba(0,0,0,0.92)] backdrop-blur-xl md:col-span-4 md:min-h-[340px] lg:min-h-[385px] lg:p-6 xl:min-h-[420px] xl:p-7 [@media(max-height:760px)]:min-h-[250px] [@media(max-height:760px)]:p-3.5"
+              className="flex flex-col justify-between rounded-2xl border border-white/15 bg-[#07090E]/95 p-5 shadow-[0_24px_65px_rgba(0,0,0,0.92)] backdrop-blur-sm md:col-span-4 md:min-h-[340px] lg:min-h-[385px] lg:p-6 xl:min-h-[420px] xl:p-7 [@media(max-height:760px)]:min-h-[250px] [@media(max-height:760px)]:p-3.5"
             >
               <div className="space-y-3 xl:space-y-4 [@media(max-height:760px)]:space-y-1.5">
                 <div className="font-mono text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B9FC01] xl:text-xs">
@@ -501,7 +521,7 @@ export const HeroConcept1Frontier: React.FC = () => {
             {/* CARD DIREITO (4 COLS) */}
             <div
               data-f1-reveal
-              className="rounded-2xl border border-[#B9FC01]/35 bg-[#070A0B]/92 p-3.5 shadow-[0_24px_60px_rgba(0,0,0,0.88)] backdrop-blur-xl md:col-span-4 lg:p-4 xl:p-5"
+              className="rounded-2xl border border-[#B9FC01]/35 bg-[#070A0B]/95 p-3.5 shadow-[0_24px_60px_rgba(0,0,0,0.88)] backdrop-blur-sm md:col-span-4 lg:p-4 xl:p-5"
             >
               <div className="flex items-center justify-between border-b border-white/10 pb-1.5 font-mono text-[10px] text-[#B9FC01]">
                 <span>// TELEMETRIA DO SISTEMA</span>
@@ -536,12 +556,12 @@ export const HeroConcept1Frontier: React.FC = () => {
           {/* BARRA DOCK INFERIOR CHANFRADA FULL-WIDTH COMPACTA */}
           <div
             data-f1-reveal
-            className="grid grid-cols-1 gap-2.5 rounded-2xl border border-[#B9FC01]/40 bg-[#060908]/95 p-3 shadow-[0_-15px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(185,252,1,0.08)] backdrop-blur-2xl md:grid-cols-4 lg:gap-4 lg:p-3.5"
+            className="grid grid-cols-1 gap-2.5 rounded-2xl border border-[#B9FC01]/40 bg-[#060908]/95 p-3 shadow-[0_-15px_60px_rgba(0,0,0,0.9),0_0_50px_rgba(185,252,1,0.08)] backdrop-blur-sm md:grid-cols-4 lg:gap-4 lg:p-3.5"
           >
             {[
               {
                 icon: Monitor,
-                metric: "COMPUTER USE",
+                metric: "OPERADOR DE PC",
                 title: "Operador de Programas",
                 desc: "Abre aplicativos, move o mouse e organiza arquivos no seu PC",
               },

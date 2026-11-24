@@ -24,8 +24,8 @@ if [ -n "${REPO_URL:-}" ]; then
   git reset --hard origin/main
 fi
 
-echo "⚙️ Instalando dependências..."
-npm ci || npm install
+echo "⚙️ Instalando dependências (incluindo dev para build Vite)..."
+npm ci --include=dev || npm install --include=dev
 
 echo "🏗️ Gerando build de produção (Vite)..."
 export NODE_ENV=production

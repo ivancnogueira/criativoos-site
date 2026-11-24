@@ -20,13 +20,14 @@ export const OfficialOfferSection: React.FC = () => {
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
               Escolha a Capacidade Ideal Para a{" "}
-              <span className="text-gradient-volt">Sua Operação</span>
+              <span className="text-[#B9FC01]">Sua Operação</span>
             </h2>
           </div>
           <div className="lg:col-span-4">
             <p className="text-sm leading-relaxed text-slate-400 sm:text-base">
               Liberação imediata por e-mail, instalação em 1 minuto no Windows,
-              Mac, Linux ou VPS, e 7 dias de garantia incondicional.
+              Mac, Linux ou servidor na nuvem 24h, e 7 dias de garantia
+              incondicional.
             </p>
           </div>
         </div>

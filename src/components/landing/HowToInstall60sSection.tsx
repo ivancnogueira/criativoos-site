@@ -40,7 +40,7 @@ const STEPS: readonly MilestoneStep[] = [
     badge: "PASSO 02",
     tag: "Economia Total",
     title: "Escolha Usar Modelos Gratuitos ou Sua Própria IA",
-    desc: "Logo na boas-vindas você escolhe: pode rodar gratuitamente com os 10 modelos já liberados no OpenCode ou conectar a assinatura do ChatGPT, Claude, Gemini ou Grok que você já usa.",
+    desc: "Logo na boas-vindas você escolhe: pode começar gratuitamente com 10 inteligências artificiais já inclusas ou conectar a conta do ChatGPT, Claude, Gemini ou Grok que você já usa.",
     deliverable: "Inteligência ativada sem custo extra por post",
     icon: Cpu,
     mascotShape: "hex",
@@ -193,7 +193,7 @@ export const HowToInstall60sSection: React.FC = () => {
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
               Do Download à Primeira Operação em{" "}
-              <span className="text-gradient-volt">4 Passos Simples</span>
+              <span className="text-[#B9FC01]">4 Passos Simples</span>
             </h2>
           </div>
           <div className="lg:col-span-4">
@@ -318,31 +318,32 @@ export const HowToInstall60sSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Bloco Zero Custo Obrigatório de API */}
+        {/* Bloco Sem Custo Extra Obrigatorio */}
         <div className="mt-14 rounded-3xl border border-[#B9FC01]/35 bg-[#0A130D] p-6 sm:p-8">
           <div className="grid gap-6 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#B9FC01]">
-                Zero Custo Obrigatório de API ou Créditos
+                Zero Custo Obrigatório por Mensagem ou Créditos
               </span>
               <h3 className="mt-2 font-display text-2xl font-extrabold text-white sm:text-3xl">
-                Comece Grátis com 10 Modelos no OpenCode ou Conecte a IA Que Já Usa
+                Comece Com 10 Inteligências Artificiais Gratuitas Inclusas ou Conecte a Sua
               </h3>
               <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
                 Ao contrário de plataformas que cobram assinatura em dólar e ainda
                 vendem pacotes de créditos no meio do mês, o CriativoOS já traz 10
-                modelos gratuitos liberados no OpenCode e permite plugar sua conta
-                ChatGPT, Claude, Gemini ou Grok no Cofre AES-256-GCM local.
+                inteligências artificiais gratuitas inclusas, sem custo extra por
+                mensagem ou imagem, e permite conectar sua conta do ChatGPT,
+                Claude, Gemini ou Grok no cofre blindado só no seu computador.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:col-span-5">
               {[
-                "10 Modelos Grátis",
-                "OpenCode Incluso",
+                "10 IAs Gratuitas",
+                "Sem Custo Extra",
                 "ChatGPT / OpenAI",
                 "Claude / Anthropic",
                 "Google Gemini",
-                "xAI Grok + Ollama",
+                "xAI Grok + IA Local",
               ].map((m) => (
                 <div
                   key={m}

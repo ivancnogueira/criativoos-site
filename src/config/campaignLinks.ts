@@ -105,7 +105,7 @@ export const OFFICIAL_PUBLIC_PLANS: readonly PlanOfferSpec[] = [
       "9 Criativos Base (Estratégia, Copy, Carrossel, Posts, Stories, Anúncios e Publicação)",
       "Estúdio visual com calendário do mês e prévia do feed e stories",
       "Peça e aprove suas artes direto pelo seu WhatsApp",
-      "Use 10 modelos gratuitos no OpenCode ou sua assinatura ChatGPT, Claude, Gemini ou Grok",
+      "Use 10 inteligências artificiais gratuitas já inclusas ou sua conta do ChatGPT, Claude, Gemini ou Grok",
       "Instalador fácil em 1 clique para Windows, Mac e Linux",
     ],
   },

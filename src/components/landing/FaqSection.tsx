@@ -5,23 +5,23 @@ import { SUPPORT_WHATSAPP_URL } from "../../config/campaignLinks";
 const FAQ_ITEMS = [
   {
     q: "Preciso pagar alguma ferramenta de IA ou créditos por fora todo mês?",
-    a: "Não. Logo ao abrir o CriativoOS você pode rodar gratuitamente os 10 modelos já incluídos no OpenCode sem custo adicional, ou conectar no cofre local a assinatura do ChatGPT, Claude, Gemini ou Grok que já utiliza.",
+    a: "Não. Logo ao abrir o CriativoOS você pode usar 10 inteligências artificiais gratuitas já inclusas, sem custo extra por mensagem ou imagem, ou conectar no cofre blindado do seu computador a conta do ChatGPT, Claude, Gemini ou Grok que já utiliza.",
   },
   {
-    q: "Consigo rodar o CriativoOS em um servidor VPS 24/7 ou só no meu notebook?",
-    a: "Nos dois. Você instala no seu computador Windows, Mac ou Linux em 1 minuto com dois cliques e, quando quiser escala 24 horas por dia com o notebook desligado, também pode rodar em VPS Linux / Docker pareado ao mesmo painel Cockpit.",
+    q: "Consigo rodar o CriativoOS na nuvem 24h ou só no meu notebook?",
+    a: "Nos dois. Você instala no seu computador Windows, Mac ou Linux em 1 minuto com dois cliques e, quando quiser escala 24 horas por dia com o notebook desligado, também pode rodar em servidor na nuvem 24h conectado em 1 clique ao mesmo painel.",
   },
   {
     q: "Serve para agências e social medias que atendem vários clientes?",
-    a: "Sim. Cada marca ou cliente possui workspace isolado (fotos de rosto, logotipo, paleta, histórico e relatórios PDF sem misturar nada). No plano Agência Ilimitada você cadastra contas sem limite em até 5 máquinas com todos os 15 Criativos.",
+    a: "Sim. Cada marca ou cliente possui pastas separadas e isoladas (fotos de rosto, logotipo, paleta, histórico e relatórios PDF sem misturar nada). No plano Agência Ilimitada você cadastra contas sem limite em até 5 máquinas com todos os 15 Criativos.",
   },
   {
     q: "Preciso saber programar ou abrir tela preta de código?",
     a: "De jeito nenhum. O CriativoOS vem com instalador gráfico padrão e painel visual por cliques e chat em português claro, além de comando direto no WhatsApp.",
   },
   {
-    q: "Como funciona a segurança no Computer Use e no Navegador autônomo?",
-    a: "Suas senhas, chaves de API e tokens ficam no Cofre AES-256-GCM local. Em ações críticas como logins com verificação, formulários sensíveis, CRM ou envio final no Instagram, o sistema pausa e pede sua autorização humana explícita.",
+    q: "Como funciona a segurança no Operador de Computador e no Navegador Inteligente?",
+    a: "Suas senhas e acessos ficam no cofre blindado só no seu computador. Em ações importantes como logins que pedem código no celular, formulários sensíveis ou envio final no Instagram, o sistema pausa e chama você para autorizar antes.",
   },
   {
     q: "As artes realmente mantêm meu rosto real e não mudam a cada post?",
@@ -29,7 +29,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "O sistema publica sozinho no Instagram sem minha revisão?",
-    a: "Nunca. Os Criativos enviam a prévia pronta no seu painel e no WhatsApp. A publicação na conexão oficial da Meta só acontece depois que você responder 1 ou clicar em aprovar.",
+    a: "Nunca. Os Criativos enviam a prévia pronta no seu painel e no WhatsApp. A publicação na conexão oficial do Instagram só acontece depois que você responder 1 ou clicar em aprovar.",
   },
 ];
 
@@ -50,7 +50,7 @@ export const FaqSection: React.FC = () => {
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold text-white sm:text-5xl">
               Perguntas Frequentes Sobre{" "}
-              <span className="text-gradient-volt">Licença, VPS &amp; Uso</span>
+              <span className="text-[#B9FC01]">Licença, Nuvem 24h &amp; Uso</span>
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
               Tudo o que você precisa validar antes de ativar o CriativoOS na

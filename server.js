@@ -26,6 +26,12 @@ export function createSiteApp(options = {}) {
   const app = express();
 
   app.disable("x-powered-by");
+  app.use((_req, res, next) => {
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+    next();
+  });
 
   app.get("/api/health", (_req, res) => {
     res.status(200).json({
@@ -39,10 +45,11 @@ export function createSiteApp(options = {}) {
   if (fs.existsSync(DIST_DIR)) {
     app.use(
       express.static(DIST_DIR, {
-        maxAge: "1d",
+        maxAge: "7d",
         etag: true,
         setHeaders: (res, filePath) => {
-          if (filePath.endsWith(".html")) {
+          const isHashedAsset = filePath.includes(`${path.sep}assets${path.sep}`);
+          if (!isHashedAsset) {
             res.setHeader("Cache-Control", "no-cache");
           }
         },

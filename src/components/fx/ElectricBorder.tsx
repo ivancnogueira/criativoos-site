@@ -185,8 +185,14 @@ export const ElectricBorder: React.FC<ElectricBorderProps> = ({
     };
 
     let { width, height } = updateSize();
+    let isVisible = true;
 
     const draw = (now: number) => {
+      if (!isVisible) {
+        animationRef.current = null;
+        return;
+      }
+
       const dt = (now - (lastFrameTimeRef.current || now)) / 1000;
       timeRef.current += dt * speed;
       lastFrameTimeRef.current = now;
@@ -206,14 +212,14 @@ export const ElectricBorder: React.FC<ElectricBorderProps> = ({
       const bw = width - 2 * borderOffset;
       const bh = height - 2 * borderOffset;
       const r = Math.min(borderRadius, Math.min(bw, bh) / 2);
-      const sampleCount = 220;
+      const sampleCount = 160;
 
       ctx.beginPath();
       for (let i = 0; i <= sampleCount; i++) {
         const p = i / sampleCount;
         const pt = getRoundedRectPoint(p, borderOffset, borderOffset, bw, bh, r);
-        const xn = octavedNoise(p * 8, 8, 1.6, 0.7, chaos, 10, timeRef.current, 0);
-        const yn = octavedNoise(p * 8, 8, 1.6, 0.7, chaos, 10, timeRef.current, 1);
+        const xn = octavedNoise(p * 8, 6, 1.6, 0.7, chaos, 10, timeRef.current, 0);
+        const yn = octavedNoise(p * 8, 6, 1.6, 0.7, chaos, 10, timeRef.current, 1);
         const dx = pt.x + xn * displacement;
         const dy = pt.y + yn * displacement;
         if (i === 0) ctx.moveTo(dx, dy);
@@ -232,11 +238,27 @@ export const ElectricBorder: React.FC<ElectricBorderProps> = ({
     });
     ro.observe(container);
 
+    const io = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        const nextVisible = Boolean(entry?.isIntersecting);
+        if (nextVisible === isVisible) return;
+        isVisible = nextVisible;
+        if (isVisible && animationRef.current === null) {
+          lastFrameTimeRef.current = performance.now();
+          animationRef.current = requestAnimationFrame(draw);
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    io.observe(container);
+
     animationRef.current = requestAnimationFrame(draw);
 
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
       ro.disconnect();
+      io.disconnect();
     };
   }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
 

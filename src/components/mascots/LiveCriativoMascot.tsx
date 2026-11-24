@@ -43,6 +43,7 @@ export interface LiveCriativoMascotProps {
   trackCursor?: boolean;
   working?: boolean;
   animated?: boolean;
+  lightweight?: boolean;
   className?: string;
   onClick?: () => void;
 }
@@ -60,6 +61,7 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
   trackCursor = true,
   working = false,
   animated = true,
+  lightweight = false,
   className = "",
   onClick,
 }) => {
@@ -77,7 +79,7 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
 
   // Rastreio suave das pupilas quando o mouse se movimenta na página
   useEffect(() => {
-    if (!trackCursor || typeof window === "undefined") return;
+    if (lightweight || !trackCursor || typeof window === "undefined") return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
 
     let rafId = 0;
@@ -116,7 +118,7 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
 
   // Movimento autônomo no modo "trabalhando": olha para os lados, cima, baixo e troca expressões
   useEffect(() => {
-    if (!working || typeof window === "undefined") return;
+    if (lightweight || !working || typeof window === "undefined") return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
 
     let lookTimer: number | undefined;
@@ -155,7 +157,7 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
 
   // Piscada orgânica assíncrona (com eventual piscada dupla rápida)
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (lightweight || typeof window === "undefined") return;
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
 
     let cycleTimer: number | undefined;
@@ -235,11 +237,15 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
           ? 0.62
           : 1;
 
-  const animClass = working
-    ? "mascote-working"
-    : animated
-      ? "mascote-idle"
-      : "";
+  const animClass = lightweight
+    ? ""
+    : working
+      ? "mascote-working"
+      : animated
+        ? "mascote-idle"
+        : "";
+
+  const hoverScaleClass = lightweight ? "" : "transition-transform duration-300 hover:scale-110";
 
   return (
     <svg
@@ -249,10 +255,10 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
       viewBox="0 0 100 100"
       role="img"
       aria-label={label}
-      onPointerEnter={handleEnter}
-      onPointerLeave={handleLeave}
+      onPointerEnter={lightweight ? undefined : handleEnter}
+      onPointerLeave={lightweight ? undefined : handleLeave}
       onClick={onClick}
-      className={`${animClass} select-none transition-transform duration-300 hover:scale-110 ${onClick ? "cursor-pointer" : ""} ${className}`}
+      className={`${animClass} ${hoverScaleClass} select-none ${onClick ? "cursor-pointer" : ""} ${className}`}
     >
       <defs>
         <radialGradient id={`plush-${uid}`} cx="35%" cy="28%" r="72%">
@@ -260,25 +266,16 @@ export const LiveCriativoMascot: React.FC<LiveCriativoMascotProps> = ({
           <stop offset="46%" stopColor={color} stopOpacity="1" />
           <stop offset="100%" stopColor="#050505" stopOpacity="0.44" />
         </radialGradient>
-        <filter id={`glow-${uid}`} x="-25%" y="-25%" width="150%" height="150%">
-          <feDropShadow
-            dx="0"
-            dy="4"
-            stdDeviation="4.2"
-            floodColor={working ? "#B9FC01" : color}
-            floodOpacity={working ? "0.45" : "0.3"}
-          />
-        </filter>
       </defs>
 
-      <g filter={size >= 34 ? `url(#glow-${uid})` : undefined}>
+      <g>
         <path d={pathData} fill={color} />
         <path d={pathData} fill={`url(#plush-${uid})`} />
         <path
           d={pathData}
           fill="none"
-          stroke={working ? "rgba(185,252,1,0.72)" : "rgba(255,255,255,0.24)"}
-          strokeWidth={working ? "2.1" : "1.6"}
+          stroke={working || lightweight ? "rgba(185,252,1,0.72)" : "rgba(255,255,255,0.24)"}
+          strokeWidth={working || lightweight ? "2.1" : "1.6"}
         />
       </g>
 
