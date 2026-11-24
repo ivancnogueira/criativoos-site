@@ -1,0 +1,168 @@
+# Robots.txt Oficial - CriativoOS (https://criativoos.com.br/)
+# Permite indexacao da Landing Page publica e leitura por motores de busca e IA (GEO/AEO)
+# Protege paginas internas de campanha fechada e pagina pos-compra
+
+User-agent: Googlebot
+Allow: /
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Bingbot
+Allow: /
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Perplexity-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Anthropic-AI
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Applebot
+Allow: /
+Allow: /llms.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /llms.txt
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /sitemap.xml
+Disallow: /obrigado
+Disallow: /meu-roteiro
+Disallow: /kit-whatsapp
+Disallow: /apresentacao-migracao
+Disallow: /apresentacao-black
+Disallow: /apresentacao
+Disallow: /api/
+
+Host: https://criativoos.com.br
+Sitemap: https://criativoos.com.br/sitemap.xml

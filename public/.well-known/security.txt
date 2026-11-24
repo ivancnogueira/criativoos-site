@@ -1,0 +1,4 @@
+Contact: https://criativoos.com.br/#faq
+Preferred-Languages: pt-BR, en
+Canonical: https://criativoos.com.br/.well-known/security.txt
+Expires: 2027-12-31T23:59:59.000Z

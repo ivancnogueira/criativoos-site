@@ -1,7 +1,13 @@
 # ==============================================================================
-# Fallback SPA e Cache — Hostinger Hospedagem Web / Apache / LiteSpeed
+# Fallback SPA, SEO/GEO/AEO MIME Types e Cache - Hostinger / Apache / LiteSpeed
 # Copiado automaticamente para dist/.htaccess no build do Vite
 # ==============================================================================
+<IfModule mod_mime.c>
+  AddType text/plain .txt
+  AddType application/xml .xml
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -11,9 +17,15 @@
   RewriteRule . /index.html [L]
 </IfModule>
 
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Request_URI "^/(obrigado|meu-roteiro|kit-whatsapp|apresentacao-migracao|apresentacao-black|apresentacao)/?$" NOINDEX_ROUTE=1
+</IfModule>
+
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Robots-Tag "noindex, nofollow" env=NOINDEX_ROUTE
   <FilesMatch "\.(html)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
   </FilesMatch>

@@ -1,0 +1,34 @@
+{
+  "name": "CriativoOS - Equipe de 15 Criativos com IA e Automacao no Computador",
+  "short_name": "CriativoOS",
+  "description": "Sistema Operacional Autonomo instalado no computador e nuvem 24h com Operador de Desktop, Navegador Inteligente, +253 aplicativos e 15 Criativos de IA.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050608",
+  "theme_color": "#B9FC01",
+  "categories": ["business", "productivity", "design", "marketing"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/symbol-oo-volt.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

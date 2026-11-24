@@ -1,0 +1,9 @@
+/* TEAM */
+Product: CriativoOS (https://criativoos.com.br/)
+Brand: CriativoOS - Sistema Operacional Autonomo de Criacao e Automacao
+Repository: https://github.com/ivancnogueira/criativoos-site
+
+/* SITE */
+Last update: 2026-11-24
+Language: Portuguese (Brazil) / pt-BR
+Standards: HTML5, React 19, Vite, Schema.org JSON-LD, Open Graph, Twitter Cards, llms.txt

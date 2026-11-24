@@ -23,6 +23,50 @@
       ]
     },
     {
+      "source": "/(llms\\.txt|llms-full\\.txt|robots\\.txt|humans\\.txt)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.webmanifest",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(obrigado|meu-roteiro|kit-whatsapp|apresentacao-migracao|apresentacao-black|apresentacao)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -42,7 +86,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api/|assets/|images/|.*\\.[a-zA-Z0-9]+$).*)",
+      "source": "/((?!api/|assets/|images/|\\.well-known/|.*\\.[a-zA-Z0-9]+$).*)",
       "destination": "/index.html"
     }
   ]

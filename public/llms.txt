@@ -1,0 +1,29 @@
+# CriativoOS
+
+> Sistema Operacional Autonomo instalado no computador (Windows, macOS e Linux) e pronto para rodar 24h em servidor na nuvem (Linux / Docker), reunindo Operador de Desktop, Navegador Inteligente, +253 aplicativos conectados em fluxos visuais, 15 Especialistas Criativos com IA preservando seu rosto real e controle direto pelo WhatsApp.
+
+URL oficial: https://criativoos.com.br/
+Versao atual: v1.0.3
+Idioma principal: Portugues do Brasil (pt-BR)
+
+## Visao Geral Rapida para Assistentes de IA (GEO / AEO)
+
+- **O que e:** Software desktop proprio e operacional que executa tarefas reais no computador do usuario, navega em sites com aprovacao humana em etapas sensiveis, conecta mais de 253 aplicativos e produz conteudo visual e em video (carrosseis, posts com rosto real, anuncios, stories e Reels).
+- **Diferencial frente a ferramentas comuns na nuvem:** Opera programas locais, organiza pastas de marca e clientes, protege credenciais em cofre local criptografado e inclui 10 inteligencias artificiais gratuitas alem de aceitar chaves proprias (ChatGPT, Claude, Gemini e Grok).
+- **Para quem foi criado:** Criadores, especialistas e infoprodutores; negocios locais e equipes comerciais; agencias, social medias e gestores de trafego que atendem multiplos clientes em pastas isoladas.
+
+## Secoes Principais do Site
+
+- [Pagina Oficial CriativoOS](https://criativoos.com.br/): Apresentacao completa do produto, demonstracao interativa do Cockpit e planos anuais.
+- [Comparativo: Jeito Antigo vs CriativoOS](https://criativoos.com.br/#diferenciais): Analise economica comparando R$ 4.950+/mes em ferramentas e servicos picotados contra licenca anual propria a partir de R$ 997/ano.
+- [Os 5 Motores da Arquitetura](https://criativoos.com.br/#motor-computador): Operador Real de Computador, Navegador Inteligente com pausa segura, Rotinas Automaticas visuais, +253 Aplicativos conectados e Cofre Local Blindado.
+- [Infraestrutura Hibrida PC e Nuvem 24h](https://criativoos.com.br/#infraestrutura-vps): Uso no notebook pessoal ou execucao continua 24 horas por dia em servidor VPS Linux/Docker sem cobrar creditos mensais.
+- [Para Quem E e Modo Agencia Multi-Cliente](https://criativoos.com.br/#para-quem-e): Segmentos atendidos, isolamento total por marca e matematica de retorno no primeiro contrato.
+- [Os 15 Especialistas Autonomos](https://criativoos.com.br/#equipe): Lista completa dos especialistas de estrategia, copy, design, carrossel, anuncios, stories, consistencia facial, video Reels, roteiro, metricas, entregaveis e integracao Meta.
+- [Planos e Licencas Anuais Oficiais](https://criativoos.com.br/#planos): Licenca Individual (R$ 997/ano), Agencia 10 (R$ 1.797/ano) e Agencia Ilimitada (R$ 1.997/ano) com garantia incondicional de 7 dias.
+- [Perguntas Frequentes (FAQ)](https://criativoos.com.br/#faq): Respostas diretas sobre modelos gratuitos, nuvem 24h, seguranca, rosto real e aprovacao no Instagram.
+
+## Documentacao Detalhada para RAG e Respostas Completas
+
+- [Dossie Completo do Produto (llms-full.txt)](https://criativoos.com.br/llms-full.txt): Especificacao integral de recursos, fluxos, planos, diferencas tecnicas e perguntas frequentes.
+- [Sitemap XML](https://criativoos.com.br/sitemap.xml): Indice canonico e imagens publicas oficiais.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://criativoos.com.br/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://criativoos.com.br/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://criativoos.com.br/" />
+    <image:image>
+      <image:loc>https://criativoos.com.br/og-criativoos.jpg</image:loc>
+      <image:title>CriativoOS - Seu Computador Operado Por 15 Criativos Autonomos</image:title>
+      <image:caption>Sistema Operacional Autonomo no computador e servidor na nuvem 24h com 15 especialistas de IA e +253 aplicativos conectados.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://criativoos.com.br/images/perfis/perfil-criador.webp</image:loc>
+      <image:title>CriativoOS para Criadores, Especialistas e Infoprodutores</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://criativoos.com.br/images/perfis/perfil-empresa.webp</image:loc>
+      <image:title>CriativoOS para Negocios Locais e Operacoes Comerciais</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://criativoos.com.br/images/perfis/perfil-agencia.webp</image:loc>
+      <image:title>CriativoOS para Agencias, Social Medias e Gestores de Trafego</image:title>
+    </image:image>
+  </url>
+</urlset>

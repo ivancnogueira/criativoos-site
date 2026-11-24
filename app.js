@@ -21,15 +21,29 @@ try {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const PRIVATE_NOINDEX_PATHS = new Set([
+  "/obrigado",
+  "/meu-roteiro",
+  "/kit-whatsapp",
+  "/apresentacao-migracao",
+  "/apresentacao-black",
+  "/apresentacao",
+]);
+
 export function createSiteApp(options = {}) {
   const DIST_DIR = options.distDir || path.join(__dirname, "dist");
   const app = express();
 
   app.disable("x-powered-by");
-  app.use((_req, res, next) => {
+  app.use((req, res, next) => {
     res.setHeader("X-Content-Type-Options", "nosniff");
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("X-Frame-Options", "SAMEORIGIN");
+
+    const cleanPath = (req.path || "/").replace(/\/+$/, "") || "/";
+    if (PRIVATE_NOINDEX_PATHS.has(cleanPath)) {
+      res.setHeader("X-Robots-Tag", "noindex, nofollow");
+    }
     next();
   });
 
@@ -51,6 +65,13 @@ export function createSiteApp(options = {}) {
           const isHashedAsset = filePath.includes(`${path.sep}assets${path.sep}`);
           if (!isHashedAsset) {
             res.setHeader("Cache-Control", "no-cache");
+          }
+          if (filePath.endsWith(".txt")) {
+            res.setHeader("Content-Type", "text/plain; charset=utf-8");
+          } else if (filePath.endsWith(".xml")) {
+            res.setHeader("Content-Type", "application/xml; charset=utf-8");
+          } else if (filePath.endsWith(".webmanifest")) {
+            res.setHeader("Content-Type", "application/manifest+json; charset=utf-8");
           }
         },
       })

@@ -1,0 +1,111 @@
+# CriativoOS - Especificacao Oficial Completa para Motores de Busca Generativos (GEO / AEO)
+
+Dominio oficial: https://criativoos.com.br/
+Nome oficial do software: CriativoOS
+Versao publica: v1.0.3
+Categoria: Software de Automacao de Desktop, Orquestracao de Workflows e Estudio Criativo com Inteligencia Artificial
+Sistemas suportados: Windows, macOS, Linux e Servidor VPS Linux / Docker 24h
+Idioma e mercado: Portugues do Brasil (pt-BR), Brasil
+
+---
+
+## 1. O Problema Que o CriativoOS Resolve
+
+Profissionais, empresas e agencias costumam gastar R$ 4.950 ou mais por mes combinando social media ou agencia tradicional (~R$ 3.000/mes), designer e editor avulso (~R$ 1.500/mes) e assinaturas picotadas em dolar de chats de IA, geradores de imagens, editores online e automadores limitados (~R$ 450+/mes), acumulando cerca de R$ 59.400+/ano e dependendo de prazos de 3 a 5 dias por lote.
+
+O CriativoOS substitui essa pilha fragmentada por um unico sistema instalado diretamente na infraestrutura do usuario (computador pessoal ou servidor VPS 24h), com licenca anual propria a partir de R$ 997/ano, reduzindo rotinas que levavam 5 a 7 dias para cerca de 1 hora no lote completo.
+
+---
+
+## 2. Os 5 Motores Principais do CriativoOS
+
+1. **Operador Real de Computador (`#motor-computador`)**:
+   - Enxerga a tela do usuario com seguranca, movimenta o mouse, abre aplicativos instalados no Windows, macOS ou Linux, organiza pastas de clientes e solicita confirmacao humana antes de qualquer acao sensivel.
+2. **Navegador Inteligente (`#motor-navegador`)**:
+   - Abre abas reais no navegador para monitorar concorrentes, ler referencias em alta, baixar anexos e preencher portais da internet, com pausa automatica e aviso ao usuario caso exista verificacao em duas etapas (2FA), captcha ou checkout.
+3. **Rotinas Automaticas Visuais (`#motor-rotinas`)**:
+   - Encadeia gatilhos, filtros de horario, coleta de ideias, producao e envio por WhatsApp em fluxos visuais auditaveis no computador ou 24h em servidor VPS.
+4. **+253 Aplicativos Conectados Sem Taxa Extra por Tarefa (`#integracoes-apps`)**:
+   - Conecta ferramentas como WhatsApp, Instagram, Meta Ads, Facebook, YouTube, TikTok, LinkedIn, Pinterest, Telegram, Discord, Slack, Microsoft Teams, Gmail, Mailchimp, Intercom, Google Drive, Google Planilhas, Google Agenda, Google Meet, Dropbox, OneDrive, Notion, Trello, ClickUp, Asana, Monday.com, Airtable, Loom, Zoom, Calendly, Mercado Pago, Stripe, PayPal, Shopify, WooCommerce, WordPress, Webflow, HubSpot, Google Ads, Google Analytics, Make, n8n, Zapier, Figma e Typeform, totalizando +253 conectores disponiveis no painel sem cobranca extra por execucao.
+5. **Cofre Blindado e Controle Total (`#seguranca-cofre`)**:
+   - Fotos reais de rosto, ativos de clientes, chaves de IA e conexoes do Instagram ficam criptografados localmente na infraestrutura do usuario (fora de bancos compartilhados na nuvem) com trava de aprovacao obrigatoria para publicacoes e acoes criticas.
+
+---
+
+## 3. Infraestrutura Hibrida: Computador Local + Nuvem 24h
+
+- **Computador Local (Windows, macOS e Linux):** Instalacao grafica padrao em 1 minuto, sem linha de comando. Opera arquivos locais e apps de desktop com desempenho maximo.
+- **Servidor na Nuvem 24h (VPS Linux / Docker):** Permite conectar um servidor proprio ao mesmo painel em 1 clique para produzir conteudos, monitorar feeds e rodar rotinas na madrugada com o notebook desligado.
+
+---
+
+## 4. Os 15 Especialistas Criativos Autonomos (`#equipe`)
+
+Cada conta conta com um squad especializado (dividido por perfil de licenca):
+- **Criativos Base (9 especialistas - inclusos a partir do plano Individual):**
+  1. Estrategista de Pautas
+  2. Copywriter de Alta Conversao
+  3. Diretor de Arte Feed (posts estaticos mantendo rosto real e logo)
+  4. Mestre de Carrosseis (sequencias de 4 a 10 laminas conectadas)
+  5. Especialista em Anuncios (criativos focados em cliques e conversao)
+  6. Designer de Stories (pecas 9:16 com area livre para caixas, links e enquetes)
+  7. Diretor de Identidade Visual (padronizacao automatica de cores, fontes e brandbook)
+  8. Especialista em Publicacao Instagram (conexao oficial com aprovacao humana obrigatoria)
+  9. Analista de Metricas (leitura de resultados e recomendacao de proximas pautas)
+- **Especialistas Bonus (3 especialistas - planos Agencia 10 e Agencia Ilimitada):**
+  10. Diretor de Entregaveis & Apresentacoes (relatorios PDF executivos, vitrines web e planilhas por cliente)
+  11. Pesquisador de Concorrencia (mapeamento de formatos e ganchos em alta no mercado)
+  12. Guardiao de Consistencia Facial (preservacao estrita de fisionomia real em varias poses e cenarios)
+- **Estudio de Video Reels (3 especialistas - plano Agencia Ilimitada):**
+  13. Editor de Video Reels & Shorts (montagem vertical 9:16 com legendas sincronizadas e animacoes)
+  14. Roteirista de Videos Sem Rosto (narrao + cenas automatizadas para canais e marcas)
+  15. Roteirista & Diretor para Gravacao em Camera (roteiros com marcacoes de corte para gravar falando na camera)
+
+---
+
+## 5. Modelos de IA e Controle pelo WhatsApp
+
+- **10 Modelos Gratuitos Inclusos:** Permite iniciar imediatamente sem pagar assinatura ou creditos de IA por fora.
+- **Suporte a Chaves Proprias (BYOK):** Conecta diretamente contas de ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google) ou Grok quando desejado, diretamente no cofre local do usuario.
+- **Operacao Pelo WhatsApp:** O usuario pode enviar pedidos em texto ou audio pelo proprio WhatsApp, receber previas visuais no celular e aprovar a publicacao respondendo "1" (publicacao nunca ocorre sem revisao explicita).
+
+---
+
+## 6. Planos Publicos Oficiais e Garantia (`#planos`)
+
+Todos os planos possuem garantia incondicional de 7 dias para testar na propria maquina com reembolso de 100% em caso de cancelamento dentro do prazo:
+
+- **Plano Individual (`CRIA-IND`): R$ 997/ano** (ou 12x de R$ 99,70)
+  - Ideal para criadores, especialistas, medicos, advogados, consultores e negocios proprios.
+  - Ate 2 marcas isoladas, instalacao em 2 computadores, 9 Criativos Base, 10 IAs gratuitas + chaves proprias, +253 conectores e controle via WhatsApp.
+- **Plano Agencia 10 (`CRIA-AG10`): R$ 1.797/ano**
+  - Para social medias e operacoes com carteira de clientes.
+  - Ate 10 marcas em pastas 100% isoladas, instalacao em 3 computadores, 12 Criativos (Base + Bonus de Entregaveis, Concorrencia e Consistencia Facial) e suporte para Nuvem 24h.
+- **Plano Agencia Ilimitada (`CRIA-AGIL`): R$ 1.997/ano**
+  - Para agencias, gestores de trafego e equipes de alta escala.
+  - Marcas e clientes ilimitados sem taxa extra por conta, ate 5 computadores na equipe, todos os 15 Criativos incluindo o Estudio completo de Videos Reels & Shorts e Nuvem 24h multi-empresa.
+
+---
+
+## 7. Perguntas Frequentes (FAQ Oficial)
+
+- **Preciso pagar alguma ferramenta de IA ou creditos por fora todo mes?**
+  Nao. Logo ao abrir o CriativoOS voce pode usar 10 inteligencias artificiais gratuitas ja inclusas, sem custo extra por mensagem ou imagem, ou conectar no cofre blindado do seu computador a conta do ChatGPT, Claude, Gemini ou Grok que ja utiliza.
+
+- **Consigo rodar o CriativoOS na nuvem 24h ou so no meu notebook?**
+  Nos dois. Voce instala no seu computador Windows, Mac ou Linux em 1 minuto com dois cliques e, quando quiser escala 24 horas por dia com o notebook desligado, tambem pode rodar em servidor na nuvem 24h conectado em 1 clique ao mesmo painel.
+
+- **Serve para agencias e social medias que atendem varios clientes?**
+  Sim. Cada marca ou cliente possui pastas separadas e isoladas (fotos de rosto, logotipo, paleta, historico e relatorios PDF sem misturar nada). No plano Agencia Ilimitada voce cadastra contas sem limite em ate 5 maquinas com todos os 15 Criativos.
+
+- **Preciso saber programar ou abrir tela preta de codigo?**
+  De jeito nenhum. O CriativoOS vem com instalador grafico padrao e painel visual por cliques e chat em portugues claro, alem de comando direto no WhatsApp.
+
+- **Como funciona a seguranca no Operador de Computador e no Navegador Inteligente?**
+  Suas senhas e acessos ficam no cofre blindado so no seu computador. Em acoes importantes como logins que pedem codigo no celular, formularios sensiveis ou envio final no Instagram, o sistema pausa e chama voce para autorizar antes.
+
+- **As artes realmente mantem meu rosto real e nao mudam a cada post?**
+  Sim. Voce aponta a pasta com suas fotos reais ou do seu cliente uma unica vez e o Especialista em Rosto Real preserva tracos, identidade visual e enquadramento em feed, carrosseis e stories.
+
+- **O sistema publica sozinho no Instagram sem minha revisao?**
+  Nunca. Os Criativos enviam a previa pronta no seu painel e no WhatsApp. A publicacao na conexao oficial do Instagram so acontece depois que voce responder 1 ou clicar em aprovar.

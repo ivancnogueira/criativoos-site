@@ -5,6 +5,7 @@ import { PresentationMigrationPage } from "./pages/PresentationMigrationPage";
 import { PresentationBlackPage } from "./pages/PresentationBlackPage";
 import { PresenterScriptPage } from "./pages/PresenterScriptPage";
 import { WhatsAppCampaignKitPage } from "./pages/WhatsAppCampaignKitPage";
+import { RouteSeoSync } from "./components/seo/RouteSeoSync";
 
 function normalizePathname(raw: string): string {
   const clean = (raw || "/").split("?")[0].split("#")[0].replace(/\/+$/, "");
@@ -24,27 +25,26 @@ export const App: React.FC = () => {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
+  let page: React.ReactNode = <HomePage />;
+
   if (pathname === "/apresentacao-migracao") {
-    return <PresentationMigrationPage />;
+    page = <PresentationMigrationPage />;
+  } else if (pathname === "/apresentacao-black" || pathname === "/apresentacao") {
+    page = <PresentationBlackPage />;
+  } else if (pathname === "/meu-roteiro") {
+    page = <PresenterScriptPage />;
+  } else if (pathname === "/kit-whatsapp") {
+    page = <WhatsAppCampaignKitPage />;
+  } else if (pathname === "/obrigado") {
+    page = <ThankYouPage />;
   }
 
-  if (pathname === "/apresentacao-black" || pathname === "/apresentacao") {
-    return <PresentationBlackPage />;
-  }
-
-  if (pathname === "/meu-roteiro") {
-    return <PresenterScriptPage />;
-  }
-
-  if (pathname === "/kit-whatsapp") {
-    return <WhatsAppCampaignKitPage />;
-  }
-
-  if (pathname === "/obrigado") {
-    return <ThankYouPage />;
-  }
-
-  return <HomePage />;
+  return (
+    <>
+      <RouteSeoSync pathname={pathname} />
+      {page}
+    </>
+  );
 };
 
 export default App;

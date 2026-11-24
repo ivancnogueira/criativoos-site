@@ -29,7 +29,7 @@ function walkFiles(dirPath) {
 async function run() {
   console.log("🔎 Verificando criativoos-site (estrutura, zero travessões, regras comerciais e rotas SPA)...");
 
-  // 1. Verificar ativos oficiais obrigatórios e acervo real de imagens
+  // 1. Verificar ativos oficiais obrigatórios e acervo real de imagens + SEO/GEO/AEO/OG/PWA
   for (const asset of [
     "public/logo-criativoos-dark.svg",
     "public/logo-criativoos-light.svg",
@@ -38,9 +38,56 @@ async function run() {
     "public/images/01.webp",
     "public/images/criativo-ia-operacao-v1-dark.webp",
     "public/images/criativo-ia-stories.webp",
+    "public/og-criativoos.jpg",
+    "public/icon-192.png",
+    "public/icon-512.png",
+    "public/apple-touch-icon.png",
+    "public/favicon-48x48.png",
+    "public/robots.txt",
+    "public/sitemap.xml",
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/manifest.webmanifest",
     "dist/index.html",
+    "dist/robots.txt",
+    "dist/sitemap.xml",
+    "dist/llms.txt",
+    "dist/llms-full.txt",
+    "dist/og-criativoos.jpg",
+    "dist/.htaccess",
   ]) {
     assert.ok(fs.existsSync(path.join(ROOT, asset)), `Asset ausente: ${asset}`);
+  }
+
+  // 1B. Validar Schema.org JSON-LD e zero vazamento de preços promocionais em arquivos SEO/GEO
+  const distHtml = readUtf8("dist/index.html");
+  const jsonLdMatch = distHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  assert.ok(jsonLdMatch, "Schema JSON-LD ausente em dist/index.html");
+  const jsonLd = JSON.parse(jsonLdMatch[1]);
+  assert.ok(Array.isArray(jsonLd["@graph"]), "JSON-LD precisa conter @graph");
+  const graphTypes = new Set(jsonLd["@graph"].map((n) => n["@type"]));
+  for (const requiredType of ["Organization", "WebSite", "WebPage", "SoftwareApplication", "FAQPage", "HowTo"]) {
+    assert.ok(graphTypes.has(requiredType), `Tipo Schema.org ausente no JSON-LD: ${requiredType}`);
+  }
+
+  for (const seoFile of [
+    "index.html",
+    "public/robots.txt",
+    "public/sitemap.xml",
+    "public/llms.txt",
+    "public/llms-full.txt",
+  ]) {
+    const content = readUtf8(seoFile);
+    assert.ok(
+      !content.includes("\u2014") && !content.includes("\u2013"),
+      `Travessão (em-dash/en-dash) proibido em arquivo SEO: ${seoFile}`
+    );
+    for (const forbidden of ["R$ 47", "R$ 87", "R$ 97", "R$ 177", "R$ 197"]) {
+      assert.ok(
+        !content.includes(forbidden),
+        `Preço promocional '${forbidden}' vazou no SEO público (${seoFile})`
+      );
+    }
   }
 
   // 2. Proibir travessões (em-dash \u2014 e en-dash \u2013) nos componentes da página e apresentações
@@ -127,6 +174,26 @@ async function run() {
       assert.equal(res.status, 200, `Rota SPA ${route} retornou HTTP ${res.status}`);
       const html = await res.text();
       assert.ok(html.includes("CriativoOS"), `HTML da rota ${route} inválido`);
+      const xRobots = res.headers.get("x-robots-tag");
+      if (route === "/") {
+        assert.ok(!xRobots, `Rota / não deve possuir X-Robots-Tag bloqueante (${xRobots})`);
+      } else {
+        assert.equal(xRobots, "noindex, nofollow", `Rota privada ${route} precisa retornar X-Robots-Tag: noindex, nofollow`);
+      }
+    }
+
+    for (const [seoPath, expectedCt] of [
+      ["/robots.txt", "text/plain"],
+      ["/sitemap.xml", "application/xml"],
+      ["/llms.txt", "text/plain"],
+      ["/llms-full.txt", "text/plain"],
+      ["/manifest.webmanifest", "application/manifest+json"],
+      ["/og-criativoos.jpg", "image/jpeg"],
+    ]) {
+      const res = await fetch(`${base}${seoPath}`);
+      assert.equal(res.status, 200, `Ativo SEO ${seoPath} retornou HTTP ${res.status}`);
+      const ct = res.headers.get("content-type") || "";
+      assert.ok(ct.includes(expectedCt), `Content-Type inesperado em ${seoPath}: ${ct}`);
     }
   } finally {
     await new Promise((resolve) => server.close(resolve));
