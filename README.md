@@ -41,15 +41,18 @@ O arquivo `vercel.json` e a função `api/health.js` já configuram framework Vi
 2. Cadastre as variáveis `VITE_CHECKOUT_*` e `VITE_SUPPORT_WHATSAPP_URL` em **Settings -> Environment Variables**.
 3. Clique em **Deploy** (Build Command: `npm run build`, Output Directory: `dist`).
 
-### 2. Hostinger (Web Apps Node.js ou Hospedagem Web/Estática)
-- **Via Hostinger Web Apps (Node.js):**
-  1. Conecte o repositório GitHub selecionando Node 20+.
-  2. Configure as variáveis `VITE_*` no painel antes do deploy (o Hostinger injeta `PORT` automaticamente).
-  3. Build Command: `npm run build` | Start Command: `npm start` (`node server.js`).
+### 2. Hostinger (Web Apps — **Selecione o preset `Vite`**)
+> **Importante:** Como o projeto possui `server.js` para VPS/aaPanel/Docker, a Hostinger Web Apps pode autodetectar como `Express` por padrão — **não deixe em `Express`** porque esse preset não executa `npm run build` para gerar a pasta `dist/`.
+
+- **Via Hostinger Web Apps (Recomendado):**
+  1. Em **Configuração predefinida**, altere de `Express` para **`Vite`**.
+  2. Confira **Diretório raiz:** `./`, **Comando de compilação:** `npm run build` e **Diretório de saída:** `dist`.
+  3. **Variáveis de ambiente:** **não são obrigatórias** para o site subir no ar. Se ainda não cadastrar nada, o site publica normalmente com placeholders seguros (`#checkout-*`). Quando quiser ativar links reais de checkout e WhatsApp, adicione `VITE_CHECKOUT_*` e `VITE_SUPPORT_WHATSAPP_URL` antes de salvar e reimplantar.
+  4. Clique em **Salvar e reimplantar**. O arquivo `public/.htaccess` é copiado automaticamente para `dist/.htaccess` garantindo todas as rotas SPA sem 404.
+  *(Nota: `app.js` + `server.js` também foram ajustados sem `top-level await` para compatibilidade caso execute sob `lsnode.js` em modo Express após `npm run build`.)*
 - **Via Hospedagem Web Tradicional / Estática (Apache/LiteSpeed):**
-  1. Execute `npm run build` localmente (ou via pipeline).
-  2. O arquivo `public/.htaccess` já é copiado automaticamente para `dist/.htaccess` com rewrite SPA e cache.
-  3. Envie o conteúdo inteiro da pasta `dist/` para `public_html/`.
+  1. Execute `npm run build` localmente.
+  2. Envie todo o conteúdo de `dist/` (incluindo `.htaccess`) para `public_html/`.
 
 ### 3. Easypanel (Docker ou Nixpacks)
 - **Opção recomendada (`Dockerfile`):**

@@ -1,91 +1,24 @@
-import express from "express";
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { createSiteApp } from "./app.js";
 
-if (typeof process.loadEnvFile === "function") {
-  try {
-    process.loadEnvFile();
-  } catch {
-    // Variáveis podem ser injetadas pelo ambiente / aaPanel / PM2
-  }
-} else {
-  try {
-    const dotenv = await import("dotenv");
-    dotenv.default?.config?.();
-  } catch {
-    // dotenv opcional
-  }
-}
+export { createSiteApp };
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const args = process.argv.slice(2);
+const cliPort =
+  args.find((arg) => /^\d+$/.test(arg)) ||
+  (args.includes("--port") ? args[args.indexOf("--port") + 1] : null);
 
-export function createSiteApp(options = {}) {
-  const DIST_DIR = options.distDir || path.join(__dirname, "dist");
-  const app = express();
+// Em painéis como Hostinger (lsnode/Passenger), process.env.PORT pode ser numérico ou socket gerenciado
+const PORT = process.env.PORT || (cliPort ? Number(cliPort) : 3008);
 
-  app.disable("x-powered-by");
-  app.use((_req, res, next) => {
-    res.setHeader("X-Content-Type-Options", "nosniff");
-    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-    res.setHeader("X-Frame-Options", "SAMEORIGIN");
-    next();
-  });
+const app = createSiteApp();
 
-  app.get("/api/health", (_req, res) => {
-    res.status(200).json({
-      status: "ok",
-      service: "criativoos-site",
-      release: "v1.0.3",
-      timestamp: new Date().toISOString(),
-    });
-  });
-
-  if (fs.existsSync(DIST_DIR)) {
-    app.use(
-      express.static(DIST_DIR, {
-        maxAge: "7d",
-        etag: true,
-        setHeaders: (res, filePath) => {
-          const isHashedAsset = filePath.includes(`${path.sep}assets${path.sep}`);
-          if (!isHashedAsset) {
-            res.setHeader("Cache-Control", "no-cache");
-          }
-        },
-      })
-    );
-  }
-
-  // Fallback SPA para todas as rotas comerciais do CriativoOS
-  app.get("*", (_req, res) => {
-    const indexPath = path.join(DIST_DIR, "index.html");
-    if (fs.existsSync(indexPath)) {
-      res.setHeader("Cache-Control", "no-cache");
-      return res.sendFile(indexPath);
-    }
-    return res.status(404).json({ error: "dist_not_built" });
-  });
-
-  return app;
-}
-
-const isEntryPoint =
-  process.argv[1] && path.resolve(process.argv[1]) === path.resolve(__filename);
-
-if (isEntryPoint) {
-  const args = process.argv.slice(2);
-  const cliPort =
-    args.find((arg) => /^\d+$/.test(arg)) ||
-    (args.includes("--port") ? args[args.indexOf("--port") + 1] : null);
-  const PORT = Number(process.env.PORT || cliPort || 3008);
-
-  const app = createSiteApp();
-  app.listen(PORT, "0.0.0.0", () => {
+if (process.env.CRIATIVOOS_NO_LISTEN !== "1") {
+  app.listen(PORT, () => {
     console.log(`\n======================================================`);
     console.log(`CRIATIVOOS | SITE OFICIAL & APRESENTAÇÕES NÍVEL ÔMEGA`);
     console.log(`Servidor rodando em: http://localhost:${PORT}`);
-    console.log(`Pronto para aaPanel / PM2 / Nginx (criativoos.com.br)`);
     console.log(`======================================================\n`);
   });
 }
+
+export default app;

@@ -36,7 +36,7 @@ COPY package*.json ./
 RUN npm ci --omit=dev && npm cache clean --force
 
 COPY --from=builder /app/dist ./dist
-COPY server.js ./
+COPY app.js server.js ./
 
 EXPOSE 3008
 
