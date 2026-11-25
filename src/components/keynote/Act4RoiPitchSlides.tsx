@@ -1,8 +1,9 @@
 import React from "react";
-import { ArrowUpRight, Check, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, ShieldCheck, Sparkles, Users } from "lucide-react";
 import {
   getCampaignOfferPlans,
   OFFICIAL_PUBLIC_PLANS,
+  WHATSAPP_COMMUNITY_URL,
 } from "../../config/campaignLinks";
 import type { KeynoteEdition } from "../../data/keynoteSlidesData";
 
@@ -18,37 +19,37 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
   if (slideId === 16) {
     return (
       <div className="mx-auto max-w-4xl rounded-3xl border border-white/15 bg-[#141416] p-7">
-        <div className="grid gap-4 sm:grid-cols-2 text-left">
+        <div className="grid gap-4 text-left sm:grid-cols-2">
           <div className="space-y-3 rounded-2xl border border-white/10 bg-black/40 p-5 text-sm">
             <div className="font-mono text-xs text-red-400">CUSTO TRADICIONAL MENSAL</div>
             <div className="flex justify-between text-zinc-300">
-              <span>SaaS Social Media + IA + Vídeo</span>
-              <span className="font-mono">R$ 850/mês</span>
+              <span>Agência ou Social Media mensal</span>
+              <span className="font-mono">R$ 3.000/mês</span>
             </div>
             <div className="flex justify-between text-zinc-300">
-              <span>Freelancer Social / Design básico</span>
-              <span className="font-mono">R$ 2.500/mês</span>
+              <span>Designer + Editor para Reels</span>
+              <span className="font-mono">R$ 1.500/mês</span>
             </div>
             <div className="flex justify-between text-zinc-300">
-              <span>Editor de Reels / Cortes</span>
-              <span className="font-mono">R$ 1.800/mês</span>
+              <span>Assinaturas em dólar e automações</span>
+              <span className="font-mono">R$ 450+/mês</span>
             </div>
             <div className="flex justify-between border-t border-white/10 pt-3 font-bold text-white">
               <span>Total Anual Fora do CriativoOS</span>
-              <span className="font-mono text-red-400">R$ 61.800/ano</span>
+              <span className="font-mono text-red-400">R$ 59.400+/ano</span>
             </div>
           </div>
 
           <div className="flex flex-col justify-between rounded-2xl border border-[#B9FC01]/45 bg-[#12160F] p-5">
             <div>
-              <div className="font-mono text-xs text-[#B9FC01]">NA ARQUITETURA CRIATIVOOS</div>
+              <div className="font-mono text-xs text-[#B9FC01]">COM O CRIATIVOOS NO SEU PC</div>
               <h4 className="mt-2 font-display text-2xl font-bold text-white">
-                Se paga na 1ª campanha ou no 1º cliente atendido
+                Se paga na primeira campanha ou no 1º cliente atendido
               </h4>
               <p className="mt-2 text-xs leading-relaxed text-zinc-300">
-                15 Criativos especializados rodando no seu PC/VPS, usando modelos
-                gratuitos OpenCode ou sua assinatura atual, com Estúdio Instagram e Vídeo
-                Remotion inclusos.
+                Operador de Computador, Navegador Inteligente, +253 apps conectados, 15 Criativos
+                com seu rosto real e Estúdio de Vídeos para Reels usando 10 IAs gratuitas ou sua
+                conta atual.
               </p>
             </div>
             <div className="mt-4 rounded-xl bg-black/40 px-4 py-2.5 font-mono text-xs text-[#B9FC01]">
@@ -62,22 +63,29 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
 
   if (slideId === 17) {
     return (
-      <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3 text-left">
+      <div className="mx-auto grid max-w-5xl gap-5 text-left md:grid-cols-3">
         {OFFICIAL_PUBLIC_PLANS.map((p) => (
           <div
             key={p.id}
             className="rounded-3xl border border-white/15 bg-[#141416] p-6"
           >
-            <div className="font-mono text-xs text-zinc-400">PÁGINA OFICIAL · SITE PÚBLICO</div>
+            <div className="font-mono text-xs text-zinc-400">OFERTA PERPÉTUA · SITE PÚBLICO</div>
             <h4 className="mt-2 font-display text-xl font-bold text-white">{p.name}</h4>
-            <div className="mt-4 font-display text-3xl font-bold text-white">
-              {p.priceCash}
-              <span className="text-xs font-normal text-zinc-400">/ano</span>
+            <div className="mt-4 flex items-baseline gap-1.5 font-display">
+              <span className="text-sm font-bold text-[#B9FC01]">12x de</span>
+              <span className="text-3xl font-bold text-white">{p.installmentValue}</span>
             </div>
-            <div className="text-xs text-zinc-400">{p.installmentsText}</div>
+            <div className="mt-1 text-xs font-semibold text-zinc-300">
+              ou {p.priceCash} à vista/ano
+            </div>
             <div className="mt-4 border-t border-white/10 pt-3 text-xs text-zinc-300">
               {p.brandsLimit} · {p.pcsLimit} · {p.criativosCount}
             </div>
+            {p.orderBumpNote && (
+              <div className="mt-2 text-[11px] text-amber-200/90">
+                {p.orderBumpNote}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -91,12 +99,12 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
           <span className="inline-flex items-center gap-2 rounded-full bg-[#B9FC01] px-4 py-1 font-mono text-[11px] font-bold text-[#0D0D0D]">
             <Sparkles className="h-3.5 w-3.5" />
             {isMig
-              ? "JANELA MIGRAÇÃO DA BASE (48H) · VITALÍCIO INCLUSO NO ILIMITADO"
-              : "LOTE BLACK FRIDAY (QUINTA & SEXTA) · VITALÍCIO INCLUSO NO ILIMITADO"}
+              ? "FASE 1 · PRÉ-LANÇAMENTO FUNDADORES (1ª IMERSÃO) · VITALÍCIO NO ILIMITADO"
+              : "FASE 2 · LANÇAMENTO OFICIAL QUINTA BLACK · VITALÍCIO NO ILIMITADO"}
           </span>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3 text-left">
+        <div className="grid gap-4 text-left md:grid-cols-3">
           {wavePlans.map((plan) => {
             const isHero = Boolean(plan.highlighted);
             return (
@@ -131,16 +139,22 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
                   <div className="mt-2.5 border-y border-white/10 py-2.5">
                     {plan.anchorPrice && (
                       <div className="font-mono text-xs text-zinc-500 line-through">
-                        Oficial: {plan.anchorPrice}/ano
+                        Oficial: {plan.anchorInstallments} ({plan.anchorPrice}/ano)
                       </div>
                     )}
-                    <div className="font-display text-3xl font-bold text-white sm:text-4xl">
-                      {plan.priceCash}
+                    <div className="mt-0.5 flex items-baseline gap-1.5 font-display">
+                      <span className="text-base font-extrabold text-[#B9FC01] sm:text-lg">
+                        12x de
+                      </span>
+                      <span className="text-3xl font-bold text-white sm:text-4xl">
+                        {plan.installmentValue}
+                      </span>
                     </div>
-                    <div className="text-xs font-semibold text-[#B9FC01]">
-                      {plan.installmentsText}
+                    <div className="mt-1 text-xs font-semibold text-zinc-200">
+                      ou <strong className="text-[#B9FC01]">{plan.priceCash} à vista</strong>
+                      {plan.vitalicioIncluded ? " · SEM ANUIDADE" : " (anual)"}
                     </div>
-                    <div className="mt-0.5 font-mono text-[10px] text-zinc-300">
+                    <div className="mt-0.5 font-mono text-[10px] text-zinc-400">
                       {plan.billingCycle}
                     </div>
                   </div>
@@ -190,8 +204,9 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
         7 Dias de Garantia Incondicional + Ativação Imediata v1.0.3
       </h4>
       <p className="mt-3 text-sm text-zinc-300">
-        Instale hoje no seu Windows, Mac ou Linux, conecte sua marca e teste os 15
-        Criativos. Se não fizer sentido, reembolso 100% integral dentro dos 7 dias.
+        Instale hoje no seu Windows, Mac ou Linux, conecte sua marca e teste tudo por dentro com aulas
+        gravadas na Área de Membros e acesso à Comunidade Oficial no WhatsApp. Se não fizer sentido,
+        devolvemos 100% do valor dentro dos 7 dias.
       </p>
 
       <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -201,8 +216,17 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
           rel="noopener noreferrer"
           className="volt-button inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm"
         >
-          Garantir Agência Ilimitada VITALÍCIO ({heroPlan.priceCash})
+          Garantir Ilimitado VITALÍCIO (12x {heroPlan.installmentValue} ou {heroPlan.priceCash})
           <ArrowUpRight className="h-4 w-4" />
+        </a>
+        <a
+          href={WHATSAPP_COMMUNITY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-5 py-3.5 text-xs font-semibold text-zinc-200 hover:border-[#B9FC01] hover:text-white"
+        >
+          <Users className="h-4 w-4 text-[#B9FC01]" />
+          Comunidade Oficial
         </a>
       </div>
       <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-zinc-400">
@@ -214,7 +238,7 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
             rel="noopener noreferrer"
             className="underline hover:text-[#B9FC01]"
           >
-            Ou ir de {p.name} Anual ({p.priceCash})
+            Ou ir de {p.name} Anual (12x {p.installmentValue} ou {p.priceCash})
           </a>
         ))}
       </div>

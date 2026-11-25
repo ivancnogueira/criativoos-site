@@ -3,11 +3,12 @@ import {
   BarChart3,
   Calendar,
   CheckCheck,
-  Chrome,
   GitBranch,
+  Globe,
   Layers,
+  Lock,
+  Monitor,
   Moon,
-  MousePointerClick,
   Play,
   Server,
   Sun,
@@ -35,8 +36,14 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
             onClick={() => setLightMode((v) => !v)}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-xs font-semibold text-white hover:border-white/35"
           >
-            {lightMode ? <Moon className="h-3.5 w-3.5 text-[#B9FC01]" /> : <Sun className="h-3.5 w-3.5 text-blue-400" />}
-            {lightMode ? "Voltar ao Dark Volt (#B9FC01)" : "Testar Light Mode Royal Cobalt (#0031CC)"}
+            {lightMode ? (
+              <Moon className="h-3.5 w-3.5 text-[#B9FC01]" />
+            ) : (
+              <Sun className="h-3.5 w-3.5 text-blue-400" />
+            )}
+            {lightMode
+              ? "Voltar ao Modo Escuro Volt"
+              : "Testar Modo Claro Cobalt"}
           </button>
         </div>
 
@@ -47,57 +54,61 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
               : "border-white/15 bg-[#0D0D0D] text-white"
           }`}
         >
-          <div className="rounded-2xl border border-current/10 p-4 md:col-span-3 text-left">
+          <div className="rounded-2xl border border-current/10 p-4 text-left md:col-span-3">
             <img
               src={lightMode ? "/logo-criativoos-light.svg" : "/logo-criativoos-dark.svg"}
               alt="CriativoOS"
               className="h-5 w-auto"
             />
             <div className="mt-4 space-y-2 text-xs">
-              <div className="font-mono text-[10px] opacity-60">SIDEBAR DE OPERAÇÃO</div>
-              {["Conversas & Equipes", "Estúdio Social Media", "Fluxos em Grafo", "Loja 253+ Apps", "WhatsApp & Voz"].map(
-                (item) => (
-                  <div key={item} className="rounded-lg bg-current/5 px-2.5 py-1.5 font-medium">
-                    {item}
-                  </div>
-                )
-              )}
+              <div className="font-mono text-[10px] opacity-60">MENU DO ESTÚDIO</div>
+              {[
+                "Equipe & Conversas",
+                "Estúdio do Instagram",
+                "Rotinas Automáticas",
+                "Loja +253 Aplicativos",
+                "WhatsApp & Nuvem 24h",
+              ].map((item) => (
+                <div key={item} className="rounded-lg bg-current/5 px-2.5 py-1.5 font-medium">
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="rounded-2xl border border-current/10 p-4 md:col-span-6 text-left">
+          <div className="rounded-2xl border border-current/10 p-4 text-left md:col-span-6">
             <div className="mx-auto mb-4 w-fit rounded-full bg-[#09090B] px-4 py-1 font-mono text-[10px] text-[#B9FC01] ring-1 ring-white/10">
-              ● Dynamic Island · 3 Criativos executando em paralelo
+              ● Barra de Atividade ao Vivo · 3 especialistas trabalhando juntos
             </div>
             <div className="space-y-2.5 text-xs">
               <div className="rounded-xl border border-current/10 bg-current/5 p-3">
                 <strong className={lightMode ? "text-[#0031CC]" : "text-[#B9FC01]"}>
-                  Bloco 1 · Raciocínio ao Vivo
+                  Etapa 1 · Operação e Pesquisa ao Vivo
                 </strong>
                 <p className="mt-1 opacity-80">
-                  Lendo ficha PDF da marca + selecionando 4 fotos reais da pasta autorizada.
+                  Lendo ficha da marca, conferindo planilha da semana e separando suas 4 fotos reais.
                 </p>
               </div>
               <div className="rounded-xl border border-current/10 bg-current/5 p-3">
                 <strong className={lightMode ? "text-[#0031CC]" : "text-[#B9FC01]"}>
-                  Bloco 2 · Entrega Visual + Legenda
+                  Etapa 2 · Entrega Pronta no Painel e Celular
                 </strong>
                 <p className="mt-1 opacity-80">
-                  Carrossel 1080×1350 gerado com margem segura 10% pronto para preview.
+                  Carrossel montado com suas cores, legenda persuasiva e prévia enviada para sua aprovação.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-current/10 p-4 md:col-span-3 text-left text-xs">
-            <div className="font-mono text-[10px] opacity-60">INSPETOR LATERAL</div>
+          <div className="rounded-2xl border border-current/10 p-4 text-left text-xs md:col-span-3">
+            <div className="font-mono text-[10px] opacity-60">PASTA DA MARCA</div>
             <div className="mt-3 space-y-2">
               {[
-                "Configurações do Criativo",
-                "Pastas Autorizadas (3)",
-                "Subconversas Ativas",
-                "Memórias da Marca",
-                "Modelos de Backup",
+                "Fotos Reais & Logotipo",
+                "Pastas Autorizadas no PC",
+                "Clientes 100% Separados",
+                "Memórias e Tom de Voz",
+                "Cofre Local Protegido",
               ].map((t) => (
                 <div key={t} className="rounded-lg border border-current/10 px-2.5 py-1.5">
                   {t}
@@ -111,6 +122,80 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
   }
 
   if (slideId === 10) {
+    return (
+      <div className="grid gap-5 text-left md:grid-cols-3">
+        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
+          <Monitor className="h-7 w-7 text-[#B9FC01]" />
+          <h4 className="mt-4 font-display text-lg font-bold text-white">
+            Operador Real de Computador
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+            Enxerga sua tela com segurança, abre suas pastas locais, preenche planilhas, organiza
+            arquivos de clientes e opera programas do seu Windows, Mac ou Linux sem erro manual.
+          </p>
+        </div>
+        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
+          <Globe className="h-7 w-7 text-[#B9FC01]" />
+          <h4 className="mt-4 font-display text-lg font-bold text-white">
+            Navegador Inteligente
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+            Abre páginas de verdade para pesquisar concorrentes, mapear temas em alta e baixar
+            referências e anexos direto para a sua pasta de trabalho.
+          </p>
+        </div>
+        <div className="rounded-3xl border border-[#B9FC01]/35 bg-[#12160F] p-6">
+          <Lock className="h-7 w-7 text-[#B9FC01]" />
+          <h4 className="mt-4 font-display text-lg font-bold text-white">
+            Pausa Segura e Cofre Local
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-300">
+            Suas senhas nunca vão para bancos públicos. Quando um site pede código no celular ou
+            confirmação importante, o sistema pausa na hora e chama você para autorizar.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (slideId === 11) {
+    return (
+      <div className="mx-auto grid max-w-5xl gap-5 text-left md:grid-cols-3">
+        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
+          <Layers className="h-6 w-6 text-[#B9FC01]" />
+          <h4 className="mt-3 font-display text-xl font-bold text-white">
+            +253 Aplicativos Conectados
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+            Conecte Google Drive, Planilhas, Notion, Gmail, Trello, ClickUp, WordPress e seu CRM em
+            um clique, sem pagar taxa extra por cada tarefa executada.
+          </p>
+        </div>
+        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
+          <GitBranch className="h-6 w-6 text-[#B9FC01]" />
+          <h4 className="mt-3 font-display text-xl font-bold text-white">
+            Rotinas Visuais &amp; PDFs Semanais
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+            Agende fluxos automáticos: toda segunda às 8h o sistema analisa resultados, gera ideias no
+            Drive e entrega o relatório em PDF pronto para o cliente.
+          </p>
+        </div>
+        <div className="rounded-3xl border border-[#B9FC01]/35 bg-[#12160F] p-6">
+          <Server className="h-6 w-6 text-[#B9FC01]" />
+          <h4 className="mt-3 font-display text-xl font-bold text-white">
+            Seu PC + Servidor na Nuvem 24h
+          </h4>
+          <p className="mt-2 text-xs leading-relaxed text-zinc-300">
+            Trabalhe no seu notebook no dia a dia ou conecte um servidor na nuvem para manter sua
+            equipe criando e respondendo 24 horas com o computador desligado.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (slideId === 12) {
     return (
       <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-5">
         {CRIATIVOS_15_ROSTER.map((spec) => (
@@ -138,18 +223,18 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
     );
   }
 
-  if (slideId === 11) {
+  if (slideId === 13) {
     const steps = [
-      "1. Comando Único: 'Equipe, monte campanha completa da oferta de sexta usando minhas fotos reais.'",
-      "2. Estrategista + Copywriter estruturam gancho, 7 lâminas de carrossel e legenda com CTA.",
-      "3. Engenheiro de Consistência 360° lê a pasta /fotos-fundador e trava traços e identidade.",
-      "4. Designer de Carrosséis gera as lâminas 4:5 e envia para Aprovação Humana no Cockpit e WhatsApp!",
+      "1. Pedido Simples: 'Equipe, monte a campanha da oferta de sexta usando minhas fotos reais e atualize a planilha.'",
+      "2. Estrategista + Copywriter pesquisam o tema no Navegador Inteligente e escrevem os 7 slides e a legenda.",
+      "3. Guardião do Rosto Real puxa sua pasta oficial /minhas-fotos para manter fisionomia, roupas, logo e cores idênticas.",
+      "4. Mestre de Carrosséis gera todas as lâminas prontas, salva no Google Drive e manda no seu WhatsApp para você responder [1]!",
     ];
     return (
       <div className="mx-auto max-w-4xl rounded-3xl border border-white/15 bg-[#141416] p-6 text-left">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
           <div className="font-display text-lg font-bold text-white">
-            Simulação Ao Vivo de Delegação entre Criativos
+            Simulação Passo a Passo do Pedido até a Entrega Final
           </div>
           <button
             type="button"
@@ -157,7 +242,7 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
             className="volt-button inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs"
           >
             <Play className="h-3.5 w-3.5" />
-            Avançar Execução ({runDemoStep + 1}/{steps.length})
+            Avançar Passo ({runDemoStep + 1}/{steps.length})
           </button>
         </div>
 
@@ -182,14 +267,14 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
     );
   }
 
-  if (slideId === 12) {
+  if (slideId === 14) {
     return (
       <div className="mx-auto max-w-4xl rounded-3xl border border-white/15 bg-[#141416] p-6">
         <div className="flex flex-wrap justify-center gap-2.5">
           {[
-            { id: "calendario", label: "Calendário Drag & Drop", icon: Calendar },
-            { id: "safezones", label: "Safe Zones 4:5 e 9:16", icon: Layers },
-            { id: "metricas", label: "Métricas Meta v27.0", icon: BarChart3 },
+            { id: "calendario", label: "Calendário Visual do Mês", icon: Calendar },
+            { id: "safezones", label: "Espaço Livre nos Stories & Feed", icon: Layers },
+            { id: "metricas", label: "Resultados Reais do Perfil", icon: BarChart3 },
           ].map((t) => {
             const Icon = t.icon;
             const active = studioTab === t.id;
@@ -211,150 +296,90 @@ export const Act3InsideProductSlides: React.FC<Props> = ({ slideId }) => {
 
         <div className="mt-5 rounded-2xl border border-white/10 bg-[#0D0D0D] p-6 text-left">
           {studioTab === "calendario" && (
-            <div className="grid gap-3 sm:grid-cols-3 text-xs">
-              {["Seg · Carrossel 4:5 (Aprovado)", "Qua · Reel Remotion (Agendado)", "Sex · Anúncio Oferta (Em Revisão)"].map(
-                (card) => (
-                  <div key={card} className="rounded-xl border border-[#B9FC01]/35 bg-[#14180F] p-3.5">
-                    <div className="font-mono text-[10px] text-[#B9FC01]">META API v27.0</div>
-                    <div className="mt-1 font-bold text-white">{card}</div>
-                  </div>
-                )
-              )}
+            <div className="grid gap-3 text-xs sm:grid-cols-3">
+              {[
+                "Segunda · Carrossel com seu rosto (Aprovado)",
+                "Quarta · Vídeo vertical Reels com legenda animada (Agendado)",
+                "Sexta · Anúncio da oferta (Aguardando sua revisão)",
+              ].map((card) => (
+                <div key={card} className="rounded-xl border border-[#B9FC01]/35 bg-[#14180F] p-3.5">
+                  <div className="font-mono text-[10px] text-[#B9FC01]">CONEXÃO OFICIAL INSTAGRAM</div>
+                  <div className="mt-1 font-bold text-white">{card}</div>
+                </div>
+              ))}
             </div>
           )}
           {studioTab === "safezones" && (
-            <div className="grid gap-4 sm:grid-cols-2 text-xs">
+            <div className="grid gap-4 text-xs sm:grid-cols-2">
               <div className="rounded-xl border border-white/10 bg-[#141416] p-4">
-                <div className="font-mono text-[#B9FC01]">FEED & CARROSSEL · 4:5 (1080×1350)</div>
+                <div className="font-mono text-[#B9FC01]">FEED &amp; CARROSSEL · PRÉVIA REAL</div>
                 <p className="mt-1.5 text-zinc-300">
-                  Grade automática de respiro 10% + corte perfeito no preview de perfil 3:4.
+                  Enquadramento limpo que aparece inteiro na grade do seu perfil sem cortar títulos nas
+                  bordas.
                 </p>
               </div>
               <div className="rounded-xl border border-white/10 bg-[#141416] p-4">
-                <div className="font-mono text-[#B9FC01]">STORIES & REELS · 9:16 (1080×1920)</div>
+                <div className="font-mono text-[#B9FC01]">STORIES &amp; REELS · ESPAÇO LIVRE</div>
                 <p className="mt-1.5 text-zinc-300">
-                  Zonas seguras protegidas contra ícone de perfil superior e legenda/CTA inferior.
+                  Margem automática respeitando o nome do perfil no topo e deixando espaço livre para suas
+                  enquetes, caixinhas e links embaixo.
                 </p>
               </div>
             </div>
           )}
           {studioTab === "metricas" && (
-            <div className="grid gap-3 sm:grid-cols-3 text-xs">
+            <div className="grid gap-3 text-xs sm:grid-cols-3">
               <div className="rounded-xl border border-white/10 bg-[#141416] p-3.5">
                 <div className="text-zinc-400">Salvamentos Médios</div>
                 <div className="mt-1 font-display text-2xl font-bold text-[#B9FC01]">+42%</div>
               </div>
               <div className="rounded-xl border border-white/10 bg-[#141416] p-3.5">
-                <div className="text-zinc-400">Alcance Orgânico</div>
-                <div className="mt-1 font-display text-2xl font-bold text-white">Real Meta API</div>
+                <div className="text-zinc-400">Leitura Direta</div>
+                <div className="mt-1 font-display text-2xl font-bold text-white">Dados Oficiais</div>
               </div>
               <div className="rounded-xl border border-white/10 bg-[#141416] p-3.5">
-                <div className="text-zinc-400">Loop Inteligente</div>
-                <div className="mt-1 text-zinc-200">Analista alimenta o Estrategista</div>
+                <div className="text-zinc-400">Ciclo Inteligente</div>
+                <div className="mt-1 text-zinc-200">Analista sugere as melhores ideias para próxima semana</div>
               </div>
             </div>
           )}
-        </div>
-      </div>
-    );
-  }
-
-  if (slideId === 13) {
-    return (
-      <div className="grid gap-5 md:grid-cols-3 text-left">
-        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-          <Chrome className="h-7 w-7 text-[#B9FC01]" />
-          <h4 className="mt-4 font-display text-lg font-bold text-white">
-            Chromium CDP + Takeover
-          </h4>
-          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-            Navegador real dentro do Cockpit. Os Criativos pesquisam páginas e você pode
-            assumir o mouse com 1 clique ou ensinar tarefas na TeachBar.
-          </p>
-        </div>
-        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-          <MousePointerClick className="h-7 w-7 text-[#B9FC01]" />
-          <h4 className="mt-4 font-display text-lg font-bold text-white">
-            Computer Use (cua-driver)
-          </h4>
-          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-            Automação visual de desktop permitindo operar interfaces externas quando não há
-            API disponível, com histórico seguro.
-          </p>
-        </div>
-        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-          <Layers className="h-7 w-7 text-[#B9FC01]" />
-          <h4 className="mt-4 font-display text-lg font-bold text-white">
-            Loja com 253+ Apps MCP
-          </h4>
-          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-            Conecte Notion, ClickUp, Drive, CRM, WordPress, WooCommerce e centenas de
-            ferramentas via conectores MCP confinados.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  if (slideId === 14) {
-    return (
-      <div className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2 text-left">
-        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-          <GitBranch className="h-6 w-6 text-[#B9FC01]" />
-          <h4 className="mt-3 font-display text-xl font-bold text-white">
-            Workflows Visuais em Grafo
-          </h4>
-          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-            Ligue nós visuais: Gatilho Semanal -&gt; Analista de BI -&gt; Estrategista -&gt;
-            Carrossel -&gt; Envio no WhatsApp para Aprovação Humana.
-          </p>
-        </div>
-        <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-          <CheckCheck className="h-6 w-6 text-[#B9FC01]" />
-          <h4 className="mt-3 font-display text-xl font-bold text-white">
-            Rotinas Agendadas + Entregáveis PDF
-          </h4>
-          <p className="mt-2 text-xs leading-relaxed text-zinc-400">
-            Agende relatórios automáticos em PDF executivo e planilhas editoriais sem
-            precisar lembrar de abrir nenhuma ferramenta.
-          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="grid gap-5 md:grid-cols-3 text-left">
+    <div className="grid gap-5 text-left md:grid-cols-3">
       <div className="rounded-3xl border border-[#B9FC01]/40 bg-[#12160F] p-6">
-        <div className="font-mono text-xs text-[#B9FC01]">WHATSAPP + SELF-CHAT</div>
+        <div className="font-mono text-xs text-[#B9FC01]">NO SEU PRÓPRIO WHATSAPP</div>
         <h4 className="mt-2 font-display text-lg font-bold text-white">
-          Responda [1] e Publique da Rua
+          Responda [1] e Aprove da Rua
         </h4>
         <p className="mt-2 text-xs text-zinc-300">
-          Aprove carrosséis, peça ajustes com [2] ou dê ordens pelo seu próprio número
-          sem abrir o notebook.
+          Receba carrosséis, vídeos ou relatórios no celular, peça ajustes respondendo [2] ou dê ordens
+          por áudio sem precisar abrir o notebook.
         </p>
       </div>
       <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
-        <div className="font-mono text-xs text-zinc-400">DOCK FLUTUANTE DESKTOP</div>
+        <div className="font-mono text-xs text-zinc-400">BARRA RÁPIDA NA TELA</div>
         <h4 className="mt-2 font-display text-lg font-bold text-white">
           Sempre à Mão em 1 Clique
         </h4>
         <p className="mt-2 text-xs text-zinc-300">
-          Recolhível na lateral da tela para consultar status, disparar tarefas rápidas e
-          alternar servidores.
+          Deixe a janelinha discreta no canto da tela para acompanhar tarefas em andamento ou acionar sua
+          equipe enquanto trabalha em outros programas.
         </p>
       </div>
       <div className="rounded-3xl border border-white/10 bg-[#141416] p-6">
         <div className="flex items-center gap-2 font-mono text-xs text-[#B9FC01]">
-          <Server className="h-4 w-4" /> CRIATIVO_CLAIM
+          <CheckCheck className="h-4 w-4" /> CONTROLE HUMANO
         </div>
         <h4 className="mt-2 font-display text-lg font-bold text-white">
-          Multi-Servidor Local &amp; VPS 24/7
+          Nada Vai ao Ar Sem Seu Aval
         </h4>
         <p className="mt-2 text-xs text-zinc-300">
-          Pareie quantas máquinas/VPS sua licença liberar mantendo memória e credenciais
-          isoladas por marca.
+          Seja uma publicação no Instagram, um envio importante ou um login no navegador, você tem a
+          palavra final antes de executar.
         </p>
       </div>
     </div>

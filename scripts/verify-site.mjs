@@ -82,7 +82,7 @@ async function run() {
       !content.includes("\u2014") && !content.includes("\u2013"),
       `Travessão (em-dash/en-dash) proibido em arquivo SEO: ${seoFile}`
     );
-    for (const forbidden of ["R$ 47", "R$ 87", "R$ 97", "R$ 177", "R$ 197"]) {
+    for (const forbidden of ["R$ 47", "R$ 87", "R$ 177", "R$ 197"]) {
       assert.ok(
         !content.includes(forbidden),
         `Preço promocional '${forbidden}' vazou no SEO público (${seoFile})`
@@ -114,14 +114,14 @@ async function run() {
   const offerSrc = readUtf8("src/components/landing/OfficialOfferSection.tsx");
   assert.ok(offerSrc.includes("OFFICIAL_PUBLIC_PLANS"));
   const campaignLinksSrc = readUtf8("src/config/campaignLinks.ts");
+  assert.ok(campaignLinksSrc.includes("R$ 297"), "Preço oficial R$ 297 ausente");
+  assert.ok(campaignLinksSrc.includes("R$ 897"), "Preço oficial R$ 897 ausente");
   assert.ok(campaignLinksSrc.includes("R$ 997"), "Preço oficial R$ 997 ausente");
-  assert.ok(campaignLinksSrc.includes("R$ 1.797"), "Preço oficial R$ 1.797 ausente");
-  assert.ok(campaignLinksSrc.includes("R$ 1.997"), "Preço oficial R$ 1.997 ausente");
 
   const homeFiles = fs.readdirSync(path.join(ROOT, "src/components/landing"));
   for (const file of homeFiles) {
     const content = readUtf8(path.join("src/components/landing", file));
-    for (const forbidden of ["R$ 47", "R$ 87", "R$ 97", "R$ 177", "R$ 197"]) {
+    for (const forbidden of ["R$ 47", "R$ 87", "R$ 177", "R$ 197"]) {
       assert.ok(
         !content.includes(forbidden),
         `Preço promocional '${forbidden}' vazou na Home pública (${file})`
@@ -169,6 +169,8 @@ async function run() {
       "/meu-roteiro",
       "/kit-whatsapp",
       "/obrigado",
+      "/suporte",
+      "/suporte/admin",
     ]) {
       const res = await fetch(`${base}${route}`);
       assert.equal(res.status, 200, `Rota SPA ${route} retornou HTTP ${res.status}`);
@@ -181,6 +183,46 @@ async function run() {
         assert.equal(xRobots, "noindex, nofollow", `Rota privada ${route} precisa retornar X-Robots-Tag: noindex, nofollow`);
       }
     }
+
+    // Testar criação, listagem protegida e remoção de ticket de suporte
+    const createTicketRes = await fetch(`${base}/api/tickets`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-test-ticket": "1",
+      },
+      body: JSON.stringify({
+        name: "Teste Verificacao",
+        email: "teste@exemplo.com",
+        plan: "Agência Ilimitada",
+        os: "Windows",
+        category: "Teste Automatizado",
+        description: "Chamado de teste para validar persistência.",
+      }),
+    });
+    assert.equal(createTicketRes.status, 201, "POST /api/tickets deve retornar 201");
+    const createdPayload = await createTicketRes.json();
+    assert.ok(createdPayload?.ticket?.id, "Ticket criado deve conter id");
+    assert.ok(createdPayload?.ticket?.protocol, "Ticket criado deve conter protocol");
+
+    const unauthListRes = await fetch(`${base}/api/tickets`);
+    assert.equal(unauthListRes.status, 401, "GET /api/tickets sem chave deve retornar 401");
+
+    const authListRes = await fetch(`${base}/api/tickets`, {
+      headers: { "x-admin-key": process.env.SUPPORT_ADMIN_KEY || "criativoos2026" },
+    });
+    assert.equal(authListRes.status, 200, "GET /api/tickets autenticado deve retornar 200");
+    const listPayload = await authListRes.json();
+    assert.ok(
+      listPayload.tickets.some((t) => t.id === createdPayload.ticket.id),
+      "Ticket criado deve constar na listagem admin"
+    );
+
+    const delRes = await fetch(`${base}/api/tickets/${createdPayload.ticket.id}`, {
+      method: "DELETE",
+      headers: { "x-admin-key": process.env.SUPPORT_ADMIN_KEY || "criativoos2026" },
+    });
+    assert.equal(delRes.status, 200, "Limpeza do ticket de teste deve retornar 200");
 
     for (const [seoPath, expectedCt] of [
       ["/robots.txt", "text/plain"],

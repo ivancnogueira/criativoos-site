@@ -64,7 +64,7 @@ export const OfficialOfferSection: React.FC = () => {
                     {plan.tagline}
                   </p>
 
-                  {/* Bloco de Preço */}
+                  {/* Bloco de Preço (Ancorado em 12x com à vista menor) */}
                   <div
                     className={`mt-6 rounded-2xl border p-5 ${
                       isHero
@@ -72,16 +72,19 @@ export const OfficialOfferSection: React.FC = () => {
                         : "border-white/10 bg-black/30"
                     }`}
                   >
-                    <div className="font-mono text-xs font-bold uppercase text-[#B9FC01]">
-                      {plan.installmentsText}
+                    <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#B9FC01]">
+                      Investimento Anual
                     </div>
-                    <div className="mt-1 font-display text-4xl font-extrabold text-white sm:text-5xl">
-                      {plan.priceCash}
-                      <span className="ml-1.5 text-sm font-normal text-slate-400">
-                        /ano
+                    <div className="mt-1.5 flex items-baseline gap-1.5 font-display text-4xl font-extrabold text-white sm:text-[42px] sm:leading-none">
+                      <span className="text-lg font-bold text-[#B9FC01] sm:text-xl">
+                        12x de
                       </span>
+                      <span>{plan.installmentValue}</span>
                     </div>
-                    <div className="mt-1.5 text-xs text-slate-400">
+                    <div className="mt-2 text-xs font-semibold text-slate-300">
+                      ou <span className="text-white">{plan.priceCash}</span> à vista/ano
+                    </div>
+                    <div className="mt-1 text-[11px] text-slate-400">
                       {plan.billingCycle}
                     </div>
                   </div>
@@ -120,6 +123,12 @@ export const OfficialOfferSection: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+
+                  {plan.orderBumpNote && (
+                    <div className="mt-5 rounded-xl border border-amber-400/30 bg-amber-400/10 p-3 text-xs leading-relaxed text-amber-200">
+                      {plan.orderBumpNote}
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-8">

@@ -13,203 +13,196 @@ export interface WhatsAppMessageTemplate {
 
 export const WHATSAPP_CAMPAIGN_MESSAGES: readonly WhatsAppMessageTemplate[] = [
   // =========================================================================
-  // CAMPANHA 1 — MIGRAÇÃO DA BASE ANTIGA (GRUPOS)
+  // CAMPANHA 1 - PRE-LANCAMENTO MEMBROS FUNDADORES (1ª IMERSAO) - GRUPOS
   // =========================================================================
   {
     id: "g1-1",
     campaign: "migration",
     channel: "grupo",
     code: "G1.1",
-    title: "Comunicado Oficial de Fim do Legado + Revelação CriativoOS",
-    timing: "Dia 1 · Manhã (Abertura de consciência sem link ainda)",
-    body: `🚨 *COMUNICADO OFICIAL PARA QUEM É DA BASE DO ANTIGO CRIATIVO AI STUDIO*
+    title: "Comunicado Oficial para Membros Fundadores (1ª Imersão) + Revelação CriativoOS",
+    timing: "Fase 1 · Pré-Lançamento (Abertura de consciência sem link ainda)",
+    body: `🚨 *COMUNICADO OFICIAL PARA MEMBROS FUNDADORES (1ª IMERSÃO)*
 
-Pessoal, uma atualização muito importante e transparente para vocês que estão aqui com a gente desde o início.
+Pessoal, uma atualização importante e 100% transparente para vocês que estão com a gente desde a primeira turma.
 
-O antigo *Criativo AI Studio* cumpriu o ciclo dele — *ele não vai mais receber novas atualizações ou novos recursos daqui pra frente.*
+O antigo *Criativo AI Studio* cumpriu o ciclo dele e *não vai mais receber novas atualizações ou novos recursos daqui para frente.*
 
-Mas calma: ele não acabou à toa. Ele evoluiu para algo de outra categoria.
+Mas ele não parou à toa: ele evoluiu para um sistema de outra categoria.
 
-Nos últimos meses nós reescrevemos praticamente tudo do zero e criamos o *CriativoOS* — não é mais um pacote de prompts ou um plugin preso no terminal. Agora é um *Sistema Operacional completo de Criativos de IA* com instalador próprio para Windows, Mac e Linux (além de VPS).
+Reescrevemos tudo do zero e criamos o *CriativoOS* - um *Sistema Operacional Autônomo* com instalador próprio em 2 cliques para Windows, Mac e Linux (e opção de rodar 24h na nuvem).
 
-Olha só o que entrou dentro do *CriativoOS*:
-• *App Nativo Desktop + Dynamic Island* acompanhando tudo ao vivo no topo da tela
-• *15 Criativos Especialistas em Equipe* (Estratégia, Copy, Carrossel 4:5, Anúncios, Stories 9:16, Bônus e 3 Diretores de Vídeo com Remotion)
-• *Instagram Oficial via Meta Graph API v27.0* com Cofre local AES-256-GCM e Aprovação Humana
-• *Estúdio Social Media integrado* (Calendário Editorial, Galeria de Métricas e Editor com Zonas Seguras)
-• *Navegador Real Chromium embutido + Computer Use + Loja com +253 Apps*
-• *WhatsApp 24/7* (comande e aprove tudo pelo celular, inclusive no seu próprio número / Self-Chat)
-• *Zero gasto obrigatório com API:* rode com 10 modelos gratuitos no OpenCode _ou_ conecte sua própria assinatura do ChatGPT, Claude, Gemini ou Grok.
+E preste atenção: *ele NÃO se resume apenas a criar conteúdo!* Olha o que o *CriativoOS* faz hoje:
+• *Operador Real de Computador:* abre pastas, atualiza planilhas e opera programas no seu PC com sua autorização
+• *Navegador Inteligente com Pausa Segura:* pesquisa concorrentes na internet e pausa chamando você antes de qualquer senha ou código no celular
+• *+253 Aplicativos Conectados & Rotinas Semanais:* conecta Google Drive, Planilhas, Notion, Gmail, WordPress e gera relatórios em PDF sozinho
+• *15 Criativos Especialistas em Equipe:* carrosséis, posts com o seu rosto real, anúncios, stories com espaço livre e vídeos para Reels
+• *No seu bolso pelo WhatsApp:* peça tarefas ou criações por áudio e aprove respondendo \`1\`
+• *Zero gasto obrigatório com IA:* já vem com *10 inteligências artificiais gratuitas inclusas* ou conecte sua conta do ChatGPT, Claude, Gemini ou Grok.
 
-Nesta quinta-feira à noite nós vamos abrir oficialmente o *CriativoOS* para o público no site \`criativoos.com.br\` com licença anual de ~R$ 997 a R$ 1.997~.
+Na quinta-feira abrimos o *Lançamento Oficial Quinta Black* (de \`12x R$ 10,50\` a \`12x R$ 21,32\`) e depois fica o preço oficial no site \`criativoos.com.br\` (de \`12x R$ 32,15\` a \`12x R$ 107,91\`).
 
-*MAS ANTES DISSO...*
-Como vocês fazem parte da nossa base antiga, decidimos abrir uma *Janela de Migração Fundador de 48h* com valor puramente simbólico — _muito abaixo até da Black Friday de quinta_.
+*MAS AMANHÃ É A JANELA DE PRÉ-LANÇAMENTO EXCLUSIVA PARA VOCÊS FUNDADORES* com parcela menor que um café por mês.
 
-Logo mais eu mando aqui no grupo a apresentação mostrando o *CriativoOS por dentro* e como ativar sua licença de migração em 60 segundos.
-
-Fiquem de olho aqui no grupo 👀🔥`,
+Fiquem de olho aqui no grupo que logo mando o horário da apresentação ao vivo mostrando tudo por dentro! 👀🔥`,
   },
   {
     id: "g1-2",
     campaign: "migration",
     channel: "grupo",
     code: "G1.2",
-    title: "Tour por Dentro + Instalação em 60s + Âncora Oficial",
-    timing: "Dia 1 · Tarde (Educação antes do pitch)",
-    body: `👀 *QUER VER COMO O CRIATIVOOS FUNCIONA POR DENTRO ANTES DE DECIDIR?*
+    title: "Convite Tour Ao Vivo: Pausa para Instalar + Visão Completa das Ferramentas",
+    timing: "Fase 1 · Pré-Lançamento (Antes de abrir os links)",
+    body: `👀 *QUER VER O CRIATIVOOS INSTALADO DO ZERO E FUNCIONANDO AO VIVO NA TELA?*
 
-Muita gente perguntou no privado o que realmente mudou do antigo _Criativo AI Studio_ para o novo *CriativoOS v1.0.3*.
+Hoje preparamos uma apresentação direta ao ponto (sem linguagem técnica complicada) mostrando:
 
-Preparamos uma apresentação interativa passo a passo onde você vê, sem enrolação:
-1️⃣ *Visão de Mercado:* por que prompts soltos e SaaS web caros morreram
-2️⃣ *Instalação em 60 segundos:* baixou o \`.exe\` / \`.dmg\` / \`.AppImage\`, colou sua chave \`CRIA-*\` e seguiu 4 cliques no Onboarding
-3️⃣ *Tour Completo por Dentro:* Estúdio Social Media, Safe Zones \`4:5\` e \`9:16\`, Dynamic Island, Navegador Chromium integrado, Workflows em Grafo e WhatsApp 24/7.
+1️⃣ *A dor real que acabou:* como sair das 10 abas abertas e ferramentas em dólar que travam seus créditos
+2️⃣ *Pausa Ao Vivo para Instalar em 1 Minuto:* baixando o instalador para Windows, Mac ou Linux e configurando em 4 cliques
+3️⃣ *Tour Completo pelas Ferramentas:* Operador de Computador, Navegador Inteligente, +253 Apps conectados, Rotinas na Nuvem 24h, os 15 Criativos com seu rosto real e comando pelo WhatsApp.
 
-👉 *Veja a apresentação interativa completa aqui:*
+👉 *Link da apresentação interativa:*
 [LINK_APRESENTACAO_MIGRACAO]
 
-_(No site público \`criativoos.com.br\` os planos anuais estão ancorados de R$ 997 a R$ 1.997. Pelo link acima você destrava a tabela secreta de Migração da Base ainda hoje.)_`,
+_(Na página pública oficial \`criativoos.com.br\` a tabela perpétua fica entre 12x R$ 32,15 e 12x R$ 107,91. Aqui para Fundadores você garante sua licença simbólica ainda antes do lançamento de quinta!)_`,
   },
   {
     id: "g1-3",
     campaign: "migration",
     channel: "grupo",
     code: "G1.3",
-    title: "Abertura Oficial da Janela de Migração (R$ 47 / R$ 87 / R$ 97 + Vitalício)",
-    timing: "Dia 1 · Noite (Liberação dos links diretos)",
-    body: `🔓 *JANELA ABERTA: MIGRAÇÃO FUNDADOR PARA O CRIATIVOOS*
+    title: "Abertura Oficial Pré-Lançamento Fundadores (12x R$ 5,09 / R$ 9,42 / R$ 10,50)",
+    timing: "Fase 1 · Liberação dos links diretos",
+    body: `🔓 *PRÉ-LANÇAMENTO LIBERADO: MEMBROS FUNDADORES DO CRIATIVOOS*
 
-Está oficialmente liberado o lote exclusivo de migração para quem veio do antigo _Criativo AI Studio_!
+Está oficialmente aberta a janela exclusiva de *Pré-Lançamento* para quem comprou na 1ª Imersão!
 
-⚠️ _Lembrando: no site oficial (\`criativoos.com.br\`), a licença anual vai de *R$ 997 a R$ 1.997*. Esses valores abaixo NÃO estão na página pública — só existem nestes links diretos para a nossa base antes do lançamento de quinta._
+⚠️ _Lembrando: na quinta-feira do lançamento oficial os planos sobem para 12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32, e depois no site oficial ficam entre *12x R$ 32,15 e 12x R$ 107,91*._
 
 Escolha o tamanho da sua operação e já garanta seu instalador v1.0.3:
 
-🟢 *PLANO INDIVIDUAL — De ~R$ 997~ por R$ 47* _(Licença Anual)_
-• 2 Marcas / Servidores · 2 PCs
-• 9 Criativos Base completos (Copy, Carrossel, Post, Stories, Anúncios, Meta API, Editorial)
+🟢 *LICENÇA INDIVIDUAL · 12x de R$ 5,09* *(ou R$ 47 à vista anual)* _(Oficial: ~12x R$ 32,15~)_
+• Até 2 marcas / servidores · 2 PCs · 9 Criativos Base + Operador de PC + Navegador + +253 Apps
+• _Bônus no checkout:_ por apenas *+R$ 37* você transforma em *VITALÍCIO + libera os 6 Criativos extras* (15 no total para até 2 marcas)!
 👉 Link direto: [LINK_MIGRACAO_INDIVIDUAL]
 
-🟡 *PLANO AGÊNCIA 10 — De ~R$ 1.797~ por R$ 87* _(Licença Anual)_
-• 10 Marcas / Servidores · 3 PCs
-• 12 Criativos (Base + Pacote Bônus Estratégia/Engenharia Reversa/Consistência)
+🟡 *LICENÇA AGÊNCIA 10 · 12x de R$ 9,42* *(ou R$ 87 à vista anual)* _(Oficial: ~12x R$ 97,09~)_
+• Até 10 clientes ou servidores · 3 PCs · 12 Criativos (Base + Bônus de Rosto Real, Concorrentes e PDFs)
 👉 Link direto: [LINK_MIGRACAO_AG10]
 
-🔥 *PLANO AGÊNCIA ILIMITADA — De ~R$ 1.997~ por R$ 97* _(+ PASSAPORTE VITALÍCIO INCLUSO!)_
-• *∞ Marcas/Servidores ILIMITADOS* · 5 PCs
-• *Todos os 15 Criativos* (Base + Bônus + *3 Diretores de Vídeo Remotion*)
-• *EXCLUSIVO:* Apenas neste plano você ganha o *ACESSO VITALÍCIO FUNDADOR* (sem taxa de renovação anual) por apenas +R$ 10 de diferença!
+🔥 *LICENÇA ILIMITADA · 12x de R$ 10,50!* *(ou R$ 97 à vista · VITALÍCIO!)* _(Oficial: ~12x R$ 107,91~)_
+• *Clientes e servidores ILIMITADOS* · até 5 PCs
+• *Todos os 15 Criativos Completos* (incluindo os 3 Diretores de Vídeos para Reels) + Nuvem 24h
+• *EXCLUSIVO:* Apenas *+R$ 1,08 por mês* de diferença para o Agência 10 e você leva o *ACESSO VITALÍCIO FUNDADOR* (sem nunca pagar renovação anual)!
 👉 Link direto: [LINK_MIGRACAO_ILIMITADO]
 
-Assim que o pagamento confirma, sua chave \`CRIA-*\` chega na hora e você já baixa o *CriativoOS v1.0.3* para Windows, Mac ou Linux! 🚀`,
+Assim que o pagamento confirma, sua chave chega na hora por e-mail com o link de download, Área de Membros e Comunidade Oficial no WhatsApp! 🚀`,
   },
   {
     id: "g1-4",
     campaign: "migration",
     channel: "grupo",
     code: "G1.4",
-    title: "Quebra de Objeções + Contraste Lógico do +R$ 10 no Ilimitado",
-    timing: "Dia 2 · Manhã / Tarde",
-    body: `🤔 *"Qual plano de migração faz mais sentido pra mim?"* — Respondendo as 3 dúvidas que mais chegaram no suporte:
+    title: "Quebra de Objeções + Lógica do +R$ 1,08/mês e do Order Bump de +R$ 37",
+    timing: "Fase 1 · Meio do Pré-Lançamento",
+    body: `🤔 *"Qual opção faz mais sentido para o meu momento?"* · Respondendo às 3 maiores dúvidas aqui do grupo:
 
-*1️⃣ "Preciso pagar API da OpenAI/Claude todo mês por fora?"*
-*Não.* Você escolhe no Onboarding: pode rodar grátis com *10 modelos via OpenCode* _ou_ conectar sua própria assinatura do ChatGPT, Claude, Gemini ou Grok.
+*1️⃣ "Preciso pagar API da OpenAI ou créditos extras todo mês?"*
+*Não.* O CriativoOS já vem com *10 inteligências artificiais gratuitas inclusas* para você começar sem gastar nada por fora, além de aceitar sua assinatura atual de ChatGPT, Claude, Gemini ou Grok.
 
-*2️⃣ "Nunca mexi com código ou terminal, vou conseguir instalar?"*
-Sim! Esqueça o tempo de linha de comando. Agora é um *instalador nativo normal* (\`Setup.exe\`, \`.dmg\` ou \`.AppImage\`) com tela de boas-vindas em 4 cliques.
+*2️⃣ "E se eu não souber mexer em nada técnico ou código?"*
+Acabaram as telas pretas e comandos manuais. Agora você baixa um *instalador comum* (Windows, Mac ou Linux), dá dois cliques e acompanha as aulas passo a passo na Área de Membros e nossa Comunidade Oficial.
 
-*3️⃣ "Vale a pena pegar o Individual (R$ 47) ou o Agência Ilimitada (R$ 97)?"*
-Faça as contas com calma:
-• No *Individual (R$ 47)* ou *Agência 10 (R$ 87)* a licença é *Anual (12 meses)*.
-• No *Agência Ilimitada (R$ 97)*, além de liberar *todos os 15 Criativos (incluindo os 3 de Vídeo Remotion)* e *marcas infinitas em até 5 PCs*, você leva o *ACESSO VITALÍCIO FUNDADOR* sem precisar renovar todo ano — pagando literalmente *R$ 10 a mais* do que o Agência 10.
+*3️⃣ "Individual (12x R$ 5,09 + R$ 37) ou Agência Ilimitada (12x R$ 10,50 Vitalício)?"*
+Olha como é simples:
+• No *Individual (12x R$ 5,09 ou R$ 47 à vista)* ou no *Agência 10 (12x R$ 9,42 ou R$ 87 à vista)*, a licença base é anual.
+• Já no *Agência Ilimitada*, por apenas *12x de R$ 10,50* *(ou R$ 97 à vista)* · literalmente *+R$ 1,08 por mês* em relação ao Agência 10 · você destrava *clientes e servidores ILIMITADOS + 5 PCs + Vídeos Reels + ACESSO VITALÍCIO* para sempre!
 
-🔥 *Garantir Agência Ilimitada VITALÍCIO por R$ 97:*
+🔥 *Garantir Licença Ilimitada VITALÍCIA por 12x de R$ 10,50 (ou R$ 97):*
 [LINK_MIGRACAO_ILIMITADO]
 
-_(Se preferir começar menor no Individual anual por R$ 47: [LINK_MIGRACAO_INDIVIDUAL])_`,
+_(Ou ir de Individual por 12x de R$ 5,09 / R$ 47 com opção vitalícia no checkout: [LINK_MIGRACAO_INDIVIDUAL])_`,
   },
   {
     id: "g1-5",
     campaign: "migration",
     channel: "grupo",
     code: "G1.5",
-    title: "Últimas Horas da Janela de Migração (Antes de Virar para Black Friday)",
-    timing: "Dia 2 · Noite",
-    body: `⏳ *ÚLTIMAS HORAS DA JANELA DE MIGRAÇÃO (R$ 47 a R$ 97)*
+    title: "Últimas Horas do Pré-Lançamento Fundadores (12x R$ 5,09 a R$ 10,50)",
+    timing: "Fase 1 · Encerramento antes do Lançamento Oficial",
+    body: `⏳ *ÚLTIMAS HORAS DO PRÉ-LANÇAMENTO FUNDADORES (12x R$ 5,09 a 12x R$ 10,50)*
 
-Passando apenas para avisar com transparência:
+Passando para avisar antes de virar a chave para a próxima fase:
 
-Hoje à noite encerramos os links de migração de *R$ 47 / R$ 87 / R$ 97* para quem veio do antigo _Criativo AI Studio_.
+Hoje encerramos os links exclusivos de Membros Fundadores (*12x R$ 5,09 / 12x R$ 9,42 / 12x R$ 10,50*).
 
-A partir da abertura do *Lançamento & Black Friday (quinta à noite)*, os mesmos planos passam para *R$ 97 / R$ 177 / R$ 197* — e depois voltam para o valor oficial do site (\`R$ 997 a R$ 1.997/ano\`).
+No *Lançamento Oficial de Quinta-Feira Black*, os preços sobem para *12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32* · e na sequência entra a tabela oficial perpétua do site (\`12x R$ 32,15 / 12x R$ 97,09 / 12x R$ 107,91\`).
 
-Ou seja: quem garantir a migração agora paga *praticamente a metade do valor da própria Black Friday* e ainda trava o *Vitalício no Plano Agência Ilimitada por R$ 97 únicos*.
+Ou seja: garantindo agora você trava *Acesso Vitalício na Licença Ilimitada por 12x de R$ 10,50 (ou R$ 97 à vista)*.
 
-🔗 *Últimos acessos da tabela de migração:*
-• Individual (\`R$ 47\` Anual): [LINK_MIGRACAO_INDIVIDUAL]
-• Agência 10 (\`R$ 87\` Anual): [LINK_MIGRACAO_AG10]
-• *Agência Ilimitada (\`R$ 97\` + VITALÍCIO):* [LINK_MIGRACAO_ILIMITADO] ⚡`,
+🔗 *Últimos acessos de Membro Fundador:*
+• Individual (\`12x R$ 5,09\` ou R$ 47 + opção vitalícia de R$ 37): [LINK_MIGRACAO_INDIVIDUAL]
+• Agência 10 (\`12x R$ 9,42\` ou R$ 87 anual · até 10 clientes): [LINK_MIGRACAO_AG10]
+• *Licença Ilimitada (\`12x R$ 10,50\` ou R$ 97 VITALÍCIO):* [LINK_MIGRACAO_ILIMITADO] ⚡`,
   },
 
   // =========================================================================
-  // CAMPANHA 1 — DISPAROS 1:1 INDIVIDUAIS (MIGRAÇÃO)
+  // CAMPANHA 1 - DISPAROS 1:1 INDIVIDUAIS (PRE-LANCAMENTO FUNDADORES)
   // =========================================================================
   {
     id: "d1-1",
     campaign: "migration",
     channel: "disparo_1_1",
     code: "D1.1",
-    title: "Abordagem Pessoal 1:1 (Alta Taxa de Resposta)",
-    timing: "Dia 1 · Disparo inicial para contatos da base",
+    title: "Abordagem Pessoal 1:1 para Alunos da 1ª Imersão",
+    timing: "Fase 1 · Disparo inicial para base fundadora",
     body: `Fala [NOME], tudo bem por aí? 👋
 
-Passando rapidinho no seu WhatsApp porque você já acompanhou o antigo *Criativo AI Studio* com a gente.
+Passando rapidinho no seu privado porque você participou com a gente da 1ª Imersão do *Criativo AI Studio*.
 
-Quis te avisar em primeira mão antes de irmos para o lançamento oficial desta quinta: o _Criativo AI Studio_ encerrou o ciclo e foi completamente transformado no *CriativoOS v1.0.3* (agora com app nativo para Windows/Mac/Linux, 15 Criativos em equipe, Estúdio Social Media, Meta API oficial e operação pelo próprio WhatsApp).
+Quis te avisar antes do Lançamento Oficial de quinta-feira: o projeto antigo encerrou o ciclo e reescrevemos tudo do zero como *CriativoOS* · agora um aplicativo completo que instala em 2 cliques no Windows/Mac/Linux, opera programas e planilhas do computador, conecta +253 aplicativos, pesquisa na internet e ainda entrega tudo com 15 Criativos pelo WhatsApp.
 
-Como você já é da base antiga, liberamos por 48h um link secreto de migração a preço simbólico (*R$ 47* no Individual ou *R$ 97 no Agência Ilimitada já com Vitalício incluso* — contra R$ 1.997 no site oficial).
+Por você já ser da base fundadora, abrimos antes para vocês por valor simbólico (*12x de R$ 5,09* no Individual ou *12x de R$ 10,50 / R$ 97 à vista no Plano Ilimitado já VITALÍCIO* · contra 12x de R$ 107,91 na tabela oficial).
 
-Quer que eu te mande o link da apresentação rápida mostrando o CriativoOS por dentro e os links de migração?`,
+Quer que eu te mande o link da apresentação mostrando tudo por dentro antes de virar para os valores de quinta?`,
   },
   {
     id: "d1-2",
     campaign: "migration",
     channel: "disparo_1_1",
     code: "D1.2",
-    title: "Envio Direto com os 3 Checkouts de Migração",
-    timing: "Dia 1 · Resposta ao interesse ou disparo direto em lista quente",
+    title: "Envio Direto com os 3 Links do Pré-Lançamento Fundadores",
+    timing: "Fase 1 · Envio para interessados da base",
     body: `Oi [NOME]! Tudo certo?
 
-Aqui é da equipe do *CriativoOS* ⚡
+Aqui estão os links da janela exclusiva de *Pré-Lançamento para Membros Fundadores* antes de abrir a Quinta Black e antes do valor perpétuo do site \`criativoos.com.br\` (que vai de 12x R$ 32,15 a 12x R$ 107,91):
 
-Resumo direto ao ponto: o antigo *Criativo AI Studio* não terá mais atualizações porque evoluímos tudo para o novo *CriativoOS* (instalador nativo Desktop + VPS, Estúdio Instagram Meta API v27.0, 15 Criativos incl. Vídeos Remotion e controle via WhatsApp).
+• *Licença Individual (2 marcas · 9 Criativos + Operador PC):* *12x de R$ 5,09* (ou R$ 47 à vista anual) → [LINK_MIGRACAO_INDIVIDUAL]
+_(No checkout tem a opção de +R$ 37 para tornar Vitalício + liberar todos os 15 Criativos para até 2 marcas)_
 
-Antes de abrir o lote de Black Friday na quinta (que será de R$ 97 a R$ 197) e depois manter o preço cheio de *R$ 997 a R$ 1.997/ano* em \`criativoos.com.br\`, sua conta antiga dá direito à *Janela de Migração Fundador*:
+• *Licença Agência 10 (até 10 clientes/servidores):* *12x de R$ 9,42* (ou R$ 87 à vista anual) → [LINK_MIGRACAO_AG10]
 
-• *Individual (Anual · 2 marcas):* R$ 47 → [LINK_MIGRACAO_INDIVIDUAL]
-• *Agência 10 (Anual · 10 marcas):* R$ 87 → [LINK_MIGRACAO_AG10]
-• *Agência Ilimitada (∞ Marcas · 15 Criativos · + VITALÍCIO INCLUSO):* R$ 97 → [LINK_MIGRACAO_ILIMITADO]
+• *Licença Ilimitada (Clientes Ilimitados · 15 Criativos incl. Vídeos Reels · VITALÍCIO):* *12x de R$ 10,50* (ou R$ 97 à vista) → [LINK_MIGRACAO_ILIMITADO]
 
-Se quiser ver o tour do sistema funcionando por dentro antes, está aqui: [LINK_APRESENTACAO_MIGRACAO]`,
+Se quiser assistir ao tour completo do sistema rodando ao vivo antes de escolher, está aqui: [LINK_APRESENTACAO_MIGRACAO]`,
   },
   {
     id: "d1-3",
     campaign: "migration",
     channel: "disparo_1_1",
     code: "D1.3",
-    title: "Follow-up Pós-Clique / Quebra de Objeção de Instalação",
-    timing: "Dia 2 · Para quem visualizou ou clicou sem concluir",
-    body: `[NOME], vi que você chegou a olhar o novo *CriativoOS* 👀
+    title: "Follow-up 1:1 Quebra de Objeção de Instalação e IA",
+    timing: "Fase 1 · Para quem clicou e não finalizou",
+    body: `[NOME], vi que você chegou a dar uma olhada no novo *CriativoOS* 👀
 
-Só um detalhe que muita gente da base antiga não percebeu de primeira: você *não precisa mais instalar nada via terminal ou pagar API cara por token*.
+Só um detalhe que muita gente da primeira turma se surpreendeu: agora *não tem mais nada técnico, linha de comando ou obrigação de pagar API cara por fora*.
 
-O *CriativoOS v1.0.3* já vem com:
-✅ Instalador com 2 cliques (Windows, Mac ou Linux)
-✅ 10 modelos gratuitos prontos via OpenCode (ou sua assinatura normal de ChatGPT/Claude/Gemini/Grok)
-✅ *Acesso Vitalício incluso* direto no plano Agência Ilimitada de *R$ 97* (só nessa janela de migração!)
+O *CriativoOS* já vem com:
+✅ Instalador normal em 2 cliques (Windows, Mac ou Linux)
+✅ 10 inteligências artificiais gratuitas inclusas (ou sua conta do ChatGPT/Claude/Gemini/Grok)
+✅ *Acesso Vitalício* direto na *Licença Ilimitada por apenas 12x de R$ 10,50 (ou R$ 97 à vista)* · só nessa janela de Pré-Lançamento!
 
-O link direto do Ilimitado Vitalício ainda está ativo aqui se quiser travar antes de virar para R$ 197:
+O link direto da Licença Ilimitada Vitalícia continua ativo aqui antes de subir na quinta:
 👉 [LINK_MIGRACAO_ILIMITADO]`,
   },
   {
@@ -217,144 +210,132 @@ O link direto do Ilimitado Vitalício ainda está ativo aqui se quiser travar an
     campaign: "migration",
     channel: "disparo_1_1",
     code: "D1.4",
-    title: "Fechamento 1:1 Últimas Horas da Migração",
-    timing: "Dia 2 · Noite (Antes de encerrar os links de R$ 47/87/97)",
+    title: "Fechamento 1:1 Últimas Horas do Pré-Lançamento",
+    timing: "Fase 1 · Encerramento da janela Fundadores",
     body: `[NOME], aviso rápido de encerramento ⏳
 
-Hoje às 23h59 os links de migração de *R$ 47 / R$ 87 / R$ 97* saem do ar definitivamente para prepararmos o lançamento e a Black Friday oficial (onde os valores dobram para R$ 97 / R$ 177 / R$ 197).
+Hoje às 23h59 encerram os valores simbólicos de Membros Fundadores (*12x R$ 5,09 / 12x R$ 9,42 / 12x R$ 10,50*) para entrar o Lançamento Oficial da Quinta Black (*12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32*).
 
-Se você quiser migrar sua licença para o *CriativoOS v1.0.3* garantindo o *Agência Ilimitada Vitalício por R$ 97 únicos*, esse é o último link válido:
+Se quiser garantir a *Licença Ilimitada Vitalícia por 12x de R$ 10,50 (ou R$ 97 à vista)* com clientes e servidores sem limite + aulas passo a passo na Área de Membros, esse é o último link válido:
 👉 [LINK_MIGRACAO_ILIMITADO]
 
-Me avisa se precisar de ajuda para ativar sua chave! 🤝`,
+Qualquer dúvida me chama! 🤝`,
   },
 
   // =========================================================================
-  // CAMPANHA 2 — QUINTA À NOITE & BLACK FRIDAY (GRUPOS VIP)
+  // CAMPANHA 2 - LANCAMENTO OFICIAL QUINTA BLACK (GRUPOS VIP)
   // =========================================================================
   {
     id: "g2-1",
     campaign: "black",
     channel: "grupo",
     code: "G2.1",
-    title: "Aquecimento & Visão de Mercado 2026 (Pré-Quinta)",
-    timing: "Quarta / Quinta Manhã",
-    body: `🧠 *POR QUE 90% DE QUEM USA IA PARA SOCIAL MEDIA CONTINUA TRAVADO NO MESMO LUGAR?*
+    title: "Abertura de Consciência & Dor Real (Pré-Quinta Black)",
+    timing: "Fase 2 · Aquecimento para a Live de Quinta",
+    body: `🧠 *CHEGA DE VIVER REFÉM DE 10 ABAS ABERTAS E FERRAMENTAS CARAS EM DÓLAR*
 
 Vamos falar a real antes da nossa apresentação especial de *[HORARIO_LIVE]*:
 
-Usar um prompt solto no ChatGPT para copiar, colar no Canva, baixar imagem genérica sem o seu rosto, ajustar legenda na mão e subir tudo manualmente no Instagram... *isso não é automação. É só digitação mais rápida.*
+Pedir texto solto no ChatGPT, copiar pro Canva, gerar foto artificial sem o seu rosto, atualizar planilha na mão, pagar vários aplicativos separados em dólar e ainda travar quando acabam os créditos no meio do mês... *isso consome sua semana inteira e suga seu caixa.*
 
-Em 2026, o jogo mudou para *Sistemas Operacionais Autônomos de Criativos*.
+Foi exatamente por isso que construímos o *CriativoOS*: um sistema instalado direto no seu computador (ou nuvem 24h) que *NÃO se resume só a conteúdo!*
 
-Foi exatamente por isso que construímos o *CriativoOS*:
-Um software instalado direto na sua máquina (Windows, Mac ou Linux) — ou no seu servidor VPS — onde *15 Criativos Especialistas trabalham juntos* como uma agência completa:
-• Planejam o calendário do mês analisando dados reais do seu Instagram
-• Geram carrosséis \`4:5\`, anúncios e stories \`9:16\` usando *suas fotos reais e seu logo*
-• Renderizam Reels animados em vídeo (Remotion)
-• Enviam prévia no seu *WhatsApp* e só publicam na *Meta API oficial* quando você responde \`[1] Aprovar\`.
+Ele opera programas e pastas do seu computador, pesquisa concorrentes na internet, conecta *+253 aplicativos* (Drive, Planilhas, Notion, Gmail) e ainda coloca *15 Criativos Especialistas* trabalhando com suas fotos reais, aprovando tudo direto pelo seu *WhatsApp*!
 
-E o melhor: você pode olhar o projeto oficial hoje mesmo em \`criativoos.com.br\` — onde as licenças anuais oficiais custam de *R$ 997 a R$ 1.997/ano*.
-
-Mas nesta *[HORARIO_LIVE]* nós vamos mostrar o *CriativoOS* inteiro por dentro e abrir uma condição única de *Black Friday* exclusiva para este grupo VIP. 🔔🔥`,
+No site oficial \`criativoos.com.br\`, a tabela oficial fica entre *12x de R$ 32,15 e 12x de R$ 107,91*. Mas nesta *[HORARIO_LIVE]* vamos abrir o sistema na tela ao vivo e liberar o *Lote Especial de Lançamento Quinta Black*. 🔔🔥`,
   },
   {
     id: "g2-2",
     campaign: "black",
     channel: "grupo",
     code: "G2.2",
-    title: "Spoiler do CriativoOS por Dentro + Instalação em 60s",
-    timing: "Quinta-feira · Início da tarde",
-    body: `🎬 *O QUE VOCÊ VAI VER POR DENTRO DO CRIATIVOOS HOJE À NOITE ([HORARIO_LIVE])*
+    title: "Spoiler da Live: Pausa para Instalar + Tour Completo das Ferramentas",
+    timing: "Fase 2 · Quinta-feira à tarde",
+    body: `🎬 *O QUE VAMOS FAZER AO VIVO HOJE À NOITE ([HORARIO_LIVE])*
 
-Nada de slides vazios nem promessa vaga. Hoje às *[HORARIO_LIVE]* vamos abrir o *CriativoOS v1.0.3* em tempo real e mostrar:
+Nada de enrolação nem papo técnico difícil. Hoje às *[HORARIO_LIVE]* vou abrir minha tela e mostrar passo a passo:
 
-1️⃣ *Instalação & Onboarding em 60 segundos:*
-Como conectar *10 modelos gratuitos no OpenCode* OU usar a sua assinatura atual de ChatGPT, Claude, Gemini ou Grok — _sem pagar conta extra de API por token_.
+1️⃣ *Pausa para Instalar do Zero em 1 Minuto:*
+Instalando em 2 cliques e ativando com *10 inteligências artificiais gratuitas já inclusas* (ou sua conta do ChatGPT, Claude, Gemini ou Grok).
 
-2️⃣ *Tour Completo do Cockpit:*
-• *Dynamic Island* monitorando tarefas em tempo real
-• *Estúdio Social Media integrado:* Calendário Editorial Drag & Drop + Zonas Seguras \`4:5\` e \`9:16\` + Métricas oficiais da Meta Graph API v27.0
-• *Navegador Real Chromium embutido + Computer Use + Loja com +253 Apps conectados*
-• *Fluxos Visuais em Grafo + Rotinas Agendadas*
+2️⃣ *Tour Completo pelas Ferramentas do CriativoOS:*
+• *Operador de Computador:* abre suas pastas, preenche planilhas e opera seu PC com segurança
+• *Navegador Inteligente com Pausa Segura:* pesquisa concorrentes e chama você antes de qualquer senha ou código
+• *+253 Aplicativos & Rotinas 24h:* Google Drive, Notion, Gmail, WordPress e relatórios em PDF semanais no automático
+• *Estúdio dos 15 Criativos & Instagram:* carrosséis, posts com o seu rosto real, calendário visual, Stories com espaço livre e Vídeos para Reels.
 
-3️⃣ *Agência no WhatsApp:*
-Como mandar uma ordem no próprio WhatsApp e receber o carrossel pronto pra aprovação.
+3️⃣ *Tudo no WhatsApp:*
+Como pedir tarefas e aprovar criações respondendo \`1\` direto do celular.
 
-4️⃣ *A Oferta Fechada de Black Friday:*
-Como garantir o acesso ao invés dos ~R$ 1.997/ano~ do site oficial com *Acesso Vitalício* liberado somente nesta janela de quinta e sexta.
+4️⃣ *Lote Quinta Black com Acesso Vitalício no Ilimitado:*
+Como garantir por uma fração do valor oficial de \`12x R$ 107,91\` do site.
 
-Nos vemos daqui a pouco! 🚀`,
+Te vejo daqui a pouco! 🚀`,
   },
   {
     id: "g2-3",
     campaign: "black",
     channel: "grupo",
     code: "G2.3",
-    title: "Chamada 'Faltam 1h' e 'Estamos AO VIVO Agora'",
-    timing: "Quinta-feira · 19h00 e 20h00 (início da apresentação)",
-    body: `🔴 *ESTAMOS AO VIVO! ENTRE AGORA NA APRESENTAÇÃO NÍVEL ÔMEGA DO CRIATIVOOS*
+    title: "Chamada 'Estamos AO VIVO Agora' · Lançamento Quinta Black",
+    timing: "Fase 2 · Início da Live",
+    body: `🔴 *ESTAMOS AO VIVO! ENTRE AGORA NO LANÇAMENTO OFICIAL QUINTA BLACK DO CRIATIVOOS*
 
-Acabamos de iniciar! Primeiro estamos mostrando a visão de mercado 2026, como instalar em 60 segundos e todo o *CriativoOS v1.0.3* por dentro (Cockpit, 15 Criativos, Estúdio Meta API e WhatsApp 24/7) — e ao final revelamos o lote fechado de *Black Friday*.
+Acabamos de começar! Vou mostrar a dor real que estamos eliminando hoje, fazer uma pausa para instalar na tela em 1 minuto, fazer o tour completo por todas as ferramentas e liberar a condição especial de *Quinta Black*.
 
-👉 *Acesse a apresentação interativa aqui:*
+👉 *Acompanhe a apresentação interativa aqui:*
 [LINK_APRESENTACAO_BLACK]
 
-Vem pra sala que já começamos! 🚀`,
+Entra agora que já estamos na tela! 🚀`,
   },
   {
     id: "g2-4",
     campaign: "black",
     channel: "grupo",
     code: "G2.4",
-    title: "Abertura Oficial Black Friday (R$ 97 / R$ 177 / R$ 197 + Vitalício)",
-    timing: "Quinta-feira · Momento do Pitch (Fixar no grupo)",
-    body: `🖤 *CARRINHO ABERTO: BLACK FRIDAY CRIATIVOOS (COM VITALÍCIO LIBERADO!)*
+    title: "Carrinho Aberto Quinta Black (12x R$ 10,50 / R$ 19,16 / R$ 21,32)",
+    timing: "Fase 2 · Momento do Pitch (Fixar no grupo)",
+    body: `🖤 *CARRINHO ABERTO: LANÇAMENTO OFICIAL QUINTA BLACK DO CRIATIVOOS!*
 
-Chegou a hora! Enquanto o site público (\`criativoos.com.br\`) exibe os valores anuais oficiais de *~R$ 997 a R$ 1.997/ano~*, quem está aqui no Grupo VIP destrava a tabela especial de *Lançamento & Black Friday*:
+Chegou a hora! Enquanto a tabela oficial perpétua no site público (\`criativoos.com.br\`) custa *12x R$ 32,15, 12x R$ 97,09 e 12x R$ 107,91*, quem entra nesta janela especial de *Lançamento Quinta Black* garante:
 
-*(Atenção: estes valores NÃO aparecem na página inicial — apenas nestes links diretos 👇)*
-
-🟢 *PLANO INDIVIDUAL — De ~R$ 997/ano~ por R$ 97* *(ou 12x de R$ 9,74)*
-• Licença Anual · 2 Marcas / Servidores · 2 PCs
-• *9 Criativos Base* completos (Estratégia, Copy, Carrossel, Posts, Stories, Anúncios e Publicação Meta)
+🟢 *LICENÇA INDIVIDUAL · 12x de R$ 10,50* *(ou R$ 97 à vista anual)* _(Oficial: ~12x R$ 32,15~)_
+• Até 2 marcas / servidores · 2 PCs · 9 Criativos Base + Operador PC + Navegador + +253 Apps
+• _Opcional no checkout:_ por apenas *+R$ 37* você transforma em *VITALÍCIO + libera os 6 Criativos extras* (15 no total para até 2 marcas)!
 👉 Link direto: [LINK_BF_INDIVIDUAL]
 
-🟡 *PLANO AGÊNCIA 10 — De ~R$ 1.797/ano~ por R$ 177* *(ou 12x de R$ 17,77)*
-• Licença Anual · 10 Marcas / Servidores · 3 PCs
-• *12 Criativos* (Base + 3 Especialistas Bônus de Engenharia Reversa e Consistência)
+🟡 *LICENÇA AGÊNCIA 10 · 12x de R$ 19,16* *(ou R$ 177 à vista anual)* _(Oficial: ~12x R$ 97,09~)_
+• Até 10 clientes ou servidores · 3 PCs · 12 Criativos (Base + Bônus de Rosto Real, Concorrentes e PDFs)
 👉 Link direto: [LINK_BF_AG10]
 
-🔥 *PLANO AGÊNCIA ILIMITADA — De ~R$ 1.997/ano~ por R$ 197* *(ou 12x de R$ 19,78)*
-• *∞ Marcas/Servidores ILIMITADOS · 5 PCs*
-• *Todos os 15 Criativos Completos* (Base + Bônus + *3 Diretores de Vídeo Remotion*)
-• *🎁 BÔNUS BLACK FRIDAY:* Somente no Agência Ilimitada você ganha o *PASSAPORTE VITALÍCIO INCLUSO* (sem taxa de renovação anual!) por apenas *R$ 20* de diferença para o Agência 10!
+🔥 *LICENÇA ILIMITADA · 12x de R$ 21,32!* *(ou R$ 197 à vista · VITALÍCIO!)* _(Oficial: ~12x R$ 107,91~)_
+• *Clientes e servidores ILIMITADOS · até 5 PCs*
+• *Todos os 15 Criativos Completos* (incluindo os 3 Diretores de Vídeos para Reels) + Nuvem 24h
+• *🎁 BÔNUS QUINTA BLACK:* Por apenas *R$ 2,16 por mês de diferença* para o Agência 10, você ganha o *PASSAPORTE VITALÍCIO INCLUSO* (sem nunca mais pagar anuidade)!
 👉 Link direto: [LINK_BF_ILIMITADO]
 
-⚡ *Entrega Imediata:* Comprou, recebeu sua chave \`CRIA-*\` + download dos instaladores *CriativoOS v1.0.3* (Windows, Mac e Linux) com *Garantia Blindada de 7 Dias*. 🚀`,
+⚡ *Entrega Imediata:* Chave por e-mail na hora + download do *CriativoOS v1.0.3* (Windows, Mac e Linux) + Área de Membros + Comunidade WhatsApp + *Garantia Blindada de 7 Dias*. 🚀`,
   },
   {
     id: "g2-5",
     campaign: "black",
     channel: "grupo",
     code: "G2.5",
-    title: "Prova Lógica Sexta-Feira + Efeito Chamariz (+R$ 20 -> Vitalício)",
-    timing: "Sexta-feira Black Friday · Meio-dia",
-    body: `📊 *A CONTA QUE FAZ O PLANO ILIMITADO DA BLACK FRIDAY SE PAGAR NO 1º DIA*
+    title: "Comparativo Lógico Black Friday (+R$ 2,16/mês -> Ilimitado Vitalício)",
+    timing: "Fase 2 · Sexta-feira Black Friday",
+    body: `📊 *FAÇA ESSA CONTA RÁPIDA ANTES DA MEIA-NOITE (BLACK FRIDAY CRIATIVOOS)*
 
-Olha só a comparação real de hoje (Sexta-feira de Black Friday):
+Compare os valores válidos *SOMENTE ATÉ HOJE ÀS 23H59*:
 
-Se você entrar agora no site oficial \`criativoos.com.br\`, o *Agência Ilimitada Anual* custa *R$ 1.997/ano*.
-E hoje *SOMENTE ATÉ ÀS 23H59* nos links diretos do grupo está assim:
-• *Agência 10 (Anual):* \`R$ 177\`
-• *Agência Ilimitada (∞ Marcas + Vídeo Remotion + ACESSO VITALÍCIO):* *\`R$ 197\`* _(ou 12x de R$ 19,78)_!
+• *Agência 10 (Anual · até 10 clientes):* \`12x de R$ 19,16\` *(ou R$ 177 à vista)*
+• *Licença Ilimitada (Clientes Ilimitados + Vídeos Reels + ACESSO VITALÍCIO):* *\`12x de R$ 21,32\`* *(ou R$ 197 à vista)*!
 
-Por literalmente *R$ 20 a mais* (menos de R$ 2/mês no parcelado), você sai de uma licença anual de 10 marcas para *∞ Marcas Ilimitadas + Vídeos Remotion + PASSAPORTE VITALÍCIO* sem nunca mais pagar renovação anual.
+Por literalmente *R$ 2,16 a mais por mês*, você sai da licença anual limitada a 10 clientes para ter *clientes e servidores ILIMITADOS + 5 PCs + acesso VITALÍCIO* contra *12x de R$ 107,91 todos os anos* no site oficial perpétuo.
 
-👀 _Ainda não viu o CriativoOS funcionando por dentro?_
-Veja a apresentação completa aqui: [LINK_APRESENTACAO_BLACK]
+👀 _Ainda não viu o CriativoOS funcionando na prática?_
+Confira os slides aqui: [LINK_APRESENTACAO_BLACK]
 
-🔥 _Já quer garantir sua chave \`CRIA-AGIL-*\` Vitalícia direto?_
+🔥 _Garantir sua Licença Ilimitada Vitalícia agora:_
 👉 [LINK_BF_ILIMITADO]`,
   },
   {
@@ -362,85 +343,86 @@ Veja a apresentação completa aqui: [LINK_APRESENTACAO_BLACK]
     campaign: "black",
     channel: "grupo",
     code: "G2.6",
-    title: "Última Chamada Black Friday (Sexta 23h59 — Encerramento do Vitalício)",
-    timing: "Sexta-feira · Noite (Últimas horas)",
-    body: `🚨 *ÚLTIMA CHAMADA: ACESSO VITALÍCIO + DESCONTO DE BLACK FRIDAY ENCERRA ÀS 23H59*
+    title: "Última Chamada Lançamento Quinta Black (Virada para Perpétuo)",
+    timing: "Fase 2 · Últimas horas",
+    body: `🚨 *ÚLTIMA CHAMADA: LOTE QUINTA BLACK COM VITALÍCIO ENCERRA ÀS 23H59*
 
-Faltam poucas horas para fecharmos a condição especial de Black Friday do *CriativoOS v1.0.3*.
+Faltam poucas horas para encerrarmos o lote de lançamento de *12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32*.
 
-Depois da meia-noite de hoje:
-❌ Encerra a condição promocional de \`R$ 97 / R$ 177 / R$ 197\`
-❌ Encerra o *Passaporte Vitalício* incluso no Agência Ilimitada
-✅ Permanece apenas a tabela oficial do site público \`criativoos.com.br\` (*R$ 997 a R$ 1.997/ano*).
+Depois das 23h59 entra em vigor a *Oferta Oficial Perpétua* do site \`criativoos.com.br\`:
+• Individual passa para \`12x de R$ 32,15\` *(R$ 297/ano · adicional vitalício sobe para +R$ 97)*
+• Agência 10 passa para \`12x de R$ 97,09\` *(R$ 897/ano)*
+• Agência Ilimitada passa para \`12x de R$ 107,91\` *(R$ 997/ano e sai o bônus Vitalício incluso)*.
 
-Se você quer automatizar toda a criação de conteúdo, carrosséis, anúncios, vídeos Remotion, calendário e publicação no Instagram direto do seu PC/VPS e WhatsApp — com *7 dias de garantia incondicional*:
+Com *7 dias de garantia incondicional*, aulas gravadas na Área de Membros e Comunidade Oficial no WhatsApp:
 
-🔥 *GARANTIR AGÊNCIA ILIMITADA VITALÍCIO — R$ 197 (12x R$ 19,78):*
+🔥 *GARANTIR LICENÇA ILIMITADA VITALÍCIA · 12x de R$ 21,32 (ou R$ 197 à vista):*
 👉 [LINK_BF_ILIMITADO]
 
-🟡 *Agência 10 (Anual) — R$ 177:* [LINK_BF_AG10]
-🟢 *Individual (Anual) — R$ 97:* [LINK_BF_INDIVIDUAL]`,
+🟡 *Agência 10 (Anual) · 12x R$ 19,16 (ou R$ 177):* [LINK_BF_AG10]
+🟢 *Individual (Anual + opção vitalícia de R$ 37) · 12x R$ 10,50 (ou R$ 97):* [LINK_BF_INDIVIDUAL]`,
   },
 
   // =========================================================================
-  // CAMPANHA 2 — DISPAROS 1:1 INDIVIDUAIS (QUINTA & BLACK FRIDAY)
+  // CAMPANHA 2 - DISPAROS 1:1 INDIVIDUAIS (QUINTA BLACK)
   // =========================================================================
   {
     id: "d2-1",
     campaign: "black",
     channel: "disparo_1_1",
     code: "D2.1",
-    title: "Convite 1:1 para Apresentação de Quinta à Noite",
-    timing: "Quinta-feira · Antes da Live",
+    title: "Convite 1:1 para o Lançamento Quinta Black",
+    timing: "Fase 2 · Antes da Live",
     body: `Fala [NOME], tudo ótimo? 👋
 
-Hoje às *[HORARIO_LIVE]* vamos fazer a apresentação oficial do *CriativoOS v1.0.3* — o primeiro Sistema Operacional de Criativos de IA para Instagram, Anúncios, Vídeos e Operação via WhatsApp.
+Hoje às *[HORARIO_LIVE]* vamos abrir oficialmente o *CriativoOS v1.0.3* na nossa live de *Quinta Black*.
 
-Vou mostrar na tela desde como instalar em 60 segundos até todos os *15 Criativos* rodando juntos no Estúdio Social Media (sem precisar gastar com API cara, podendo usar modelos gratuitos ou sua assinatura atual do ChatGPT/Claude/Gemini/Grok).
+Vou fazer uma pausa para mostrar instalando em 1 minuto no computador e fazer um tour completo por dentro · mostrando que ele não faz apenas posts, mas também opera programas e planilhas do PC, pesquisa na internet, conecta +253 aplicativos e envia criações com seu rosto real pelo WhatsApp (inclusive com 10 IAs gratuitas já inclusas).
 
-E no final vai rolar o lote fechado de *Black Friday* (com acesso vitalício liberado pra quem entrar na janela).
+E no final revelamos o lote fechado de lançamento com *Acesso Vitalício*!
 
-Quer o link da sala pra assistir por dentro? 👉 [LINK_APRESENTACAO_BLACK]`,
+Quer o link da apresentação para acompanhar? 👉 [LINK_APRESENTACAO_BLACK]`,
   },
   {
     id: "d2-2",
     campaign: "black",
     channel: "disparo_1_1",
     code: "D2.2",
-    title: "Disparo Direto Carrinho Aberto Black Friday 1:1",
-    timing: "Quinta à noite / Sexta de manhã",
-    body: `[NOME], acabou de abrir a janela de *Black Friday do CriativoOS v1.0.3*! 🖤⚡
+    title: "Disparo Direto Carrinho Aberto Quinta Black 1:1",
+    timing: "Fase 2 · Pós-Live / Black Friday",
+    body: `[NOME], liberamos o lote de *Lançamento Quinta Black do CriativoOS v1.0.3*! 🖤⚡
 
-No site oficial (\`criativoos.com.br\`) o valor normal fica entre *R$ 997 e R$ 1.997/ano*, mas pelos links diretos de hoje até amanhã (sexta 23h59) ficou assim:
+Enquanto a tabela oficial perpétua do site \`criativoos.com.br\` fica entre *12x de R$ 32,15 e 12x de R$ 107,91*, nessa janela especial ficou assim:
 
-• *Individual (Anual · 2 marcas · 9 Criativos):* R$ 97 (12x R$ 9,74)
+• *Individual (Anual · 2 marcas · 9 Criativos + Operador PC):* *12x de R$ 10,50* (ou R$ 97 à vista)
+_(Com opção no checkout de +R$ 37 para ficar Vitalício + 6 Criativos extras)_
 👉 [LINK_BF_INDIVIDUAL]
 
-• *Agência 10 (Anual · 10 marcas · 12 Criativos):* R$ 177 (12x R$ 17,77)
+• *Agência 10 (Anual · até 10 clientes/servidores):* *12x de R$ 19,16* (ou R$ 177 à vista)
 👉 [LINK_BF_AG10]
 
-• *Agência Ilimitada (∞ Marcas · 15 Criativos incl. Vídeo Remotion + VITALÍCIO INCLUSO):* *R$ 197* (12x R$ 19,78)
+• *Licença Ilimitada (Clientes Ilimitados · 15 Criativos incl. Vídeos Reels · VITALÍCIO INCLUSO):* *12x de R$ 21,32* (ou R$ 197 à vista)
 👉 [LINK_BF_ILIMITADO]
 
-Dica sincera: pela diferença de apenas *R$ 20* do Agência 10 pro Ilimitado, você leva marcas infinitas, os 3 criativos de vídeo e *nunca mais paga anuidade*. Qualquer dúvida é só me chamar aqui!`,
+Dica sincera: pela diferença de apenas *R$ 2,16/mês* do Agência 10 pro Ilimitado, você leva clientes ilimitados e nunca mais paga anuidade. Qualquer dúvida me chama aqui!`,
   },
   {
     id: "d2-3",
     campaign: "black",
     channel: "disparo_1_1",
     code: "D2.3",
-    title: "Recuperação & Tira-Dúvidas 1:1",
-    timing: "Sexta-feira · Tarde",
+    title: "Recuperação & Quebra de Objeção 1:1",
+    timing: "Fase 2 · Black Friday Tarde",
     body: `Oi [NOME]! Tudo bem?
 
-Vi seu interesse no *CriativoOS* nessa Black Friday e passei só pra confirmar se ficou alguma dúvida técnica ou de pagamento.
+Vi seu interesse no *CriativoOS* nessa janela de *Quinta Black* e passei para tirar qualquer dúvida rápida.
 
-Lembrando que você tem *7 dias de garantia total* para baixar o *CriativoOS v1.0.3* no seu Windows/Mac/Linux, conectar sua conta grátis do OpenCode (ou sua assinatura de IA) e testar seus primeiros posts no Instagram.
+Você tem *7 dias de garantia incondicional* para baixar no seu Windows, Mac ou Linux, acessar a Área de Membros com as aulas passo a passo, entrar na nossa Comunidade Oficial no WhatsApp e rodar usando as 10 IAs gratuitas já inclusas (sem gasto extra com API).
 
-Se o plano que faz mais sentido for o *Agência Ilimitada Vitalício (12x R$ 19,78 ou R$ 197 à vista)*, o link direto continua aqui:
+Se quiser travar a *Licença Ilimitada Vitalícia (12x de R$ 21,32 ou R$ 197 à vista)* antes de virar para 12x de R$ 107,91 no perpétuo, o link está aqui:
 👉 [LINK_BF_ILIMITADO]
 
-Se preferir começar no *Individual (R$ 97)*, está aqui:
+E se preferir o *Individual (12x de R$ 10,50 ou R$ 97 à vista)*:
 👉 [LINK_BF_INDIVIDUAL]`,
   },
   {
@@ -448,15 +430,15 @@ Se preferir começar no *Individual (R$ 97)*, está aqui:
     campaign: "black",
     channel: "disparo_1_1",
     code: "D2.4",
-    title: "Fechamento 1:1 Últimas Horas Black Friday",
-    timing: "Sexta-feira · Noite (22h)",
+    title: "Fechamento 1:1 Últimas Horas antes do Perpétuo",
+    timing: "Fase 2 · Últimas horas antes das 23h59",
     body: `[NOME], passando rapidinho antes da meia-noite ⏳
 
-Às *23h59 de hoje* o lote de Black Friday do *CriativoOS* com *Vitalício no Plano Agência Ilimitada (R$ 197 ou 12x R$ 19,78)* sai do ar e volta a tabela oficial de até *R$ 1.997/ano* no site \`criativoos.com.br\`.
+Às *23h59* encerra a condição de lançamento da *Quinta Black* e entra no ar o valor oficial perpétuo do site \`criativoos.com.br\` (12x R$ 32,15 / 12x R$ 97,09 / 12x R$ 107,91, sem o Vitalício gratuito no Ilimitado).
 
-Se ainda quiser travar sua licença vitalícia antes do encerramento, é só concluir por aqui:
+Se quiser travar sua *Licença Ilimitada Vitalícia por apenas 12x de R$ 21,32 (ou R$ 197 à vista)*, é só concluir por aqui antes da virada:
 👉 [LINK_BF_ILIMITADO]
 
-Sucesso demais nos projetos por aí! 🚀`,
+Sucesso demais por aí! 🚀`,
   },
 ];

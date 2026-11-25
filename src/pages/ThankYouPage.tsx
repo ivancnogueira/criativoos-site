@@ -4,12 +4,19 @@ import {
   CheckCircle2,
   Download,
   ExternalLink,
+  GraduationCap,
   KeyRound,
   Laptop,
-  MessageSquare,
+  LifeBuoy,
+  ShieldAlert,
   Terminal,
+  Users,
 } from "lucide-react";
-import { CRIATIVOOS_RELEASE, SUPPORT_WHATSAPP_URL } from "../config/campaignLinks";
+import {
+  CRIATIVOOS_RELEASE,
+  SUPPORT_CENTER_URL,
+  WHATSAPP_COMMUNITY_URL,
+} from "../config/campaignLinks";
 
 const DOWNLOAD_OPTIONS = [
   {
@@ -54,6 +61,7 @@ export const ThankYouPage: React.FC = () => {
           </a>
         </div>
 
+        {/* Banner principal */}
         <div className="mt-10 rounded-3xl border border-[#B9FC01]/45 bg-[#12160F] p-8 sm:p-10">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#B9FC01] px-3.5 py-1 font-mono text-xs font-bold text-[#07080C]">
             <CheckCircle2 className="h-4 w-4" />
@@ -61,15 +69,17 @@ export const ThankYouPage: React.FC = () => {
           </div>
 
           <h1 className="mt-5 font-display text-3xl font-extrabold text-white sm:text-5xl">
-            Sua equipe de Criativos está pronta para instalar!
+            Sua licença está pronta para instalar e rodar!
           </h1>
           <p className="mt-3 max-w-2xl text-base text-slate-300">
-            Sua chave de acesso (<code className="text-[#B9FC01]">CRIA-*</code>)
-            foi enviada para o seu e-mail de compra. Baixe abaixo o instalador
-            do <strong>CriativoOS</strong> para o seu computador.
+            Sua chave de acesso (<code className="text-[#B9FC01]">CRIA-*</code>) e o acesso à{" "}
+            <strong>Área de Membros com as aulas passo a passo</strong> foram enviados para o seu
+            e-mail de compra. Baixe abaixo o instalador do <strong>CriativoOS</strong> para o seu
+            computador.
           </p>
         </div>
 
+        {/* Passo 1: Download */}
         <h2 className="mt-12 font-display text-2xl font-bold text-white">
           1. Baixe o Instalador Para o Seu Computador
         </h2>
@@ -135,54 +145,122 @@ export const ThankYouPage: React.FC = () => {
           </a>
         </div>
 
+        {/* Passo 2: Comunidade WhatsApp + Área de Membros */}
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-[#111522] p-6">
-            <div className="flex items-center gap-2.5 text-[#B9FC01]">
-              <KeyRound className="h-5 w-5" />
-              <h3 className="font-display text-lg font-bold text-white">
-                2. Como Ativar em 30 Segundos
-              </h3>
-            </div>
-            <ol className="mt-4 list-decimal space-y-2.5 pl-5 text-sm text-slate-300">
-              <li>Abra o programa instalado <strong>CriativoOS</strong>.</li>
-              <li>
-                Digite o <strong>mesmo e-mail da compra</strong> e cole sua
-                chave <code className="text-[#B9FC01]">CRIA-*</code>.
-              </li>
-              <li>
-                Escolha usar os <strong>10 modelos gratuitos</strong> ou conecte
-                seu ChatGPT, Claude, Gemini ou Grok.
-              </li>
-              <li>
-                Suba suas fotos, conecte seu Instagram e seu WhatsApp e comece a
-                criar!
-              </li>
-            </ol>
-          </div>
-
-          <div className="flex flex-col justify-between rounded-3xl border border-white/10 bg-[#111522] p-6">
+          <div className="flex flex-col justify-between rounded-3xl border border-[#25D366]/45 bg-[#0C1812] p-6 sm:p-7">
             <div>
-              <div className="flex items-center gap-2.5 text-[#B9FC01]">
-                <MessageSquare className="h-5 w-5" />
-                <h3 className="font-display text-lg font-bold text-white">
-                  Precisa de Ajuda na Instalação?
-                </h3>
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-3 py-1 font-mono text-[11px] font-bold text-[#25D366]">
+                <Users className="h-3.5 w-3.5" />
+                PASSO OBRIGATÓRIO · COMUNIDADE VIP
               </div>
-              <p className="mt-3 text-sm text-slate-400">
-                Se não encontrar o e-mail com sua chave em até 5 minutos
-                (verifique também a aba Promoções ou Spam), chame nosso time de
-                suporte no WhatsApp.
+              <h3 className="mt-3 font-display text-xl font-bold text-white">
+                2. Entre na Comunidade Oficial no WhatsApp
+              </h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
+                Receba avisos de novas versões, compartilhe seus resultados, veja dicas rápidas de uso
+                e troque experiências com centenas de membros que já rodam o CriativoOS no dia a dia.
               </p>
             </div>
             <a
-              href={SUPPORT_WHATSAPP_URL}
+              href={WHATSAPP_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="volt-button mt-6 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-extrabold text-[#050608] transition hover:brightness-110"
             >
-              Chamar Suporte no WhatsApp
+              <Users className="h-4 w-4" />
+              Entrar no Grupo Oficial do WhatsApp
+              <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
+
+          <div className="rounded-3xl border border-white/10 bg-[#111522] p-6 sm:p-7">
+            <div className="flex items-center gap-2.5 text-[#B9FC01]">
+              <GraduationCap className="h-5 w-5" />
+              <h3 className="font-display text-lg font-bold text-white">
+                3. Como Ativar &amp; Assistir às Aulas
+              </h3>
+            </div>
+            <ol className="mt-4 list-decimal space-y-2.5 pl-5 text-sm text-slate-300">
+              <li>
+                Abra o programa instalado <strong>CriativoOS</strong> no seu computador.
+              </li>
+              <li>
+                Digite o <strong>mesmo e-mail da compra</strong> e cole sua chave{" "}
+                <code className="text-[#B9FC01]">CRIA-*</code> enviada no seu e-mail.
+              </li>
+              <li>
+                Escolha usar as <strong>10 IAs gratuitas já inclusas</strong> ou conecte sua assinatura
+                do ChatGPT, Claude, Gemini ou Grok.
+              </li>
+              <li>
+                Confira o e-mail de boas-vindas com o acesso à{" "}
+                <strong>Área de Membros</strong> contendo os tutoriais completos em vídeo.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        {/* Guia Anti-Bloqueio de Instalação */}
+        <div className="mt-8 rounded-3xl border border-amber-400/30 bg-[#15130C] p-6 sm:p-8">
+          <div className="flex items-center gap-2.5 text-amber-300">
+            <ShieldAlert className="h-5 w-5" />
+            <h3 className="font-display text-lg font-bold text-white">
+              Guia Rápido: Se o Windows ou Mac Mostrar Alerta ao Abrir o Instalador
+            </h3>
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-slate-300 sm:text-sm">
+            Por ser um aplicativo novo instalado diretamente no seu computador, o Windows ou macOS pode
+            pedir confirmação na primeira abertura. Isso leva 5 segundos:
+          </p>
+
+          <div className="mt-4 grid gap-4 md:grid-cols-3 text-xs leading-relaxed">
+            <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
+              <div className="font-mono font-bold text-[#B9FC01]">NO WINDOWS</div>
+              <p className="mt-1.5 text-slate-300">
+                Se aparecer a tela azul <em>"O Windows protegeu o computador"</em>, basta clicar em{" "}
+                <strong>Mais informações</strong> e depois no botão{" "}
+                <strong>Executar assim mesmo</strong>.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
+              <div className="font-mono font-bold text-[#B9FC01]">NO MAC (MACOS)</div>
+              <p className="mt-1.5 text-slate-300">
+                Após arrastar para Aplicativos, segure a tecla Control (ou clique com botão direito)
+                sobre o ícone do CriativoOS e clique em <strong>Abrir</strong> na primeira vez.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/35 p-4">
+              <div className="font-mono font-bold text-[#B9FC01]">CHAVE NO E-MAIL</div>
+              <p className="mt-1.5 text-slate-300">
+                Não achou o e-mail com a chave em 5 minutos? Pesquise por{" "}
+                <strong>CriativoOS</strong> nas abas <strong>Promoções</strong> e{" "}
+                <strong>Spam</strong> do e-mail usado na compra.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Rodapé de suporte por ticket */}
+        <div className="mt-8 flex flex-col justify-between gap-4 rounded-3xl border border-white/10 bg-[#111522] p-6 sm:flex-row sm:items-center">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 text-[#B9FC01]">
+              <KeyRound className="h-5 w-5" />
+              <h3 className="font-display text-lg font-bold text-white">
+                Ainda ficou com dúvida na chave ou encontrou algum erro técnico?
+              </h3>
+            </div>
+            <p className="mt-1.5 text-sm text-slate-400">
+              Para dúvidas rápidas de uso, assista às aulas na Área de Membros ou pergunte na
+              Comunidade. Se for erro técnico ou problema com sua licença, abra um chamado oficial.
+            </p>
+          </div>
+          <a
+            href={SUPPORT_CENTER_URL}
+            className="volt-button inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm"
+          >
+            <LifeBuoy className="h-4 w-4" />
+            Central de Suporte &amp; Tickets
+          </a>
         </div>
       </div>
     </div>

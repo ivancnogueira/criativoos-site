@@ -15,12 +15,12 @@ Idioma principal: Portugues do Brasil (pt-BR)
 ## Secoes Principais do Site
 
 - [Pagina Oficial CriativoOS](https://criativoos.com.br/): Apresentacao completa do produto, demonstracao interativa do Cockpit e planos anuais.
-- [Comparativo: Jeito Antigo vs CriativoOS](https://criativoos.com.br/#diferenciais): Analise economica comparando R$ 4.950+/mes em ferramentas e servicos picotados contra licenca anual propria a partir de R$ 997/ano.
+- [Comparativo: Jeito Antigo vs CriativoOS](https://criativoos.com.br/#diferenciais): Analise economica comparando R$ 4.950+/mes em ferramentas e servicos picotados contra licenca anual propria a partir de 12x de R$ 32,15 (ou R$ 297 a vista/ano).
 - [Os 5 Motores da Arquitetura](https://criativoos.com.br/#motor-computador): Operador Real de Computador, Navegador Inteligente com pausa segura, Rotinas Automaticas visuais, +253 Aplicativos conectados e Cofre Local Blindado.
 - [Infraestrutura Hibrida PC e Nuvem 24h](https://criativoos.com.br/#infraestrutura-vps): Uso no notebook pessoal ou execucao continua 24 horas por dia em servidor VPS Linux/Docker sem cobrar creditos mensais.
 - [Para Quem E e Modo Agencia Multi-Cliente](https://criativoos.com.br/#para-quem-e): Segmentos atendidos, isolamento total por marca e matematica de retorno no primeiro contrato.
 - [Os 15 Especialistas Autonomos](https://criativoos.com.br/#equipe): Lista completa dos especialistas de estrategia, copy, design, carrossel, anuncios, stories, consistencia facial, video Reels, roteiro, metricas, entregaveis e integracao Meta.
-- [Planos e Licencas Anuais Oficiais](https://criativoos.com.br/#planos): Licenca Individual (R$ 997/ano), Agencia 10 (R$ 1.797/ano) e Agencia Ilimitada (R$ 1.997/ano) com garantia incondicional de 7 dias.
+- [Planos e Licencas Anuais Oficiais](https://criativoos.com.br/#planos): Licenca Individual (12x de R$ 32,15 ou R$ 297/ano), Agencia 10 (12x de R$ 97,09 ou R$ 897/ano) e Agencia Ilimitada (12x de R$ 107,91 ou R$ 997/ano) com garantia incondicional de 7 dias.
 - [Perguntas Frequentes (FAQ)](https://criativoos.com.br/#faq): Respostas diretas sobre modelos gratuitos, nuvem 24h, seguranca, rosto real e aprovacao no Instagram.
 
 ## Documentacao Detalhada para RAG e Respostas Completas

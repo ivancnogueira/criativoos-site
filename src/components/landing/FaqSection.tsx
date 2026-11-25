@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ChevronDown, MessageCircle } from "lucide-react";
-import { SUPPORT_WHATSAPP_URL } from "../../config/campaignLinks";
+import { ChevronDown, LifeBuoy } from "lucide-react";
+import { SUPPORT_CENTER_URL } from "../../config/campaignLinks";
 
 const FAQ_ITEMS = [
   {
@@ -62,17 +62,16 @@ export const FaqSection: React.FC = () => {
                 Ainda tem dúvida sobre seu cenário ou infraestrutura?
               </div>
               <p className="mt-2 text-xs leading-relaxed text-slate-400 sm:text-sm">
-                Fale direto com nosso time de atendimento e receba orientação
-                honesta sobre o melhor plano para você ou para sua equipe.
+                Acesse nossa Central de Ajuda e Chamados para tirar dúvidas de
+                instalação, chave de licença ou escolher o melhor plano para o
+                seu cenário.
               </p>
               <a
-                href={SUPPORT_WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={SUPPORT_CENTER_URL}
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#B9FC01] px-5 py-3 font-display text-sm font-extrabold text-[#050608] transition hover:brightness-110"
               >
-                <MessageCircle className="h-4 w-4" />
-                <span>Tirar Dúvida no WhatsApp</span>
+                <LifeBuoy className="h-4 w-4" />
+                <span>Abrir Central de Suporte</span>
               </a>
             </div>
           </div>

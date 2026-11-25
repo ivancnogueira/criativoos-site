@@ -360,7 +360,10 @@ export const OldVsNewOSComparison: React.FC = () => {
                       Investimento Inicial
                     </div>
                     <div className="mt-1 font-display text-lg font-bold text-[#B9FC01]">
-                      A partir de R$ 997/ano
+                      12x de R$ 32,15
+                    </div>
+                    <div className="text-[11px] text-slate-400">
+                      ou R$ 297 à vista/ano
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { SUPPORT_WHATSAPP_URL } from "../../config/campaignLinks";
+import { SUPPORT_CENTER_URL } from "../../config/campaignLinks";
 
 export const Footer: React.FC = () => {
   return (
@@ -33,13 +33,8 @@ export const Footer: React.FC = () => {
           <a href="#planos" className="hover:text-[#B9FC01]">
             Planos Oficiais
           </a>
-          <a
-            href={SUPPORT_WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#B9FC01]"
-          >
-            Atendimento WhatsApp
+          <a href={SUPPORT_CENTER_URL} className="hover:text-[#B9FC01]">
+            Central de Suporte
           </a>
         </div>
       </div>

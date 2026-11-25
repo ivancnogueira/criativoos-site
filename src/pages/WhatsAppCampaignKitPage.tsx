@@ -170,12 +170,12 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
                 ["nomeContato", "Placeholder Nome (Disparos 1:1)"],
                 ["linkApresentacaoMigracao", "URL /apresentacao-migracao"],
                 ["linkApresentacaoBlack", "URL /apresentacao-black"],
-                ["linkMigInd", "Checkout Migração Individual (R$ 47)"],
-                ["linkMigAg10", "Checkout Migração Agência 10 (R$ 87)"],
-                ["linkMigIlim", "Checkout Migração Ilimitado (R$ 97)"],
-                ["linkBfInd", "Checkout Black Individual (R$ 97)"],
-                ["linkBfAg10", "Checkout Black Agência 10 (R$ 177)"],
-                ["linkBfIlim", "Checkout Black Ilimitado (R$ 197)"],
+                ["linkMigInd", "Checkout Migração Individual (12x R$ 5,09 / R$ 47)"],
+                ["linkMigAg10", "Checkout Migração Agência 10 (12x R$ 9,42 / R$ 87)"],
+                ["linkMigIlim", "Checkout Migração Ilimitado (12x R$ 10,50 / R$ 97)"],
+                ["linkBfInd", "Checkout Black Individual (12x R$ 10,50 / R$ 97)"],
+                ["linkBfAg10", "Checkout Black Agência 10 (12x R$ 19,16 / R$ 177)"],
+                ["linkBfIlim", "Checkout Black Ilimitado (12x R$ 21,32 / R$ 197)"],
               ] as const
             ).map(([key, label]) => (
               <label key={key} className="block">
@@ -205,7 +205,7 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
                   : "border-white/10 bg-[#141416] text-zinc-300"
               }`}
             >
-              Lançamento 1 · Migração Base (R$ 47/87/97)
+              Lançamento 1 · Migração (12x R$ 5,09 a R$ 10,50)
             </button>
             <button
               type="button"
@@ -216,7 +216,7 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
                   : "border-white/10 bg-[#141416] text-zinc-300"
               }`}
             >
-              Lançamento 2 · Quinta &amp; Black Friday (R$ 97/177/197)
+              Lançamento 2 · Quinta Black (12x R$ 10,50 a R$ 21,32)
             </button>
           </div>
 

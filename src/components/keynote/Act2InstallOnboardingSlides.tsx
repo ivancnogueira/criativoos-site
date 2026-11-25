@@ -6,6 +6,7 @@ import {
   Instagram,
   Laptop,
   MessageSquare,
+  MonitorPlay,
   Upload,
 } from "lucide-react";
 
@@ -16,43 +17,55 @@ interface Props {
 export const Act2InstallOnboardingSlides: React.FC<Props> = ({ slideId }) => {
   if (slideId === 6) {
     return (
-      <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
-        {[
-          {
-            os: "Windows",
-            file: "Instalador em 2 Cliques (.exe)",
-            detail: "Instala como qualquer programa comum na sua área de trabalho e atualiza sozinho.",
-          },
-          {
-            os: "Mac (Apple M1/M2/M3/M4 e Intel)",
-            file: "Instalador Universal (.dmg)",
-            detail: "Roda nativo com máxima velocidade em qualquer MacBook ou iMac.",
-          },
-          {
-            os: "Linux e Servidores",
-            file: "Versão Portátil (.AppImage)",
-            detail: "Pronto para rodar no seu computador Linux ou deixar ligado 24 horas na nuvem.",
-          },
-        ].map((item) => (
-          <div
-            key={item.os}
-            className="rounded-3xl border border-white/10 bg-[#141416] p-6 text-left"
-          >
-            <div className="flex items-center justify-between">
-              <Laptop className="h-6 w-6 text-[#B9FC01]" />
-              <Download className="h-4 w-4 text-zinc-500" />
+      <div className="mx-auto max-w-5xl space-y-5">
+        <div className="flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-[#B9FC01]/40 bg-[#12180E] px-5 py-3 text-xs font-semibold text-[#B9FC01]">
+          <MonitorPlay className="h-4 w-4 shrink-0" />
+          <span>
+            PAUSA AO VIVO NA LIVE: hora de baixar, dar 2 cliques e instalar o CriativoOS na tela em tempo real
+          </span>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {[
+            {
+              os: "Windows",
+              file: "Instalador Padrão (.exe)",
+              detail:
+                "Baixe, dê dois cliques para instalar como qualquer programa comum e o aplicativo atualiza sozinho.",
+            },
+            {
+              os: "Mac (Apple M1/M2/M3/M4 e Intel)",
+              file: "Instalador Universal (.dmg)",
+              detail:
+                "Roda nativo com máxima velocidade em qualquer MacBook ou iMac sem precisar mexer em terminal.",
+            },
+            {
+              os: "Linux e Servidores na Nuvem 24h",
+              file: "Versão Portátil (.AppImage) + Nuvem",
+              detail:
+                "Rode direto no computador Linux ou conecte um servidor 24h para manter tudo operando com o PC desligado.",
+            },
+          ].map((item) => (
+            <div
+              key={item.os}
+              className="rounded-3xl border border-white/10 bg-[#141416] p-6 text-left"
+            >
+              <div className="flex items-center justify-between">
+                <Laptop className="h-6 w-6 text-[#B9FC01]" />
+                <Download className="h-4 w-4 text-zinc-500" />
+              </div>
+              <h4 className="mt-4 font-display text-lg font-bold text-white">
+                {item.os}
+              </h4>
+              <div className="mt-1 font-mono text-xs text-[#B9FC01]">
+                {item.file}
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-zinc-400">
+                {item.detail}
+              </p>
             </div>
-            <h4 className="mt-4 font-display text-lg font-bold text-white">
-              {item.os}
-            </h4>
-            <div className="mt-1 font-mono text-xs text-[#B9FC01]">
-              {item.file}
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-zinc-400">
-              {item.detail}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     );
   }
@@ -92,7 +105,7 @@ export const Act2InstallOnboardingSlides: React.FC<Props> = ({ slideId }) => {
         <div className="mt-5 grid grid-cols-3 gap-2 text-center text-[11px]">
           <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2.5">
             <div className="font-bold text-white">Individual</div>
-            <div className="text-zinc-400">2 marcas · 9 Criativos</div>
+            <div className="text-zinc-400">2 marcas · 9 Criativos Base</div>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2.5">
             <div className="font-bold text-white">Agência 10</div>
@@ -114,25 +127,25 @@ export const Act2InstallOnboardingSlides: React.FC<Props> = ({ slideId }) => {
           n: "Passo 1",
           icon: Cpu,
           t: "Escolha Sua IA",
-          d: "Ative os 10 modelos gratuitos do OpenCode ou entre com seu ChatGPT, Claude, Gemini ou Grok.",
+          d: "Ative as 10 inteligências artificiais gratuitas já inclusas ou entre com seu ChatGPT, Claude, Gemini ou Grok.",
         },
         {
           n: "Passo 2",
           icon: Upload,
           t: "Fotos e Sua Marca",
-          d: "Selecione sua pasta de fotos reais, seu logotipo e as cores da sua empresa.",
+          d: "Selecione sua pasta de fotos reais, seu logotipo e as cores da sua empresa em poucos segundos.",
         },
         {
           n: "Passo 3",
           icon: Instagram,
-          t: "Seu Instagram",
-          d: "Conecte seu perfil comercial para agendar posts e acompanhar seus resultados.",
+          t: "Apps e Instagram",
+          d: "Conecte seu perfil comercial do Instagram e aplicativos como Google Drive, Planilhas ou Notion com 1 clique.",
         },
         {
           n: "Passo 4",
           icon: MessageSquare,
           t: "Seu WhatsApp",
-          d: "Leia o QR Code com o celular para pedir posts e aprovar publicações de onde estiver.",
+          d: "Leia o QR Code com o celular para pedir tarefas no PC, criar posts e aprovar publicações de onde estiver.",
         },
       ].map((step) => {
         const Icon = step.icon;

@@ -13,7 +13,7 @@ Idioma e mercado: Portugues do Brasil (pt-BR), Brasil
 
 Profissionais, empresas e agencias costumam gastar R$ 4.950 ou mais por mes combinando social media ou agencia tradicional (~R$ 3.000/mes), designer e editor avulso (~R$ 1.500/mes) e assinaturas picotadas em dolar de chats de IA, geradores de imagens, editores online e automadores limitados (~R$ 450+/mes), acumulando cerca de R$ 59.400+/ano e dependendo de prazos de 3 a 5 dias por lote.
 
-O CriativoOS substitui essa pilha fragmentada por um unico sistema instalado diretamente na infraestrutura do usuario (computador pessoal ou servidor VPS 24h), com licenca anual propria a partir de R$ 997/ano, reduzindo rotinas que levavam 5 a 7 dias para cerca de 1 hora no lote completo.
+O CriativoOS substitui essa pilha fragmentada por um unico sistema instalado diretamente na infraestrutura do usuario (computador pessoal ou servidor VPS 24h), com licenca anual propria a partir de R$ 297/ano, reduzindo rotinas que levavam 5 a 7 dias para cerca de 1 hora no lote completo.
 
 ---
 
@@ -75,13 +75,13 @@ Cada conta conta com um squad especializado (dividido por perfil de licenca):
 
 Todos os planos possuem garantia incondicional de 7 dias para testar na propria maquina com reembolso de 100% em caso de cancelamento dentro do prazo:
 
-- **Plano Individual (`CRIA-IND`): R$ 997/ano** (ou 12x de R$ 99,70)
+- **Plano Individual (`CRIA-IND`): 12x de R$ 32,15** (ou R$ 297 a vista/ano)
   - Ideal para criadores, especialistas, medicos, advogados, consultores e negocios proprios.
-  - Ate 2 marcas isoladas, instalacao em 2 computadores, 9 Criativos Base, 10 IAs gratuitas + chaves proprias, +253 conectores e controle via WhatsApp.
-- **Plano Agencia 10 (`CRIA-AG10`): R$ 1.797/ano**
+  - Ate 2 marcas isoladas, instalacao em 2 computadores, 9 Criativos Base, 10 IAs gratuitas + chaves proprias, +253 conectores e controle via WhatsApp. Opcional de Acesso Vitalicio + 6 Criativos extras no checkout por +R$ 97.
+- **Plano Agencia 10 (`CRIA-AG10`): 12x de R$ 97,09** (ou R$ 897 a vista/ano)
   - Para social medias e operacoes com carteira de clientes.
   - Ate 10 marcas em pastas 100% isoladas, instalacao em 3 computadores, 12 Criativos (Base + Bonus de Entregaveis, Concorrencia e Consistencia Facial) e suporte para Nuvem 24h.
-- **Plano Agencia Ilimitada (`CRIA-AGIL`): R$ 1.997/ano**
+- **Plano Agencia Ilimitada (`CRIA-AGIL`): 12x de R$ 107,91** (ou R$ 997 a vista/ano)
   - Para agencias, gestores de trafego e equipes de alta escala.
   - Marcas e clientes ilimitados sem taxa extra por conta, ate 5 computadores na equipe, todos os 15 Criativos incluindo o Estudio completo de Videos Reels & Shorts e Nuvem 24h multi-empresa.
 

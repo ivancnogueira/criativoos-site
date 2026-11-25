@@ -62,7 +62,7 @@ export const PresenterScriptPage: React.FC = () => {
                   : "text-zinc-300"
               }`}
             >
-              Migração (R$ 47/87/97)
+              Migração (12x R$ 5,09 a R$ 10,50)
             </button>
             <button
               type="button"
@@ -73,7 +73,7 @@ export const PresenterScriptPage: React.FC = () => {
                   : "text-zinc-300"
               }`}
             >
-              Black Friday (R$ 97/177/197)
+              Black Friday (12x R$ 10,50 a R$ 21,32)
             </button>
           </div>
 

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { HomePage } from "./pages/HomePage";
 import { ThankYouPage } from "./pages/ThankYouPage";
+import { SupportCenterPage } from "./pages/SupportCenterPage";
+import { SupportAdminPage } from "./pages/SupportAdminPage";
 import { PresentationMigrationPage } from "./pages/PresentationMigrationPage";
 import { PresentationBlackPage } from "./pages/PresentationBlackPage";
 import { PresenterScriptPage } from "./pages/PresenterScriptPage";
@@ -37,6 +39,10 @@ export const App: React.FC = () => {
     page = <WhatsAppCampaignKitPage />;
   } else if (pathname === "/obrigado") {
     page = <ThankYouPage />;
+  } else if (pathname === "/suporte") {
+    page = <SupportCenterPage />;
+  } else if (pathname === "/suporte/admin") {
+    page = <SupportAdminPage />;
   }
 
   return (

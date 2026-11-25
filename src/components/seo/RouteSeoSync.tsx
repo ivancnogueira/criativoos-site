@@ -56,6 +56,18 @@ const ROUTE_SEO_MAP: Record<string, RouteSeoMeta> = {
     robots: "noindex, nofollow",
     canonicalPath: "/obrigado",
   },
+  "/suporte": {
+    title: "CriativoOS | Central de Suporte e Tickets",
+    description: "Central oficial de autoatendimento e abertura de chamados CriativoOS.",
+    robots: "noindex, nofollow",
+    canonicalPath: "/suporte",
+  },
+  "/suporte/admin": {
+    title: "CriativoOS | Painel Administrativo de Suporte",
+    description: "Painel interno de gestao de chamados.",
+    robots: "noindex, nofollow",
+    canonicalPath: "/suporte/admin",
+  },
 };
 
 function upsertMeta(attr: "name" | "property", key: string, content: string): void {
