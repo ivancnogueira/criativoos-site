@@ -24,20 +24,26 @@ export interface PlanOfferSpec {
 }
 
 export const CRIATIVOOS_RELEASE = {
-  version: "v1.0.3",
-  releasePageUrl: "https://github.com/ivancnogueira/criativo-studio/releases/tag/v1.0.3",
+  githubRepo: "ivancnogueira/criativo-studio",
+  version: "v1.0.4",
+  releasePageUrl: "https://github.com/ivancnogueira/criativo-studio/releases/tag/v1.0.4",
+  windowsFilename: "CriativoOS-Setup-1.0.4.exe",
   windowsUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/CriativoOS-Setup-1.0.3.exe",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-Setup-1.0.4.exe",
+  macDmgFilename: "CriativoOS-1.0.4-universal.dmg",
   macDmgUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/CriativoOS-1.0.3-universal.dmg",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-universal.dmg",
+  macZipFilename: "CriativoOS-1.0.4-universal.zip",
   macZipUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/CriativoOS-1.0.3-universal.zip",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-universal.zip",
+  linuxAppImageFilename: "CriativoOS-1.0.4-x86_64.AppImage",
   linuxAppImageUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/CriativoOS-1.0.3-x86_64.AppImage",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-x86_64.AppImage",
+  linuxTarGzFilename: "CriativoOS-1.0.4-x86_64.tar.gz",
   linuxTarGzUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/CriativoOS-1.0.3-x86_64.tar.gz",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-x86_64.tar.gz",
   checksumsUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.3/SHA256SUMS.txt",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/SHA256SUMS.txt",
 } as const;
 
 export const SITE_URLS = {

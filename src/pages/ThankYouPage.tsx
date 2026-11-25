@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -18,31 +18,164 @@ import {
   WHATSAPP_COMMUNITY_URL,
 } from "../config/campaignLinks";
 
-const DOWNLOAD_OPTIONS = [
-  {
-    os: "Windows (64-bit)",
-    file: "CriativoOS-Setup-1.0.3.exe",
+interface ReleaseAssetLink {
+  filename: string;
+  url: string;
+}
+
+interface DynamicReleaseState {
+  version: string;
+  releasePageUrl: string;
+  windows: ReleaseAssetLink;
+  macDmg: ReleaseAssetLink;
+  macZip: ReleaseAssetLink;
+  linuxAppImage: ReleaseAssetLink;
+  linuxTarGz: ReleaseAssetLink;
+}
+
+const INITIAL_RELEASE: DynamicReleaseState = {
+  version: CRIATIVOOS_RELEASE.version,
+  releasePageUrl: CRIATIVOOS_RELEASE.releasePageUrl,
+  windows: {
+    filename: CRIATIVOOS_RELEASE.windowsFilename,
     url: CRIATIVOOS_RELEASE.windowsUrl,
-    badge: "Instalador Recomendado",
-    icon: Laptop,
   },
-  {
-    os: "macOS Universal (M1/M2/M3/M4 & Intel)",
-    file: "CriativoOS-1.0.3-universal.dmg",
+  macDmg: {
+    filename: CRIATIVOOS_RELEASE.macDmgFilename,
     url: CRIATIVOOS_RELEASE.macDmgUrl,
-    badge: "Apple Silicon + Intel",
-    icon: Laptop,
   },
-  {
-    os: "Linux (x86_64 AppImage)",
-    file: "CriativoOS-1.0.3-x86_64.AppImage",
+  macZip: {
+    filename: CRIATIVOOS_RELEASE.macZipFilename,
+    url: CRIATIVOOS_RELEASE.macZipUrl,
+  },
+  linuxAppImage: {
+    filename: CRIATIVOOS_RELEASE.linuxAppImageFilename,
     url: CRIATIVOOS_RELEASE.linuxAppImageUrl,
-    badge: "Desktop Linux",
-    icon: Terminal,
   },
-];
+  linuxTarGz: {
+    filename: CRIATIVOOS_RELEASE.linuxTarGzFilename,
+    url: CRIATIVOOS_RELEASE.linuxTarGzUrl,
+  },
+};
+
+function extractReleaseFromGithubPayload(ghData: {
+  tag_name?: string;
+  html_url?: string;
+  assets?: Array<{ name?: string; browser_download_url?: string }>;
+}): DynamicReleaseState | null {
+  const rawTag = String(ghData?.tag_name || "").trim();
+  if (!rawTag) return null;
+  const version = rawTag.startsWith("v") ? rawTag : `v${rawTag}`;
+  const assets = Array.isArray(ghData?.assets) ? ghData.assets : [];
+
+  const pick = (matcher: (lower: string) => boolean, fallback: ReleaseAssetLink): ReleaseAssetLink => {
+    const found = assets.find((asset) => {
+      const lower = String(asset?.name || "").toLowerCase();
+      return Boolean(asset?.browser_download_url) && !lower.endsWith(".blockmap") && matcher(lower);
+    });
+    return found
+      ? { filename: String(found.name), url: String(found.browser_download_url) }
+      : fallback;
+  };
+
+  return {
+    version,
+    releasePageUrl: ghData.html_url
+      ? String(ghData.html_url)
+      : `https://github.com/${CRIATIVOOS_RELEASE.githubRepo}/releases/tag/${version}`,
+    windows: pick((l) => l.endsWith(".exe"), INITIAL_RELEASE.windows),
+    macDmg: pick((l) => l.endsWith(".dmg"), INITIAL_RELEASE.macDmg),
+    macZip: pick(
+      (l) => l.endsWith(".zip") && (l.includes("mac") || l.includes("darwin") || l.includes("universal")),
+      INITIAL_RELEASE.macZip
+    ),
+    linuxAppImage: pick((l) => l.endsWith(".appimage"), INITIAL_RELEASE.linuxAppImage),
+    linuxTarGz: pick((l) => l.endsWith(".tar.gz"), INITIAL_RELEASE.linuxTarGz),
+  };
+}
 
 export const ThankYouPage: React.FC = () => {
+  const [release, setRelease] = useState<DynamicReleaseState>(INITIAL_RELEASE);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadLatestRelease() {
+      try {
+        const apiRes = await fetch("/api/release/latest", {
+          headers: { Accept: "application/json" },
+        });
+        if (apiRes.ok) {
+          const contentType = apiRes.headers.get("content-type") || "";
+          if (contentType.includes("application/json")) {
+            const payload = (await apiRes.json()) as Partial<DynamicReleaseState>;
+            if (!cancelled && payload?.version && payload?.windows?.url) {
+              setRelease({
+                version: payload.version,
+                releasePageUrl: payload.releasePageUrl || INITIAL_RELEASE.releasePageUrl,
+                windows: payload.windows,
+                macDmg: payload.macDmg || INITIAL_RELEASE.macDmg,
+                macZip: payload.macZip || INITIAL_RELEASE.macZip,
+                linuxAppImage: payload.linuxAppImage || INITIAL_RELEASE.linuxAppImage,
+                linuxTarGz: payload.linuxTarGz || INITIAL_RELEASE.linuxTarGz,
+              });
+              return;
+            }
+          }
+        }
+      } catch {
+        // Fallback direto via GitHub API caso o host seja estatico sem backend Node/Vercel
+      }
+
+      try {
+        const ghRes = await fetch(
+          `https://api.github.com/repos/${CRIATIVOOS_RELEASE.githubRepo}/releases/latest`,
+          { headers: { Accept: "application/vnd.github+json" } }
+        );
+        if (!ghRes.ok) return;
+        const ghData = (await ghRes.json()) as {
+          tag_name?: string;
+          html_url?: string;
+          assets?: Array<{ name?: string; browser_download_url?: string }>;
+        };
+        const parsed = extractReleaseFromGithubPayload(ghData);
+        if (!cancelled && parsed) {
+          setRelease(parsed);
+        }
+      } catch {
+        // Mantem fallback estatico silenciosamente
+      }
+    }
+
+    void loadLatestRelease();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const downloadOptions = [
+    {
+      os: "Windows (64-bit)",
+      file: release.windows.filename,
+      url: release.windows.url,
+      badge: "Instalador Recomendado",
+      icon: Laptop,
+    },
+    {
+      os: "macOS Universal (M1/M2/M3/M4 & Intel)",
+      file: release.macDmg.filename,
+      url: release.macDmg.url,
+      badge: "Apple Silicon + Intel",
+      icon: Laptop,
+    },
+    {
+      os: "Linux (x86_64 AppImage)",
+      file: release.linuxAppImage.filename,
+      url: release.linuxAppImage.url,
+      badge: "Desktop Linux",
+      icon: Terminal,
+    },
+  ];
   return (
     <div className="min-h-screen bg-[#07080C] text-white">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
@@ -80,11 +213,16 @@ export const ThankYouPage: React.FC = () => {
         </div>
 
         {/* Passo 1: Download */}
-        <h2 className="mt-12 font-display text-2xl font-bold text-white">
-          1. Baixe o Instalador Para o Seu Computador
-        </h2>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-3">
+          <h2 className="font-display text-2xl font-bold text-white">
+            1. Baixe o Instalador Para o Seu Computador
+          </h2>
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-3 py-1 font-mono text-xs font-semibold text-[#B9FC01]">
+            Versão atual: {release.version} · atualização automática
+          </span>
+        </div>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {DOWNLOAD_OPTIONS.map((item) => {
+          {downloadOptions.map((item) => {
             const Icon = item.icon;
             return (
               <a
@@ -120,7 +258,7 @@ export const ThankYouPage: React.FC = () => {
 
         <div className="mt-4 flex flex-wrap items-center gap-4 text-xs text-slate-400">
           <a
-            href={CRIATIVOOS_RELEASE.macZipUrl}
+            href={release.macZip.url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-[#B9FC01]"
@@ -128,7 +266,7 @@ export const ThankYouPage: React.FC = () => {
             macOS .zip <ExternalLink className="h-3 w-3" />
           </a>
           <a
-            href={CRIATIVOOS_RELEASE.linuxTarGzUrl}
+            href={release.linuxTarGz.url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-[#B9FC01]"
@@ -136,7 +274,7 @@ export const ThankYouPage: React.FC = () => {
             Linux .tar.gz <ExternalLink className="h-3 w-3" />
           </a>
           <a
-            href={CRIATIVOOS_RELEASE.releasePageUrl}
+            href={release.releasePageUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 hover:text-[#B9FC01]"

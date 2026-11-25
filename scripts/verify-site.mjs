@@ -161,6 +161,14 @@ async function run() {
     const healthJson = await healthRes.json();
     assert.equal(healthJson.service, "criativoos-site");
 
+    const releaseRes = await fetch(`${base}/api/release/latest`);
+    assert.equal(releaseRes.status, 200, "GET /api/release/latest deve retornar 200");
+    const releaseJson = await releaseRes.json();
+    assert.ok(String(releaseJson.version || "").startsWith("v"), "Versão da release inválida");
+    assert.ok(String(releaseJson.windows?.url || "").endsWith(".exe"), "URL Windows .exe inválida");
+    assert.ok(String(releaseJson.macDmg?.url || "").endsWith(".dmg"), "URL macOS .dmg inválida");
+    assert.ok(String(releaseJson.linuxAppImage?.url || "").endsWith(".AppImage"), "URL Linux .AppImage inválida");
+
     for (const route of [
       "/",
       "/apresentacao-migracao",

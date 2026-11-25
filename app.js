@@ -3,6 +3,7 @@ import express from "express";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getLatestReleaseInfo } from "./lib/latest-release.js";
 
 try {
   if (typeof process.loadEnvFile === "function") {
@@ -135,9 +136,17 @@ export function createSiteApp(options = {}) {
     res.status(200).json({
       status: "ok",
       service: "criativoos-site",
-      release: "v1.0.3",
+      release: "v1.0.4",
       timestamp: new Date().toISOString(),
     });
+  });
+
+  app.get("/api/release/latest", async (req, res) => {
+    res.setHeader("Cache-Control", "public, max-age=60, s-maxage=300, stale-while-revalidate=600");
+    const info = await getLatestReleaseInfo({
+      forceRefresh: req.query?.refresh === "1",
+    });
+    return res.status(200).json(info);
   });
 
   // Endpoints da Central de Suporte / Tickets
