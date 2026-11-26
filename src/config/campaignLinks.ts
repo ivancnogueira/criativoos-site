@@ -91,13 +91,10 @@ export const CHECKOUT_URLS = {
   },
   black: {
     individual:
-      (env.VITE_CHECKOUT_BF_INDIVIDUAL as string | undefined) ||
       "https://payfast.greenn.com.br/207841/offer/OCTWeq?b_id_1=207842&b_offer_1=IMkvZN",
     agencia10:
-      (env.VITE_CHECKOUT_BF_AGENCIA10 as string | undefined) ||
       "https://payfast.greenn.com.br/207841/offer/kcnsgN?b_id_1=207842&b_offer_1=IMkvZN",
     ilimitado:
-      (env.VITE_CHECKOUT_BF_ILIMITADO as string | undefined) ||
       "https://payfast.greenn.com.br/207841?ch_id=145806&b_id_1=207842&b_offer_1=IMkvZN",
   },
 } as const;

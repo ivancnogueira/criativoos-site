@@ -78,7 +78,16 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
     if (typeof window === "undefined") return DEFAULT_VARS;
     try {
       const saved = window.localStorage.getItem("criativoos_kit_vars");
-      return saved ? { ...DEFAULT_VARS, ...JSON.parse(saved) } : DEFAULT_VARS;
+      if (!saved) return DEFAULT_VARS;
+      const parsed = JSON.parse(saved) as Partial<KitVariables>;
+      const merged: KitVariables = { ...DEFAULT_VARS, ...parsed };
+      const shouldReplaceLegacyBf = (val?: string) =>
+        !val || val.startsWith("#checkout-") || val.toLowerCase().includes("appmax");
+
+      if (shouldReplaceLegacyBf(parsed.linkBfInd)) merged.linkBfInd = DEFAULT_VARS.linkBfInd;
+      if (shouldReplaceLegacyBf(parsed.linkBfAg10)) merged.linkBfAg10 = DEFAULT_VARS.linkBfAg10;
+      if (shouldReplaceLegacyBf(parsed.linkBfIlim)) merged.linkBfIlim = DEFAULT_VARS.linkBfIlim;
+      return merged;
     } catch {
       return DEFAULT_VARS;
     }
