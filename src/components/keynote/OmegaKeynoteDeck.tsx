@@ -155,7 +155,13 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
       </header>
 
       {/* Palco do Slide Atual */}
-      <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 py-5 sm:px-8 sm:py-6">
+      <main
+        className={`mx-auto flex w-full flex-1 flex-col justify-center ${
+          currentSlide.id === 21
+            ? "max-w-none px-4 py-4 sm:px-8 xl:px-14"
+            : "max-w-7xl px-4 py-5 sm:px-8 sm:py-6"
+        }`}
+      >
         <div ref={stageRef} className="text-center">
           <span className="inline-block rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-4 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#B9FC01]">
             {currentSlide.badge}

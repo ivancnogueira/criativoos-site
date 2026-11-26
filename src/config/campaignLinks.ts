@@ -91,11 +91,14 @@ export const CHECKOUT_URLS = {
   },
   black: {
     individual:
-      (env.VITE_CHECKOUT_BF_INDIVIDUAL as string | undefined) || "#checkout-bf-individual",
+      (env.VITE_CHECKOUT_BF_INDIVIDUAL as string | undefined) ||
+      "https://payfast.greenn.com.br/207841/offer/OCTWeq?b_id_1=207842&b_offer_1=IMkvZN",
     agencia10:
-      (env.VITE_CHECKOUT_BF_AGENCIA10 as string | undefined) || "#checkout-bf-agencia10",
+      (env.VITE_CHECKOUT_BF_AGENCIA10 as string | undefined) ||
+      "https://payfast.greenn.com.br/207841/offer/kcnsgN?b_id_1=207842&b_offer_1=IMkvZN",
     ilimitado:
-      (env.VITE_CHECKOUT_BF_ILIMITADO as string | undefined) || "#checkout-bf-ilimitado",
+      (env.VITE_CHECKOUT_BF_ILIMITADO as string | undefined) ||
+      "https://payfast.greenn.com.br/207841?ch_id=145806&b_id_1=207842&b_offer_1=IMkvZN",
   },
 } as const;
 
@@ -265,9 +268,9 @@ export function getCampaignOfferPlans(edition: "migration" | "black"): readonly 
       tagline: "Condição oficial de Lançamento & Black Friday para sua operação.",
       anchorInstallments: "12x de R$ 32,15",
       anchorPrice: "R$ 297",
-      installmentValue: "R$ 10,50",
-      installmentsText: "12x de R$ 10,50",
-      priceCash: "R$ 97",
+      installmentValue: "R$ 9,97",
+      installmentsText: "12x de R$ 9,97",
+      priceCash: "R$ 97,00",
       billingCycle: "Licença Anual (12 meses)",
       brandsLimit: "2 marcas",
       pcsLimit: "2 PCs",
@@ -289,9 +292,9 @@ export function getCampaignOfferPlans(edition: "migration" | "black"): readonly 
       tagline: "Licença anual intermediária para até 10 clientes ou servidores.",
       anchorInstallments: "12x de R$ 97,09",
       anchorPrice: "R$ 897",
-      installmentValue: "R$ 19,16",
-      installmentsText: "12x de R$ 19,16",
-      priceCash: "R$ 177",
+      installmentValue: "R$ 18,20",
+      installmentsText: "12x de R$ 18,20",
+      priceCash: "R$ 177,00",
       billingCycle: "Licença Anual (12 meses)",
       brandsLimit: "10 marcas",
       pcsLimit: "3 PCs",
@@ -310,18 +313,18 @@ export function getCampaignOfferPlans(edition: "migration" | "black"): readonly 
       id: "ilimitado",
       code: "CRIA-AGIL",
       name: "Agência Ilimitada",
-      tagline: "Por apenas +R$ 2,16/mês (ou +R$ 20 à vista) você libera Clientes Ilimitados, Vídeos e Vitalício.",
+      tagline: "Por apenas +R$ 2,05/mês (ou +R$ 20 à vista) você libera Clientes Ilimitados, Vídeos e Vitalício.",
       anchorInstallments: "12x de R$ 107,91",
       anchorPrice: "R$ 997",
-      installmentValue: "R$ 21,32",
-      installmentsText: "12x de R$ 21,32",
-      priceCash: "R$ 197",
+      installmentValue: "R$ 20,25",
+      installmentsText: "12x de R$ 20,25",
+      priceCash: "R$ 197,00",
       billingCycle: "PASSAPORTE VITALÍCIO BLACK FRIDAY INCLUSO",
       brandsLimit: "Marcas ilimitadas",
       pcsLimit: "5 PCs",
       criativosCount: "Todos os 15 (+ Vídeos Reels)",
       highlighted: true,
-      badge: "VITALÍCIO BLACK FRIDAY INCLUSO · +R$ 2,16/mês vs. Ag. 10",
+      badge: "VITALÍCIO BLACK FRIDAY INCLUSO · +R$ 2,05/mês vs. Ag. 10",
       vitalicioIncluded: true,
       checkoutUrl: CHECKOUT_URLS.black.ilimitado,
       features: [

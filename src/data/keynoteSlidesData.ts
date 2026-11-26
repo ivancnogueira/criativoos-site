@@ -200,13 +200,13 @@ export function getKeynoteSlides(edition: KeynoteEdition): readonly KeynoteSlide
         : "ATO 4 · CONDIÇÃO ESPECIAL LANÇAMENTO QUINTA BLACK",
       title: isMig
         ? "Condição de Membro Fundador: a partir de 12x de R$ 5,09 (com Vitalício no Ilimitado)"
-        : "Lote de Lançamento Quinta Black: a partir de 12x de R$ 10,50 (com Vitalício no Ilimitado)",
+        : "Lote de Lançamento Quinta Black: a partir de 12x de R$ 9,97 (com Vitalício no Ilimitado)",
       subtitle: isMig
         ? "Valor simbólico exclusivo para quem comprou a 1ª imersão: menos de um cafezinho por mês, garantindo Acesso Vitalício sem anuidade no plano Agência Ilimitada por apenas 12x de R$ 10,50 (ou R$ 97 à vista)."
-        : "Condição fechada de quinta e sexta-feira muito abaixo da tabela oficial do site, liberando Acesso Vitalício sem renovação anual no plano Agência Ilimitada por apenas 12x de R$ 21,32 (ou R$ 197 à vista).",
+        : "Condição fechada de quinta e sexta-feira muito abaixo da tabela oficial do site, liberando Acesso Vitalício sem renovação anual no plano Agência Ilimitada por apenas 12x de R$ 20,25 (ou R$ 197,00 à vista).",
       presenterCue: isMig
         ? "Destaque que do Agência 10 (12x R$ 9,42) para o Ilimitado Vitalício (12x R$ 10,50) são apenas +R$ 1,08 por mês!"
-        : "Destaque que do Agência 10 (12x R$ 19,16) para o Ilimitado Vitalício (12x R$ 21,32) são apenas +R$ 2,16 por mês!",
+        : "Destaque que do Agência 10 (12x R$ 18,20) para o Ilimitado Vitalício (12x R$ 20,25) são apenas +R$ 2,05 por mês!",
     },
     {
       id: 19,
@@ -224,7 +224,18 @@ export function getKeynoteSlides(edition: KeynoteEdition): readonly KeynoteSlide
       title: "Teste no seu computador por 7 dias com risco zero, aulas gravadas e comunidade",
       subtitle:
         "Garanta sua chave agora, assista ao passo a passo na Área de Membros, entre na Comunidade Oficial do WhatsApp e rode suas rotinas hoje mesmo com garantia total de 7 dias.",
-      presenterCue: "Faça a chamada final apontando para o botão do plano escolhido logo abaixo.",
+      presenterCue: "Faça a chamada final e avance para a tela cheia com os 3 QR Codes das ofertas.",
+    },
+    {
+      id: 21,
+      act: 4,
+      badge: isMig
+        ? "ATO 4 · ESCANEIE AGORA · MIGRAÇÃO FUNDADOR"
+        : "ATO 4 · ESCANEIE AGORA · BLACK FRIDAY",
+      title: "Aponte a Câmera do Celular e Garanta Sua Licença Agora",
+      subtitle:
+        "Escaneie o QR Code do plano escolhido direto na tela ou clique no botão correspondente para liberar acesso imediato com 7 dias de garantia.",
+      presenterCue: "Deixe esta tela em largura total com os 3 QR Codes visíveis enquanto responde dúvidas da sala.",
     },
   ];
 }

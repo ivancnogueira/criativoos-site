@@ -1,11 +1,12 @@
 import React from "react";
-import { ArrowUpRight, Check, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { ArrowUpRight, Check, QrCode, ShieldCheck, Sparkles, Users } from "lucide-react";
 import {
   getCampaignOfferPlans,
   OFFICIAL_PUBLIC_PLANS,
   WHATSAPP_COMMUNITY_URL,
 } from "../../config/campaignLinks";
 import type { KeynoteEdition } from "../../data/keynoteSlidesData";
+import { OfferQrCode } from "./OfferQrCode";
 
 interface Props {
   slideId: number;
@@ -196,51 +197,155 @@ export const Act4RoiPitchSlides: React.FC<Props> = ({ slideId, edition }) => {
     );
   }
 
-  const heroPlan = wavePlans[2];
-  return (
-    <div className="mx-auto max-w-3xl rounded-3xl border border-[#B9FC01]/50 bg-[#12160F] p-8">
-      <ShieldCheck className="mx-auto h-12 w-12 text-[#B9FC01]" />
-      <h4 className="mt-4 font-display text-2xl font-bold text-white sm:text-3xl">
-        7 Dias de Garantia Incondicional + Ativação Imediata v1.0.3
-      </h4>
-      <p className="mt-3 text-sm text-zinc-300">
-        Instale hoje no seu Windows, Mac ou Linux, conecte sua marca e teste tudo por dentro com aulas
-        gravadas na Área de Membros e acesso à Comunidade Oficial no WhatsApp. Se não fizer sentido,
-        devolvemos 100% do valor dentro dos 7 dias.
-      </p>
+  if (slideId === 20) {
+    const heroPlan = wavePlans[2];
+    return (
+      <div className="mx-auto max-w-3xl rounded-3xl border border-[#B9FC01]/50 bg-[#12160F] p-8">
+        <ShieldCheck className="mx-auto h-12 w-12 text-[#B9FC01]" />
+        <h4 className="mt-4 font-display text-2xl font-bold text-white sm:text-3xl">
+          7 Dias de Garantia Incondicional + Ativação Imediata v1.0.3
+        </h4>
+        <p className="mt-3 text-sm text-zinc-300">
+          Instale hoje no seu Windows, Mac ou Linux, conecte sua marca e teste tudo por dentro com aulas
+          gravadas na Área de Membros e acesso à Comunidade Oficial no WhatsApp. Se não fizer sentido,
+          devolvemos 100% do valor dentro dos 7 dias.
+        </p>
 
-      <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a
-          href={heroPlan.checkoutUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="volt-button inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm"
-        >
-          Garantir Ilimitado VITALÍCIO (12x {heroPlan.installmentValue} ou {heroPlan.priceCash})
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
-        <a
-          href={WHATSAPP_COMMUNITY_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-5 py-3.5 text-xs font-semibold text-zinc-200 hover:border-[#B9FC01] hover:text-white"
-        >
-          <Users className="h-4 w-4 text-[#B9FC01]" />
-          Comunidade Oficial
-        </a>
-      </div>
-      <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-zinc-400">
-        {wavePlans.slice(0, 2).map((p) => (
+        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            key={p.id}
-            href={p.checkoutUrl}
+            href={heroPlan.checkoutUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-[#B9FC01]"
+            className="volt-button inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm"
           >
-            Ou ir de {p.name} Anual (12x {p.installmentValue} ou {p.priceCash})
+            Garantir Ilimitado VITALÍCIO (12x {heroPlan.installmentValue} ou {heroPlan.priceCash})
+            <ArrowUpRight className="h-4 w-4" />
           </a>
-        ))}
+          <a
+            href={WHATSAPP_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-5 py-3.5 text-xs font-semibold text-zinc-200 hover:border-[#B9FC01] hover:text-white"
+          >
+            <Users className="h-4 w-4 text-[#B9FC01]" />
+            Comunidade Oficial
+          </a>
+        </div>
+        <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs text-zinc-400">
+          {wavePlans.slice(0, 2).map((p) => (
+            <a
+              key={p.id}
+              href={p.checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#B9FC01]"
+            >
+              Ou ir de {p.name} Anual (12x {p.installmentValue} ou {p.priceCash})
+            </a>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full">
+      <div className="grid w-full grid-cols-1 gap-5 text-left lg:grid-cols-3">
+        {wavePlans.map((plan) => {
+          const isHero = Boolean(plan.highlighted);
+          return (
+            <div
+              key={plan.id}
+              className={`flex flex-col justify-between rounded-3xl border p-6 transition ${
+                isHero
+                  ? "border-[#B9FC01] bg-[#13180E] shadow-[0_0_55px_rgba(185,252,1,0.2)]"
+                  : "border-white/15 bg-[#141416]"
+              }`}
+            >
+              <div>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="font-mono text-xs font-semibold text-zinc-400">
+                    {plan.code}
+                  </span>
+                  {plan.badge && (
+                    <span
+                      className={`rounded-full px-3 py-0.5 font-mono text-[10px] font-bold uppercase ${
+                        isHero
+                          ? "bg-[#B9FC01] text-[#0D0D0D]"
+                          : "bg-white/10 text-zinc-200"
+                      }`}
+                    >
+                      {plan.badge}
+                    </span>
+                  )}
+                </div>
+
+                <div className="mt-3 flex flex-wrap items-end justify-between gap-3 border-b border-white/10 pb-4">
+                  <div>
+                    <h4 className="font-display text-2xl font-bold text-white">
+                      {plan.name}
+                    </h4>
+                    <div className="mt-0.5 text-xs text-zinc-400">
+                      {plan.brandsLimit} · {plan.pcsLimit} · {plan.criativosCount}
+                    </div>
+                  </div>
+
+                  <div className="text-right">
+                    {plan.anchorPrice && (
+                      <div className="font-mono text-[11px] text-zinc-500 line-through">
+                        {plan.anchorInstallments}
+                      </div>
+                    )}
+                    <div className="flex items-baseline justify-end gap-1 font-display">
+                      <span className="text-sm font-extrabold text-[#B9FC01]">12x de</span>
+                      <span className="text-2xl font-extrabold text-white sm:text-3xl">
+                        {plan.installmentValue}
+                      </span>
+                    </div>
+                    <div className="text-xs font-semibold text-zinc-200">
+                      ou <strong className="text-[#B9FC01]">{plan.priceCash} à vista</strong>
+                      {plan.vitalicioIncluded ? " · VITALÍCIO" : " (anual)"}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="my-5 flex flex-col items-center">
+                  <OfferQrCode
+                    url={plan.checkoutUrl}
+                    label={plan.name}
+                    highlighted={isHero}
+                  />
+                  <div className="mt-3 inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-zinc-300">
+                    <QrCode className="h-3.5 w-3.5 text-[#B9FC01]" />
+                    Aponte a câmera para o plano {plan.name}
+                  </div>
+                </div>
+
+                {plan.orderBumpNote && (
+                  <div className="mb-4 rounded-xl border border-amber-400/30 bg-amber-400/10 p-2.5 text-center text-[11px] text-amber-200">
+                    {plan.orderBumpNote}
+                  </div>
+                )}
+              </div>
+
+              <a
+                href={plan.checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex w-full items-center justify-center gap-2 rounded-full py-3 text-xs font-extrabold transition ${
+                  isHero
+                    ? "volt-button"
+                    : "border border-white/15 bg-white/[0.06] text-white hover:border-[#B9FC01] hover:bg-white/15"
+                }`}
+              >
+                {isHero
+                  ? `GARANTIR ILIMITADO VITALÍCIO (12x ${plan.installmentValue})`
+                  : `Abrir Checkout ${plan.name} (12x ${plan.installmentValue})`}
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

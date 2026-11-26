@@ -173,9 +173,9 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
                 ["linkMigInd", "Checkout Migração Individual (12x R$ 5,09 / R$ 47)"],
                 ["linkMigAg10", "Checkout Migração Agência 10 (12x R$ 9,42 / R$ 87)"],
                 ["linkMigIlim", "Checkout Migração Ilimitado (12x R$ 10,50 / R$ 97)"],
-                ["linkBfInd", "Checkout Black Individual (12x R$ 10,50 / R$ 97)"],
-                ["linkBfAg10", "Checkout Black Agência 10 (12x R$ 19,16 / R$ 177)"],
-                ["linkBfIlim", "Checkout Black Ilimitado (12x R$ 21,32 / R$ 197)"],
+                ["linkBfInd", "Checkout Black Individual (12x R$ 9,97 / R$ 97,00)"],
+                ["linkBfAg10", "Checkout Black Agência 10 (12x R$ 18,20 / R$ 177,00)"],
+                ["linkBfIlim", "Checkout Black Ilimitado (12x R$ 20,25 / R$ 197,00)"],
               ] as const
             ).map(([key, label]) => (
               <label key={key} className="block">
@@ -216,7 +216,7 @@ export const WhatsAppCampaignKitPage: React.FC = () => {
                   : "border-white/10 bg-[#141416] text-zinc-300"
               }`}
             >
-              Lançamento 2 · Quinta Black (12x R$ 10,50 a R$ 21,32)
+              Lançamento 2 · Quinta Black (12x R$ 9,97 a R$ 20,25)
             </button>
           </div>
 

@@ -73,7 +73,7 @@ export const PresenterScriptPage: React.FC = () => {
                   : "text-zinc-300"
               }`}
             >
-              Black Friday (12x R$ 10,50 a R$ 21,32)
+              Black Friday (12x R$ 9,97 a R$ 20,25)
             </button>
           </div>
 
@@ -146,7 +146,7 @@ export const PresenterScriptPage: React.FC = () => {
           ))}
         </div>
 
-        {/* Blocos dos 20 slides */}
+        {/* Blocos dos slides */}
         <div className="mt-8 space-y-6 pb-28">
           {blocks.map((block, idx) => {
             const showActBanner = idx === 0 || blocks[idx - 1].act !== block.act;
@@ -166,7 +166,7 @@ export const PresenterScriptPage: React.FC = () => {
                 <article className="rounded-3xl border border-white/10 bg-[#141416] p-6 sm:p-8">
                   <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] pb-3">
                     <span className="font-mono text-xs font-bold text-[#B9FC01]">
-                      SLIDE {String(block.slideId).padStart(2, "0")}/20 · {block.slideTitle}
+                      SLIDE {String(block.slideId).padStart(2, "0")}/{blocks.length} · {block.slideTitle}
                     </span>
                   </div>
 

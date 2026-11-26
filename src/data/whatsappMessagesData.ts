@@ -40,7 +40,7 @@ E preste atenção: *ele NÃO se resume apenas a criar conteúdo!* Olha o que o 
 • *No seu bolso pelo WhatsApp:* peça tarefas ou criações por áudio e aprove respondendo \`1\`
 • *Zero gasto obrigatório com IA:* já vem com *10 inteligências artificiais gratuitas inclusas* ou conecte sua conta do ChatGPT, Claude, Gemini ou Grok.
 
-Na quinta-feira abrimos o *Lançamento Oficial Quinta Black* (de \`12x R$ 10,50\` a \`12x R$ 21,32\`) e depois fica o preço oficial no site \`criativoos.com.br\` (de \`12x R$ 32,15\` a \`12x R$ 107,91\`).
+Na quinta-feira abrimos o *Lançamento Oficial Quinta Black* (de \`12x R$ 9,97\` a \`12x R$ 20,25\`) e depois fica o preço oficial no site \`criativoos.com.br\` (de \`12x R$ 32,15\` a \`12x R$ 107,91\`).
 
 *MAS AMANHÃ É A JANELA DE PRÉ-LANÇAMENTO EXCLUSIVA PARA VOCÊS FUNDADORES* com parcela menor que um café por mês.
 
@@ -77,7 +77,7 @@ _(Na página pública oficial \`criativoos.com.br\` a tabela perpétua fica entr
 
 Está oficialmente aberta a janela exclusiva de *Pré-Lançamento* para quem comprou na 1ª Imersão!
 
-⚠️ _Lembrando: na quinta-feira do lançamento oficial os planos sobem para 12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32, e depois no site oficial ficam entre *12x R$ 32,15 e 12x R$ 107,91*._
+⚠️ _Lembrando: na quinta-feira do lançamento oficial os planos sobem para 12x R$ 9,97 / 12x R$ 18,20 / 12x R$ 20,25, e depois no site oficial ficam entre *12x R$ 32,15 e 12x R$ 107,91*._
 
 Escolha o tamanho da sua operação e já garanta seu instalador v1.0.3:
 
@@ -136,7 +136,7 @@ Passando para avisar antes de virar a chave para a próxima fase:
 
 Hoje encerramos os links exclusivos de Membros Fundadores (*12x R$ 5,09 / 12x R$ 9,42 / 12x R$ 10,50*).
 
-No *Lançamento Oficial de Quinta-Feira Black*, os preços sobem para *12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32* · e na sequência entra a tabela oficial perpétua do site (\`12x R$ 32,15 / 12x R$ 97,09 / 12x R$ 107,91\`).
+No *Lançamento Oficial de Quinta-Feira Black*, os preços sobem para *12x R$ 9,97 / 12x R$ 18,20 / 12x R$ 20,25* · e na sequência entra a tabela oficial perpétua do site (\`12x R$ 32,15 / 12x R$ 97,09 / 12x R$ 107,91\`).
 
 Ou seja: garantindo agora você trava *Acesso Vitalício na Licença Ilimitada por 12x de R$ 10,50 (ou R$ 97 à vista)*.
 
@@ -214,7 +214,7 @@ O link direto da Licença Ilimitada Vitalícia continua ativo aqui antes de subi
     timing: "Fase 1 · Encerramento da janela Fundadores",
     body: `[NOME], aviso rápido de encerramento ⏳
 
-Hoje às 23h59 encerram os valores simbólicos de Membros Fundadores (*12x R$ 5,09 / 12x R$ 9,42 / 12x R$ 10,50*) para entrar o Lançamento Oficial da Quinta Black (*12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32*).
+Hoje às 23h59 encerram os valores simbólicos de Membros Fundadores (*12x R$ 5,09 / 12x R$ 9,42 / 12x R$ 10,50*) para entrar o Lançamento Oficial da Quinta Black (*12x R$ 9,97 / 12x R$ 18,20 / 12x R$ 20,25*).
 
 Se quiser garantir a *Licença Ilimitada Vitalícia por 12x de R$ 10,50 (ou R$ 97 à vista)* com clientes e servidores sem limite + aulas passo a passo na Área de Membros, esse é o último link válido:
 👉 [LINK_MIGRACAO_ILIMITADO]
@@ -293,25 +293,25 @@ Entra agora que já estamos na tela! 🚀`,
     campaign: "black",
     channel: "grupo",
     code: "G2.4",
-    title: "Carrinho Aberto Quinta Black (12x R$ 10,50 / R$ 19,16 / R$ 21,32)",
+    title: "Carrinho Aberto Quinta Black (12x R$ 9,97 / R$ 18,20 / R$ 20,25)",
     timing: "Fase 2 · Momento do Pitch (Fixar no grupo)",
     body: `🖤 *CARRINHO ABERTO: LANÇAMENTO OFICIAL QUINTA BLACK DO CRIATIVOOS!*
 
 Chegou a hora! Enquanto a tabela oficial perpétua no site público (\`criativoos.com.br\`) custa *12x R$ 32,15, 12x R$ 97,09 e 12x R$ 107,91*, quem entra nesta janela especial de *Lançamento Quinta Black* garante:
 
-🟢 *LICENÇA INDIVIDUAL · 12x de R$ 10,50* *(ou R$ 97 à vista anual)* _(Oficial: ~12x R$ 32,15~)_
+🟢 *LICENÇA INDIVIDUAL · 12x de R$ 9,97* *(ou R$ 97,00 à vista anual)* _(Oficial: ~12x R$ 32,15~)_
 • Até 2 marcas / servidores · 2 PCs · 9 Criativos Base + Operador PC + Navegador + +253 Apps
 • _Opcional no checkout:_ por apenas *+R$ 37* você transforma em *VITALÍCIO + libera os 6 Criativos extras* (15 no total para até 2 marcas)!
 👉 Link direto: [LINK_BF_INDIVIDUAL]
 
-🟡 *LICENÇA AGÊNCIA 10 · 12x de R$ 19,16* *(ou R$ 177 à vista anual)* _(Oficial: ~12x R$ 97,09~)_
+🟡 *LICENÇA AGÊNCIA 10 · 12x de R$ 18,20* *(ou R$ 177,00 à vista anual)* _(Oficial: ~12x R$ 97,09~)_
 • Até 10 clientes ou servidores · 3 PCs · 12 Criativos (Base + Bônus de Rosto Real, Concorrentes e PDFs)
 👉 Link direto: [LINK_BF_AG10]
 
-🔥 *LICENÇA ILIMITADA · 12x de R$ 21,32!* *(ou R$ 197 à vista · VITALÍCIO!)* _(Oficial: ~12x R$ 107,91~)_
-• *Clientes e servidores ILIMITADOS · até 5 PCs*
+🔥 *LICENÇA ILIMITADA · 12x de R$ 20,25!* *(ou R$ 197,00 à vista · VITALÍCIO!)* _(Oficial: ~12x R$ 107,91~)_
+• *Clientes e servidores ILIMITADOS* · até 5 PCs
 • *Todos os 15 Criativos Completos* (incluindo os 3 Diretores de Vídeos para Reels) + Nuvem 24h
-• *🎁 BÔNUS QUINTA BLACK:* Por apenas *R$ 2,16 por mês de diferença* para o Agência 10, você ganha o *PASSAPORTE VITALÍCIO INCLUSO* (sem nunca mais pagar anuidade)!
+• *🎁 BÔNUS QUINTA BLACK:* Por apenas *R$ 2,05 por mês de diferença* para o Agência 10, você ganha o *PASSAPORTE VITALÍCIO INCLUSO* (sem nunca mais pagar anuidade)!
 👉 Link direto: [LINK_BF_ILIMITADO]
 
 ⚡ *Entrega Imediata:* Chave por e-mail na hora + download do *CriativoOS v1.0.3* (Windows, Mac e Linux) + Área de Membros + Comunidade WhatsApp + *Garantia Blindada de 7 Dias*. 🚀`,
@@ -321,16 +321,16 @@ Chegou a hora! Enquanto a tabela oficial perpétua no site público (\`criativoo
     campaign: "black",
     channel: "grupo",
     code: "G2.5",
-    title: "Comparativo Lógico Black Friday (+R$ 2,16/mês -> Ilimitado Vitalício)",
+    title: "Comparativo Lógico Black Friday (+R$ 2,05/mês -> Ilimitado Vitalício)",
     timing: "Fase 2 · Sexta-feira Black Friday",
     body: `📊 *FAÇA ESSA CONTA RÁPIDA ANTES DA MEIA-NOITE (BLACK FRIDAY CRIATIVOOS)*
 
 Compare os valores válidos *SOMENTE ATÉ HOJE ÀS 23H59*:
 
-• *Agência 10 (Anual · até 10 clientes):* \`12x de R$ 19,16\` *(ou R$ 177 à vista)*
-• *Licença Ilimitada (Clientes Ilimitados + Vídeos Reels + ACESSO VITALÍCIO):* *\`12x de R$ 21,32\`* *(ou R$ 197 à vista)*!
+• *Agência 10 (Anual · até 10 clientes):* \`12x de R$ 18,20\` *(ou R$ 177,00 à vista)*
+• *Licença Ilimitada (Clientes Ilimitados + Vídeos Reels + ACESSO VITALÍCIO):* *\`12x de R$ 20,25\`* *(ou R$ 197,00 à vista)*!
 
-Por literalmente *R$ 2,16 a mais por mês*, você sai da licença anual limitada a 10 clientes para ter *clientes e servidores ILIMITADOS + 5 PCs + acesso VITALÍCIO* contra *12x de R$ 107,91 todos os anos* no site oficial perpétuo.
+Por literalmente *R$ 2,05 a mais por mês*, você sai da licença anual limitada a 10 clientes para ter *clientes e servidores ILIMITADOS + 5 PCs + acesso VITALÍCIO* contra *12x de R$ 107,91 todos os anos* no site oficial perpétuo.
 
 👀 _Ainda não viu o CriativoOS funcionando na prática?_
 Confira os slides aqui: [LINK_APRESENTACAO_BLACK]
@@ -347,7 +347,7 @@ Confira os slides aqui: [LINK_APRESENTACAO_BLACK]
     timing: "Fase 2 · Últimas horas",
     body: `🚨 *ÚLTIMA CHAMADA: LOTE QUINTA BLACK COM VITALÍCIO ENCERRA ÀS 23H59*
 
-Faltam poucas horas para encerrarmos o lote de lançamento de *12x R$ 10,50 / 12x R$ 19,16 / 12x R$ 21,32*.
+Faltam poucas horas para encerrarmos o lote de lançamento de *12x R$ 9,97 / 12x R$ 18,20 / 12x R$ 20,25*.
 
 Depois das 23h59 entra em vigor a *Oferta Oficial Perpétua* do site \`criativoos.com.br\`:
 • Individual passa para \`12x de R$ 32,15\` *(R$ 297/ano · adicional vitalício sobe para +R$ 97)*
@@ -356,11 +356,11 @@ Depois das 23h59 entra em vigor a *Oferta Oficial Perpétua* do site \`criativoo
 
 Com *7 dias de garantia incondicional*, aulas gravadas na Área de Membros e Comunidade Oficial no WhatsApp:
 
-🔥 *GARANTIR LICENÇA ILIMITADA VITALÍCIA · 12x de R$ 21,32 (ou R$ 197 à vista):*
+🔥 *GARANTIR LICENÇA ILIMITADA VITALÍCIA · 12x de R$ 20,25 (ou R$ 197,00 à vista):*
 👉 [LINK_BF_ILIMITADO]
 
-🟡 *Agência 10 (Anual) · 12x R$ 19,16 (ou R$ 177):* [LINK_BF_AG10]
-🟢 *Individual (Anual + opção vitalícia de R$ 37) · 12x R$ 10,50 (ou R$ 97):* [LINK_BF_INDIVIDUAL]`,
+🟡 *Agência 10 (Anual) · 12x R$ 18,20 (ou R$ 177,00):* [LINK_BF_AG10]
+🟢 *Individual (Anual + opção vitalícia de R$ 37) · 12x R$ 9,97 (ou R$ 97,00):* [LINK_BF_INDIVIDUAL]`,
   },
 
   // =========================================================================
@@ -394,17 +394,17 @@ Quer o link da apresentação para acompanhar? 👉 [LINK_APRESENTACAO_BLACK]`,
 
 Enquanto a tabela oficial perpétua do site \`criativoos.com.br\` fica entre *12x de R$ 32,15 e 12x de R$ 107,91*, nessa janela especial ficou assim:
 
-• *Individual (Anual · 2 marcas · 9 Criativos + Operador PC):* *12x de R$ 10,50* (ou R$ 97 à vista)
+• *Individual (Anual · 2 marcas · 9 Criativos + Operador PC):* *12x de R$ 9,97* (ou R$ 97,00 à vista)
 _(Com opção no checkout de +R$ 37 para ficar Vitalício + 6 Criativos extras)_
 👉 [LINK_BF_INDIVIDUAL]
 
-• *Agência 10 (Anual · até 10 clientes/servidores):* *12x de R$ 19,16* (ou R$ 177 à vista)
+• *Agência 10 (Anual · até 10 clientes/servidores):* *12x de R$ 18,20* (ou R$ 177,00 à vista)
 👉 [LINK_BF_AG10]
 
-• *Licença Ilimitada (Clientes Ilimitados · 15 Criativos incl. Vídeos Reels · VITALÍCIO INCLUSO):* *12x de R$ 21,32* (ou R$ 197 à vista)
+• *Licença Ilimitada (Clientes Ilimitados · 15 Criativos incl. Vídeos Reels · VITALÍCIO INCLUSO):* *12x de R$ 20,25* (ou R$ 197,00 à vista)
 👉 [LINK_BF_ILIMITADO]
 
-Dica sincera: pela diferença de apenas *R$ 2,16/mês* do Agência 10 pro Ilimitado, você leva clientes ilimitados e nunca mais paga anuidade. Qualquer dúvida me chama aqui!`,
+Dica sincera: pela diferença de apenas *R$ 2,05/mês* do Agência 10 pro Ilimitado, você leva clientes ilimitados e nunca mais paga anuidade. Qualquer dúvida me chama aqui!`,
   },
   {
     id: "d2-3",
@@ -419,10 +419,10 @@ Vi seu interesse no *CriativoOS* nessa janela de *Quinta Black* e passei para ti
 
 Você tem *7 dias de garantia incondicional* para baixar no seu Windows, Mac ou Linux, acessar a Área de Membros com as aulas passo a passo, entrar na nossa Comunidade Oficial no WhatsApp e rodar usando as 10 IAs gratuitas já inclusas (sem gasto extra com API).
 
-Se quiser travar a *Licença Ilimitada Vitalícia (12x de R$ 21,32 ou R$ 197 à vista)* antes de virar para 12x de R$ 107,91 no perpétuo, o link está aqui:
+Se quiser travar a *Licença Ilimitada Vitalícia (12x de R$ 20,25 ou R$ 197,00 à vista)* antes de virar para 12x de R$ 107,91 no perpétuo, o link está aqui:
 👉 [LINK_BF_ILIMITADO]
 
-E se preferir o *Individual (12x de R$ 10,50 ou R$ 97 à vista)*:
+E se preferir o *Individual (12x de R$ 9,97 ou R$ 97,00 à vista)*:
 👉 [LINK_BF_INDIVIDUAL]`,
   },
   {
@@ -436,7 +436,7 @@ E se preferir o *Individual (12x de R$ 10,50 ou R$ 97 à vista)*:
 
 Às *23h59* encerra a condição de lançamento da *Quinta Black* e entra no ar o valor oficial perpétuo do site \`criativoos.com.br\` (12x R$ 32,15 / 12x R$ 97,09 / 12x R$ 107,91, sem o Vitalício gratuito no Ilimitado).
 
-Se quiser travar sua *Licença Ilimitada Vitalícia por apenas 12x de R$ 21,32 (ou R$ 197 à vista)*, é só concluir por aqui antes da virada:
+Se quiser travar sua *Licença Ilimitada Vitalícia por apenas 12x de R$ 20,25 (ou R$ 197,00 à vista)*, é só concluir por aqui antes da virada:
 👉 [LINK_BF_ILIMITADO]
 
 Sucesso demais por aí! 🚀`,

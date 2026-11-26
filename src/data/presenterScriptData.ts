@@ -161,11 +161,11 @@ export function getPresenterScriptBlocks(
       act: 4,
       slideTitle: isMig
         ? "Ato 4: Pré-Lançamento Fundadores (12x R$ 5,09 / R$ 9,42 / R$ 10,50)"
-        : "Ato 4: Lançamento Quinta Black (12x R$ 10,50 / R$ 19,16 / R$ 21,32)",
+        : "Ato 4: Lançamento Quinta Black (12x R$ 9,97 / R$ 18,20 / R$ 20,25)",
       stageDirection: "[MOMENTO DA OFERTA: Destaque a diferença mínima por mês no parcelado]",
       spokenText: isMig
         ? "Mas amanhã, na janela de Pré-Lançamento exclusiva para vocês Membros Fundadores da 1ª Imersão, o Individual sai por apenas 12x de R$ 5,09 (ou R$ 47 à vista no ano), o Agência 10 sai por 12x de R$ 9,42 (ou R$ 87 à vista no ano), e olha isso: por apenas R$ 1,08 a mais por mês - 12x de R$ 10,50 (ou R$ 97 à vista) - você garante o Agência Ilimitada VITALÍCIO para clientes e servidores ilimitados!"
-        : "Mas nesta quinta-feira de Lançamento Oficial Black, em vez de 12x de R$ 107,91 no site oficial, liberamos o Individual por 12x de R$ 10,50 (ou R$ 97 à vista), o Agência 10 por 12x de R$ 19,16 (ou R$ 177 à vista), e por apenas R$ 2,16 a mais por mês - 12x de R$ 21,32 (ou R$ 197 à vista) - você garante o Agência Ilimitada VITALÍCIO com clientes ilimitados, todos os 15 Criativos e Vídeos para Reels!",
+        : "Mas nesta quinta-feira de Lançamento Oficial Black, em vez de 12x de R$ 107,91 no site oficial, liberamos o Individual por 12x de R$ 9,97 (ou R$ 97,00 à vista), o Agência 10 por 12x de R$ 18,20 (ou R$ 177,00 à vista), e por apenas R$ 2,05 a mais por mês - 12x de R$ 20,25 (ou R$ 197,00 à vista) - você garante o Agência Ilimitada VITALÍCIO com clientes ilimitados, todos os 15 Criativos e Vídeos para Reels!",
     },
     {
       slideId: 19,
@@ -173,15 +173,23 @@ export function getPresenterScriptBlocks(
       slideTitle: "Ato 4: Comparativo Completo + Order Bump do Individual",
       stageDirection: "[EXPLIQUE O ADICIONAL DE +R$ 37 NO INDIVIDUAL E POR QUE O ILIMITADO VENCE]",
       spokenText:
-        "E atenção: se você quiser começar apenas com até 2 marcas no plano Individual, lá no checkout você ainda pode marcar o adicional de +R$ 37 para transformar seu Individual em Acesso Vitalício e liberar também os 6 Criativos extras. Mas pela diferença de centavos ou R$ 2 por mês sobre o plano do meio, ir direto no Agência Ilimitada Vitalício é a decisão mais inteligente.",
+        "E atenção: se você quiser começar apenas com até 2 marcas no plano Individual, lá no checkout você ainda pode marcar o adicional de +R$ 37 para transformar seu Individual em Acesso Vitalício e liberar também os 6 Criativos extras. Mas pela diferença de centavos ou cerca de R$ 2 por mês sobre o plano do meio, ir direto no Agência Ilimitada Vitalício é a decisão mais inteligente.",
     },
     {
       slideId: 20,
       act: 4,
       slideTitle: "Ato 4: Garantia de 7 Dias + Aulas Gravadas + Comunidade",
-      stageDirection: "[CHAMADA FINAL: Aponte os botões na tela e no grupo]",
+      stageDirection: "[CHAMADA FINAL ANTES DOS QR CODES]",
       spokenText:
-        "Você tem 7 dias de garantia total para instalar no seu computador, assistir às aulas passo a passo na Área de Membros e entrar na nossa Comunidade Oficial no WhatsApp. Escolha seu plano agora aqui na tela e nos vemos lá dentro!",
+        "Você tem 7 dias de garantia total para instalar no seu computador, assistir às aulas passo a passo na Área de Membros e entrar na nossa Comunidade Oficial no WhatsApp. E para facilitar na hora, vou deixar agora na tela os 3 QR Codes direto para você apontar o celular!",
+    },
+    {
+      slideId: 21,
+      act: 4,
+      slideTitle: "Ato 4: Tela Final com os 3 QR Codes das Ofertas",
+      stageDirection: "[DEIXE ESTA TELA ABERTA EM LARGURA TOTAL COM OS 3 QR CODES ENQUANTO TIRA DÚVIDAS]",
+      spokenText:
+        "Aponte agora a câmera do seu celular para o QR Code do plano escolhido na tela ou clique no link enviado no grupo. Assim que finalizar, você já recebe sua chave de ativação na hora. Te espero lá dentro do CriativoOS!",
     },
   ];
 }
