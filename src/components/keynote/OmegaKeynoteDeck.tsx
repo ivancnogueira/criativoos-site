@@ -79,34 +79,34 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
     gsap.fromTo(
       el,
-      { opacity: 0, y: 14 },
-      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.28, ease: "power3.out" }
     );
   }, [currentSlide.id]);
 
   return (
     <div
       ref={deckRef}
-      className="flex min-h-screen flex-col justify-between bg-[#0D0D0D] bg-linear-grid bg-volt-radial text-white"
+      className="flex min-h-screen flex-col justify-between bg-[#090A0D] bg-linear-grid bg-volt-radial text-white"
     >
-      {/* Topbar dos Atos */}
-      <header className="border-b border-white/10 bg-[#0D0D0D]/85 px-4 py-3 backdrop-blur-xl sm:px-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
+      {/* Topbar dos Atos em largura total */}
+      <header className="border-b border-white/10 bg-[#090A0D]/80 px-5 py-3 backdrop-blur-xl sm:px-10 xl:px-16">
+        <div className="flex w-full flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <a href="/" aria-label="Voltar para criativoos.com.br">
+            <a href="/" aria-label="Voltar para criativoos.com.br" className="transition active:scale-[0.97]">
               <img
                 src="/logo-criativoos-dark.svg"
                 alt="CriativoOS"
-                className="h-6 w-auto"
+                className="h-7 w-auto"
               />
             </a>
-            <span className="rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-2.5 py-0.5 font-mono text-[10px] font-bold uppercase text-[#B9FC01]">
-              {edition === "migration" ? "Migração da Base" : "Black Friday"}
+            <span className="rounded-full border border-[#B9FC01]/40 bg-[#B9FC01]/10 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[#B9FC01]">
+              {edition === "migration" ? "Migração Fundadores" : "Black Friday"}
             </span>
           </div>
 
           {/* Navegador por Atos */}
-          <div className="flex flex-wrap items-center gap-1.5">
+          <div className="flex flex-wrap items-center gap-2">
             {KEYNOTE_ACTS.map((actItem) => {
               const active = currentSlide.act === actItem.act;
               return (
@@ -114,10 +114,10 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
                   key={actItem.act}
                   type="button"
                   onClick={() => jumpToAct(actItem.act)}
-                  className={`rounded-full px-3 py-1 font-mono text-[11px] font-semibold transition ${
+                  className={`rounded-full px-4 py-1.5 font-mono text-xs font-bold transition duration-150 active:scale-[0.97] ${
                     active
-                      ? "bg-[#B9FC01] text-[#0D0D0D]"
-                      : "bg-white/[0.05] text-zinc-400 hover:text-white"
+                      ? "bg-[#B9FC01] text-[#0D0D0D] shadow-[0_0_20px_rgba(185,252,1,0.35)]"
+                      : "bg-white/[0.06] text-zinc-300 hover:bg-white/[0.12] hover:text-white"
                   }`}
                 >
                   {actItem.shortTitle}
@@ -132,7 +132,7 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
               target="_blank"
               rel="noopener noreferrer"
               title="Abrir Roteiro do Apresentador"
-              className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-[11px] text-zinc-300 hover:border-white/30"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.05] px-4 py-1.5 font-mono text-xs font-semibold text-zinc-200 transition hover:border-white/35 active:scale-[0.97]"
             >
               <FileText className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Roteiro</span>
@@ -142,7 +142,7 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
               type="button"
               onClick={toggleFullscreen}
               title="Tela Cheia (F)"
-              className="rounded-full border border-white/10 bg-white/[0.04] p-2 text-zinc-300 hover:border-white/30"
+              className="rounded-full border border-white/15 bg-white/[0.05] p-2.5 text-zinc-200 transition hover:border-white/35 active:scale-[0.97]"
             >
               {isFullscreen ? (
                 <Minimize2 className="h-4 w-4" />
@@ -154,27 +154,21 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
         </div>
       </header>
 
-      {/* Palco do Slide Atual */}
-      <main
-        className={`mx-auto flex w-full flex-1 flex-col justify-center ${
-          currentSlide.id === 21
-            ? "max-w-none px-4 py-4 sm:px-8 xl:px-14"
-            : "max-w-7xl px-4 py-5 sm:px-8 sm:py-6"
-        }`}
-      >
-        <div ref={stageRef} className="text-center">
-          <span className="inline-block rounded-full border border-[#B9FC01]/35 bg-[#B9FC01]/10 px-4 py-1 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#B9FC01]">
+      {/* Palco do Slide Atual em Largura Full */}
+      <main className="flex w-full flex-1 flex-col justify-center px-5 py-5 sm:px-10 sm:py-6 xl:px-16">
+        <div ref={stageRef} className="w-full text-center">
+          <span className="inline-block rounded-full border border-[#B9FC01]/45 bg-[#B9FC01]/12 px-4 py-1.5 font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#B9FC01]">
             {currentSlide.badge}
           </span>
 
-          <h1 className="mx-auto mt-3 max-w-5xl font-display text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="mx-auto mt-3 max-w-6xl font-display text-3xl font-extrabold leading-[1.06] tracking-[-0.025em] text-white sm:text-5xl xl:text-[54px]">
             {currentSlide.title}
           </h1>
-          <p className="mx-auto mt-2.5 max-w-3xl text-sm leading-relaxed text-zinc-300 sm:text-base">
+          <p className="mx-auto mt-3 max-w-5xl text-base font-medium leading-snug text-zinc-200 sm:text-xl xl:text-2xl">
             {currentSlide.subtitle}
           </p>
 
-          <div className="mt-6">
+          <div className="mt-7 w-full">
             {currentSlide.act === 1 && (
               <Act1MarketVisionSlides slideId={currentSlide.id} edition={edition} />
             )}
@@ -191,10 +185,10 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
         </div>
       </main>
 
-      {/* Rodapé de Navegação + Progresso */}
-      <footer className="border-t border-white/10 bg-[#0D0D0D]/90 px-4 py-3 backdrop-blur-xl sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-2.5 h-1 w-full overflow-hidden rounded-full bg-white/10">
+      {/* Rodapé de Navegação + Progresso em largura total */}
+      <footer className="border-t border-white/10 bg-[#090A0D]/90 px-5 py-3.5 backdrop-blur-xl sm:px-10 xl:px-16">
+        <div className="w-full">
+          <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
             <div
               className="h-full bg-[#B9FC01] transition-all duration-300"
               style={{ width: `${progressPct}%` }}
@@ -206,13 +200,13 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
               type="button"
               onClick={goPrev}
               disabled={currentIdx === 0}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-white transition hover:bg-white/10 disabled:opacity-30"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-white/10 active:scale-[0.97] disabled:opacity-30 sm:text-sm"
             >
               <ChevronLeft className="h-4 w-4" />
               Anterior
             </button>
 
-            <div className="text-center font-mono text-xs text-zinc-400">
+            <div className="text-center font-mono text-xs text-zinc-300 sm:text-sm">
               Slide{" "}
               <strong className="text-white">
                 {String(currentIdx + 1).padStart(2, "0")}
@@ -224,7 +218,7 @@ export const OmegaKeynoteDeck: React.FC<OmegaKeynoteDeckProps> = ({ edition }) =
               type="button"
               onClick={goNext}
               disabled={currentIdx === slides.length - 1}
-              className="volt-button inline-flex items-center gap-1.5 rounded-full px-5 py-2 text-xs disabled:opacity-30"
+              className="volt-button inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-xs font-extrabold transition active:scale-[0.97] disabled:opacity-30 sm:text-sm"
             >
               Próximo
               <ChevronRight className="h-4 w-4" />

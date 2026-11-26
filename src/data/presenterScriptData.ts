@@ -178,13 +178,22 @@ export function getPresenterScriptBlocks(
     {
       slideId: 20,
       act: 4,
+      slideTitle: "Ato 4: Reforço de Oferta - Tudo Que Você Leva no Ilimitado Vitalício",
+      stageDirection: "[REFORÇO DE PITCH: Leia os 8 entregáveis antes da garantia para consolidar a decisão]",
+      spokenText: isMig
+        ? "Olha só tudo o que você leva hoje no Agência Ilimitada Vitalício por apenas 12x de R$ 10,50 (ou R$ 97 à vista): Passaporte Vitalício sem nunca pagar anuidade, marcas e clientes ilimitados, até 5 computadores ou servidores na nuvem, todos os 15 Criativos com Vídeos para Reels, Operador de Computador, Navegador Inteligente, +253 aplicativos, 10 IAs gratuitas, Área de Membros e Comunidade Oficial."
+        : "Olha só tudo o que você desbloqueia hoje no Agência Ilimitada Vitalício por apenas 12x de R$ 20,25 (ou R$ 197,00 à vista): Passaporte Vitalício sem nunca pagar anuidade, marcas e clientes ilimitados, até 5 computadores ou servidores na nuvem, todos os 15 Criativos incluindo Vídeos para Reels, Operador de Computador, Navegador Inteligente, +253 aplicativos, 10 IAs gratuitas, Área de Membros e Comunidade Oficial.",
+    },
+    {
+      slideId: 21,
+      act: 4,
       slideTitle: "Ato 4: Garantia de 7 Dias + Aulas Gravadas + Comunidade",
       stageDirection: "[CHAMADA FINAL ANTES DOS QR CODES]",
       spokenText:
         "Você tem 7 dias de garantia total para instalar no seu computador, assistir às aulas passo a passo na Área de Membros e entrar na nossa Comunidade Oficial no WhatsApp. E para facilitar na hora, vou deixar agora na tela os 3 QR Codes direto para você apontar o celular!",
     },
     {
-      slideId: 21,
+      slideId: 22,
       act: 4,
       slideTitle: "Ato 4: Tela Final com os 3 QR Codes das Ofertas",
       stageDirection: "[DEIXE ESTA TELA ABERTA EM LARGURA TOTAL COM OS 3 QR CODES ENQUANTO TIRA DÚVIDAS]",

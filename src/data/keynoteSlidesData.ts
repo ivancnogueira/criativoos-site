@@ -38,17 +38,17 @@ export function getKeynoteSlides(edition: KeynoteEdition): readonly KeynoteSlide
         ? "Do Criativo AI Studio para o Novo CriativoOS"
         : "Sua Operação Inteira e 15 Criativos de IA no Seu Computador",
       subtitle:
-        "Muito além de apenas criar posts: coloque um sistema inteligente no seu PC e na nuvem 24h para operar seus programas, organizar pastas, pesquisar na internet, conectar +253 aplicativos e criar campanhas com suas fotos reais pelo WhatsApp.",
-      presenterCue: "Cumprimente a sala e mostre os 15 mascotes vivos seguindo o mouse.",
+        "Muito além de conteúdo: opere seu computador, conecte +253 apps, rode 24h na nuvem e aprove campanhas no WhatsApp.",
+      presenterCue: "Cumprimente a sala mostrando a capa com os personagens cyberpunk e os mascotes.",
     },
     {
       id: 2,
       act: 1,
       badge: "ATO 1 · A DOR REAL DO DIA A DIA",
-      title: "Chega de viver refém de 10 abas abertas e ferramentas que cobram em dólar",
+      title: "Chega de viver refém de 10 abas abertas e ferramentas em dólar",
       subtitle:
-        "Pedir texto genérico em um chat, copiar para o Canva, caçar fotos sem o seu rosto, atualizar planilhas na mão, esquecer arquivos de clientes espalhados e ainda travar no meio do mês quando acabam os créditos pagos... isso rouba a sua semana inteira.",
-      presenterCue: "Aprofunde na dor: pergunte quem sente o cansaço dessa rotina picotada e cara.",
+        "Copiar texto para o Canva, caçar fotos sem seu rosto e travar quando os créditos acabam consome sua semana inteira.",
+      presenterCue: "Aprofunde na dor comparando o caos manual de hoje com a liberdade do CriativoOS.",
     },
     {
       id: 3,
@@ -57,140 +57,140 @@ export function getKeynoteSlides(edition: KeynoteEdition): readonly KeynoteSlide
         ? "ATO 1 · TRANSIÇÃO OFICIAL DE CICLO"
         : "ATO 1 · A VIRADA DE CHAVE",
       title: isMig
-        ? "O antigo Criativo AI Studio encerrou seu ciclo e não terá mais atualizações"
-        : "De ferramentas complicadas para um aplicativo completo no seu computador",
+        ? "O antigo Criativo AI Studio encerrou o ciclo e evoluiu para o CriativoOS"
+        : "Saia de sites soltos para um aplicativo completo no seu computador",
       subtitle: isMig
-        ? "Em vez de remendar o formato antigo, construímos do zero um programa de verdade para Windows, Mac e Linux chamado CriativoOS: muito mais fácil de instalar e com o poder de operar sua rotina inteira."
-        : "Enquanto plataformas na internet vivem presas fora do seu computador e cobram caro por crédito, o CriativoOS roda direto na sua máquina (ou servidor 24h) com controle total das suas pastas e aplicativos.",
+        ? "Construímos do zero um programa completo para Windows, Mac e Linux sem códigos nem complicação."
+        : "Instale direto na sua máquina ou nuvem 24h com controle total das suas pastas e sem trava de créditos.",
       presenterCue: isMig
-        ? "Explique com transparência o fim das atualizações do legado e a evolução gigante para o CriativoOS."
-        : "Destaque a diferença entre uma ferramenta presa no navegador e um sistema no próprio PC.",
+        ? "Explique com transparência o fim das atualizações do legado e o salto para o novo CriativoOS."
+        : "Destaque a vantagem de rodar no próprio PC e nuvem em vez de plataformas presas no navegador.",
     },
     {
       id: 4,
       act: 1,
       badge: "ATO 1 · NÃO SE RESUME A CONTEÚDO",
-      title: "Um Sistema Operacional completo: trabalho pesado + criação em um só lugar",
+      title: "Um Sistema Operacional completo: trabalho pesado + criação juntos",
       subtitle:
-        "O CriativoOS opera programas e planilhas do seu computador, pesquisa concorrentes na internet, conecta mais de 253 aplicativos e ainda coloca 15 especialistas trabalhando juntos para criar carrosséis, posts com o seu rosto, anúncios, stories e vídeos.",
-      presenterCue: "Mostre os 4 blocos do sistema e reforce que vai muito além de só fazer post.",
+        "Opera programas e planilhas do PC, pesquisa concorrentes na web, conecta +253 apps e entrega tudo no WhatsApp.",
+      presenterCue: "Aponte os 4 blocos e reforce que o CriativoOS automatiza operação além de criar posts.",
     },
     {
       id: 5,
       act: 1,
-      badge: "ATO 1 · ECONOMIA REAL COM IA",
-      title: "Comece grátis com 10 Inteligências Artificiais já incluídas ou use sua conta",
+      badge: "ATO 1 · ZERO GASTO EXTRA COM IA",
+      title: "10 Inteligências Artificiais gratuitas já inclusas ou use sua conta",
       subtitle:
-        "Você não precisa cadastrar cartão nem gastar com créditos extras por imagem ou mensagem. Já vem com 10 modelos gratuitos prontos para rodar na hora, ou conecte o ChatGPT, Claude, Gemini ou Grok que você já usa.",
-      presenterCue: "Quebre a objeção de custo mensal por fora antes de abrir a tela do programa.",
+        "Sem cadastrar cartão em créditos por fora: rode grátis na hora ou conecte seu ChatGPT, Claude, Gemini ou Grok.",
+      presenterCue: "Quebre a objeção de gasto mensal por fora antes de abrir a tela de instalação.",
     },
     {
       id: 6,
       act: 2,
       badge: "PAUSA AO VIVO · INSTALAÇÃO PASSO 1 DE 3",
-      title: "Agora vou pausar os slides: instalando do zero em 1 minuto na minha tela",
+      title: "Pausa ao vivo: instalando do zero em 1 minuto na minha tela",
       subtitle:
-        "Esqueça telas pretas de código ou configurações difíceis. Você baixa o instalador para Windows, Mac ou Linux, dá dois cliques como qualquer programa comum e ele já atualiza sozinho.",
-      presenterCue: "PAUSA AO VIVO: Compartilhe sua tela, baixe/execute o instalador e mostre a simplicidade.",
+        "Sem telas pretas de código: baixou o instalador normal, deu dois cliques e ele atualiza sozinho.",
+      presenterCue: "PAUSA AO VIVO: Compartilhe a tela do computador e mostre a instalação em 2 cliques.",
     },
     {
       id: 7,
       act: 2,
       badge: "PAUSA AO VIVO · ATIVAÇÃO PASSO 2 DE 3",
-      title: "Ative na hora com seu e-mail de compra e sua chave de acesso",
+      title: "Ative na hora com seu e-mail de compra e sua chave",
       subtitle:
-        "Ao abrir o CriativoOS, digite o mesmo e-mail usado na compra e cole sua chave para liberar imediatamente suas ferramentas de computador, conectores e seus 9, 12 ou 15 Criativos.",
-      presenterCue: "Mostre na prática a diferença entre Individual, Agência 10 e Agência Ilimitada.",
+        "Colou sua chave recebida por e-mail e todas as ferramentas do seu plano já destravam na hora.",
+      presenterCue: "Mostre na tela a diferença de capacidade entre Individual, Agência 10 e Ilimitada.",
     },
     {
       id: 8,
       act: 2,
       badge: "PAUSA AO VIVO · BOAS-VINDAS PASSO 3 DE 3",
-      title: "Em 4 cliques rápidos sua marca e suas automações já estão rodando",
+      title: "Em 4 cliques sua marca e suas rotinas já estão funcionando",
       subtitle:
-        "1) Escolha uma IA gratuita ou sua assinatura · 2) Selecione suas fotos reais e logo · 3) Conecte seu Instagram e apps · 4) Leia o QR Code do seu WhatsApp.",
-      presenterCue: "Finalize a instalação ao vivo e prepare o tour completo por todas as ferramentas.",
+        "Escolha a IA gratuita, suba suas fotos reais, conecte Instagram e apps e leia o QR Code do WhatsApp.",
+      presenterCue: "Finalize a configuração inicial ao vivo e puxe o tour completo das ferramentas.",
     },
     {
       id: 9,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · VISÃO GERAL",
-      title: "Um painel visual limpo nos modos Escuro Volt e Claro Cobalt",
+      badge: "TOUR COMPLETO · VISÃO GERAL",
+      title: "Painel visual limpo nos modos Escuro Volt e Claro Cobalt",
       subtitle:
-        "Veja na barra de atividade no topo tudo o que o sistema está fazendo ao vivo, separe seus clientes em pastas totalmente isoladas na lateral esquerda e alterne os temas com 1 clique.",
-      presenterCue: "TOUR AO VIVO: Clique para alternar Escuro/Claro e mostre a organização visual do painel.",
+        "Acompanhe tudo no topo da tela e mantenha cada cliente separado em pastas 100% isoladas.",
+      presenterCue: "TOUR AO VIVO: Alterne o tema Escuro/Claro e mostre a organização das marcas.",
     },
     {
       id: 10,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · OPERADOR DE PC & NAVEGADOR",
+      badge: "TOUR COMPLETO · OPERADOR DE PC & NAVEGADOR",
       title: "Operador de Computador e Navegador Inteligente com Pausa Segura",
       subtitle:
-        "Ele enxerga sua tela para abrir pastas, planilhas e programas locais, pesquisa concorrentes e assuntos em alta na internet e pausa automaticamente para chamar você quando algum site pede senha ou código no celular.",
-      presenterCue: "Mostre ao vivo o Operador de Computador e o Navegador pesquisando e pausando com segurança.",
+        "Abre pastas e planilhas locais, pesquisa concorrentes na web e chama você antes de qualquer senha.",
+      presenterCue: "Mostre o Operador de Computador e o Navegador pesquisando e pausando com segurança.",
     },
     {
       id: 11,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · +253 APPS, ROTINAS & NUVEM 24H",
-      title: "+253 Aplicativos Conectados, Rotinas Automáticas e Servidor na Nuvem 24h",
+      badge: "TOUR COMPLETO · +253 APPS, ROTINAS & NUVEM 24H",
+      title: "+253 Aplicativos Conectados, Rotinas Semanais e Nuvem 24h",
       subtitle:
-        "Conecte Google Drive, Planilhas, Notion, Gmail, WordPress e seu CRM sem pagar taxa extra por tarefa. Programe rotinas semanais com relatórios em PDF rodando direto no seu PC ou 24h na nuvem com o notebook desligado.",
-      presenterCue: "Destaque que o trabalho operacional e os relatórios rodam sozinhos toda semana.",
+        "Conecte Drive, Planilhas, Notion e CRM para gerar relatórios PDF e entregas até com o PC desligado.",
+      presenterCue: "Destaque a automação semanal recorrente e o funcionamento 24h na nuvem.",
     },
     {
       id: 12,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · EQUIPE DE 15 ESPECIALISTAS",
-      title: "Conheça os 15 Criativos que planejam, escrevem, criam e editam vídeos",
+      badge: "TOUR COMPLETO · EQUIPE DE 15 ESPECIALISTAS",
+      title: "15 Criativos que planejam, escrevem, criam e editam Reels",
       subtitle:
-        "9 Criativos Base (estratégia, copy, carrossel, feed, stories, anúncios, identidade, postagem e métricas) + 3 Bônus (rosto real, radar de concorrentes e PDFs) + 3 Diretores de Vídeos para Reels.",
-      presenterCue: "Passe pelos 15 mascotes mostrando que cada um cuida de uma parte da entrega.",
+        "9 Especialistas Base + 3 Bônus (Rosto Real, Concorrentes e PDFs) + 3 Diretores de Vídeos para Reels.",
+      presenterCue: "Mostre as 3 camadas da equipe trabalhando em conjunto.",
     },
     {
       id: 13,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · NA PRÁTICA",
-      title: "De um único pedido em português até a campanha pronta com suas fotos reais",
+      badge: "TOUR COMPLETO · NA PRÁTICA",
+      title: "De um único pedido até a campanha pronta com suas fotos reais",
       subtitle:
-        "Você manda um comando simples. O sistema puxa suas fotos da pasta da marca, estrutura o carrossel, aplica seu logotipo, escreve a legenda e entrega tudo pronto para sua revisão.",
-      presenterCue: "Clique no botão de avançar execução no slide (ou mostre direto no programa aberto).",
+        "Um comando simples puxa suas fotos da pasta, monta o carrossel, atualiza a planilha e manda para você.",
+      presenterCue: "Avance os 4 passos na tela enquanto mostra o resultado visual à direita.",
     },
     {
       id: 14,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · ESTÚDIO DO INSTAGRAM",
-      title: "Calendário visual do mês, Stories com espaço livre e painel de resultados",
+      badge: "TOUR COMPLETO · ESTÚDIO DO INSTAGRAM",
+      title: "Calendário visual do mês, Stories sem cortes e resultados reais",
       subtitle:
-        "Arraste seus posts no calendário, confira na prévia do celular se textos ou artes não ficam atrás das enquetes e links nos Stories, e acompanhe o que gerou mais alcance e salvamentos.",
-      presenterCue: "Alterne as 3 abas no slide para mostrar Calendário, Espaço Livre e Resultados.",
+        "Arraste os posts no mês, garanta espaço livre para enquetes nos Stories e acompanhe o que vende mais.",
+      presenterCue: "Alterne as 3 abas no slide para demonstrar Calendário, Espaço Livre e Resultados.",
     },
     {
       id: 15,
       act: 3,
-      badge: "TOUR COMPLETO AO VIVO · NO SEU BOLSO 24 HORAS",
-      title: "Comande seu computador e aprove suas entregas direto pelo WhatsApp",
+      badge: "TOUR COMPLETO · NO SEU BOLSO 24 HORAS",
+      title: "Comande seu PC e aprove suas criações pelo próprio WhatsApp",
       subtitle:
-        "Mesmo longe do escritório, envie uma mensagem ou áudio para o seu próprio WhatsApp pedindo uma tarefa ou post, receba a prévia no celular e responda 1 para confirmar com total segurança.",
-      presenterCue: "Reforce que nada é postado ou alterado sem o seu '1' ou aprovação humana.",
+        "Mande mensagem ou áudio da rua, confira a prévia pronta no celular e responda 1 para confirmar.",
+      presenterCue: "Reforce que nada vai ao ar sem a sua resposta 1.",
     },
     {
       id: 16,
       act: 4,
-      badge: "ATO 4 · ECONOMIA REAL NO SEU BOLSO",
-      title: "Quanto custa hoje fazer tudo isso do jeito antigo com ferramentas e terceiros?",
+      badge: "ATO 4 · ECONOMIA REAL NO SEU CAIXA",
+      title: "Quanto custa hoje fazer tudo isso fora do CriativoOS?",
       subtitle:
-        "Somando social media ou agência, designer, editor de vídeos e várias assinaturas em dólar de IAs e automadores, a conta passa fácil de R$ 4.950 por mês (quase R$ 60.000 por ano).",
-      presenterCue: "Deixe a dor financeira clara na tela antes de revelar a tabela oficial e a oferta.",
+        "Social media, designer, editor de vídeos e assinaturas em dólar passam fácil de R$ 59.400 por ano.",
+      presenterCue: "Contraste o custo mensal tradicional antes de mostrar a tabela oficial.",
     },
     {
       id: 17,
       act: 4,
       badge: "ATO 4 · VALOR OFICIAL PERPÉTUO NO SITE",
-      title: "Os valores oficiais em criativoos.com.br",
+      title: "Os valores oficiais em até 12x em criativoos.com.br",
       subtitle:
-        "Na nossa página oficial para o público geral (Oferta Oficial Perpétua), as licenças anuais custam 12x de R$ 32,15 (ou R$ 297 à vista) no Individual, 12x de R$ 97,09 (ou R$ 897 à vista) no Agência 10 e 12x de R$ 107,91 (ou R$ 997 à vista) no Agência Ilimitada.",
-      presenterCue: "Ancore nos valores oficiais parcelados em 12x: R$ 32,15, R$ 97,09 e R$ 107,91 por mês.",
+        "No site público, os planos anuais custam 12x de R$ 32,15 (Individual), 12x de R$ 97,09 (Agência 10) e 12x de R$ 107,91 (Ilimitada).",
+      presenterCue: "Ancore os valores oficiais parcelados antes de revelar o lote especial.",
     },
     {
       id: 18,
@@ -199,42 +199,53 @@ export function getKeynoteSlides(edition: KeynoteEdition): readonly KeynoteSlide
         ? "ATO 4 · PRÉ-LANÇAMENTO EXCLUSIVO MEMBROS FUNDADORES"
         : "ATO 4 · CONDIÇÃO ESPECIAL LANÇAMENTO QUINTA BLACK",
       title: isMig
-        ? "Condição de Membro Fundador: a partir de 12x de R$ 5,09 (com Vitalício no Ilimitado)"
-        : "Lote de Lançamento Quinta Black: a partir de 12x de R$ 9,97 (com Vitalício no Ilimitado)",
+        ? "Condição Fundador: a partir de 12x de R$ 5,09 com Vitalício no Ilimitado"
+        : "Lote Quinta Black: a partir de 12x de R$ 9,97 com Vitalício no Ilimitado",
       subtitle: isMig
-        ? "Valor simbólico exclusivo para quem comprou a 1ª imersão: menos de um cafezinho por mês, garantindo Acesso Vitalício sem anuidade no plano Agência Ilimitada por apenas 12x de R$ 10,50 (ou R$ 97 à vista)."
-        : "Condição fechada de quinta e sexta-feira muito abaixo da tabela oficial do site, liberando Acesso Vitalício sem renovação anual no plano Agência Ilimitada por apenas 12x de R$ 20,25 (ou R$ 197,00 à vista).",
+        ? "Exclusivo da 1ª imersão: garanta o Agência Ilimitada Vitalício por apenas 12x de R$ 10,50 (ou R$ 97 à vista)."
+        : "Exclusivo desta janela: garanta o Agência Ilimitada Vitalício por apenas 12x de R$ 20,25 (ou R$ 197,00 à vista).",
       presenterCue: isMig
-        ? "Destaque que do Agência 10 (12x R$ 9,42) para o Ilimitado Vitalício (12x R$ 10,50) são apenas +R$ 1,08 por mês!"
-        : "Destaque que do Agência 10 (12x R$ 18,20) para o Ilimitado Vitalício (12x R$ 20,25) são apenas +R$ 2,05 por mês!",
+        ? "Destaque que são apenas +R$ 1,08/mês do Agência 10 para o Ilimitado Vitalício."
+        : "Destaque que são apenas +R$ 2,05/mês do Agência 10 para o Ilimitado Vitalício.",
     },
     {
       id: 19,
       act: 4,
       badge: "ATO 4 · ESCOLHA SEU PLANO",
-      title: "Compare os 3 planos e veja por que o Agência Ilimitada Vitalício é a decisão óbvia",
+      title: "Compare os 3 planos e veja por que o Ilimitado é a escolha óbvia",
       subtitle:
-        "No Ilimitado você libera marcas e servidores sem fim, até 5 computadores, todos os 15 Criativos (com Vídeos para Reels) e Acesso Vitalício sem nunca mais renovar. Se for de Individual, ainda pode adicionar o Vitalício + 6 Criativos extras por +R$ 37 direto no checkout.",
-      presenterCue: "Explique claramente os 3 planos + a oportunidade do adicional de +R$ 37 no checkout do Individual.",
+        "Clientes infinitos, 5 PCs, todos os 15 Criativos com Reels e Acesso Vitalício por centavos ou R$ 2 a mais por mês.",
+      presenterCue: "Explique os 3 planos e cite o adicional de +R$ 37 caso alguém escolha o Individual.",
     },
     {
       id: 20,
       act: 4,
-      badge: "ATO 4 · GARANTIA DE 7 DIAS + COMUNIDADE + AULAS",
-      title: "Teste no seu computador por 7 dias com risco zero, aulas gravadas e comunidade",
+      badge: isMig
+        ? "ATO 4 · TUDO QUE VOCÊ LEVA · ILIMITADO VITALÍCIO"
+        : "ATO 4 · REFORÇO DE OFERTA · ILIMITADO VITALÍCIO",
+      title: "Tudo o Que Você Desbloqueia Hoje no Agência Ilimitada Vitalício",
       subtitle:
-        "Garanta sua chave agora, assista ao passo a passo na Área de Membros, entre na Comunidade Oficial do WhatsApp e rode suas rotinas hoje mesmo com garantia total de 7 dias.",
-      presenterCue: "Faça a chamada final e avance para a tela cheia com os 3 QR Codes das ofertas.",
+        "Uma decisão única hoje para nunca mais pagar anuidade e operar marcas, PCs e 15 Criativos sem limite.",
+      presenterCue: "REFORÇO DO PITCH: Leia cada um dos 8 entregáveis e mostre o valor absurdamente baixo da parcela.",
     },
     {
       id: 21,
+      act: 4,
+      badge: "ATO 4 · GARANTIA DE 7 DIAS + COMUNIDADE + AULAS",
+      title: "Teste no seu computador por 7 dias com risco zero e aulas gravadas",
+      subtitle:
+        "Baixe hoje, assista ao passo a passo na Área de Membros e conte com a Comunidade Oficial no WhatsApp.",
+      presenterCue: "Reforce risco zero total antes de abrir os QR Codes finais.",
+    },
+    {
+      id: 22,
       act: 4,
       badge: isMig
         ? "ATO 4 · ESCANEIE AGORA · MIGRAÇÃO FUNDADOR"
         : "ATO 4 · ESCANEIE AGORA · BLACK FRIDAY",
       title: "Aponte a Câmera do Celular e Garanta Sua Licença Agora",
       subtitle:
-        "Escaneie o QR Code do plano escolhido direto na tela ou clique no botão correspondente para liberar acesso imediato com 7 dias de garantia.",
+        "Escaneie o QR Code do plano escolhido na tela ou clique no botão correspondente.",
       presenterCue: "Deixe esta tela em largura total com os 3 QR Codes visíveis enquanto responde dúvidas da sala.",
     },
   ];

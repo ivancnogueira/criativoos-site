@@ -17,52 +17,60 @@ interface Props {
 export const Act2InstallOnboardingSlides: React.FC<Props> = ({ slideId }) => {
   if (slideId === 6) {
     return (
-      <div className="mx-auto max-w-5xl space-y-5">
-        <div className="flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-[#B9FC01]/40 bg-[#12180E] px-5 py-3 text-xs font-semibold text-[#B9FC01]">
-          <MonitorPlay className="h-4 w-4 shrink-0" />
+      <div className="w-full space-y-6">
+        <div className="mx-auto flex w-fit flex-wrap items-center justify-center gap-2.5 rounded-2xl border border-[#B9FC01]/50 bg-[#12180E] px-6 py-3.5 text-sm font-bold text-[#B9FC01] sm:text-base">
+          <MonitorPlay className="h-5 w-5 shrink-0" />
           <span>
-            PAUSA AO VIVO NA LIVE: hora de baixar, dar 2 cliques e instalar o CriativoOS na tela em tempo real
+            PAUSA AO VIVO NA LIVE: instalando do zero em 1 minuto direto na tela
           </span>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid w-full gap-5 md:grid-cols-3">
           {[
             {
               os: "Windows",
               file: "Instalador Padrão (.exe)",
-              detail:
-                "Baixe, dê dois cliques para instalar como qualquer programa comum e o aplicativo atualiza sozinho.",
+              bullets: [
+                "Dois cliques como qualquer programa comum",
+                "Atualizações automáticas sem reinstalar",
+              ],
             },
             {
-              os: "Mac (Apple M1/M2/M3/M4 e Intel)",
+              os: "Mac (M1/M2/M3/M4 e Intel)",
               file: "Instalador Universal (.dmg)",
-              detail:
-                "Roda nativo com máxima velocidade em qualquer MacBook ou iMac sem precisar mexer em terminal.",
+              bullets: [
+                "Velocidade nativa em MacBook e iMac",
+                "Zero linha de comando ou tela preta",
+              ],
             },
             {
-              os: "Linux e Servidores na Nuvem 24h",
-              file: "Versão Portátil (.AppImage) + Nuvem",
-              detail:
-                "Rode direto no computador Linux ou conecte um servidor 24h para manter tudo operando com o PC desligado.",
+              os: "Linux & Nuvem 24h",
+              file: "Versão Portátil (.AppImage) + VPS",
+              bullets: [
+                "Roda direto no computador Linux",
+                "Conecta servidor na nuvem para rodar 24h",
+              ],
             },
           ].map((item) => (
             <div
               key={item.os}
-              className="rounded-3xl border border-white/10 bg-[#141416] p-6 text-left"
+              className="rounded-3xl border border-white/15 bg-[#12151D] p-7 text-left"
             >
               <div className="flex items-center justify-between">
-                <Laptop className="h-6 w-6 text-[#B9FC01]" />
-                <Download className="h-4 w-4 text-zinc-500" />
+                <Laptop className="h-7 w-7 text-[#B9FC01]" />
+                <Download className="h-5 w-5 text-zinc-400" />
               </div>
-              <h4 className="mt-4 font-display text-lg font-bold text-white">
+              <h4 className="mt-4 font-display text-2xl font-extrabold text-white">
                 {item.os}
               </h4>
-              <div className="mt-1 font-mono text-xs text-[#B9FC01]">
+              <div className="mt-1 font-mono text-sm font-semibold text-[#B9FC01]">
                 {item.file}
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-zinc-400">
-                {item.detail}
-              </p>
+              <ul className="mt-4 space-y-2 text-base text-zinc-200">
+                {item.bullets.map((b) => (
+                  <li key={b}>• {b}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
@@ -72,102 +80,133 @@ export const Act2InstallOnboardingSlides: React.FC<Props> = ({ slideId }) => {
 
   if (slideId === 7) {
     return (
-      <div className="mx-auto max-w-2xl rounded-3xl border border-white/15 bg-[#121215] p-7 shadow-2xl">
-        <div className="flex items-center justify-between border-b border-white/10 pb-4">
-          <div className="flex items-center gap-2.5">
-            <img src="/symbol-oo-volt.svg" alt="oO" className="h-6 w-6" />
-            <span className="font-display text-base font-bold text-white">
-              Ative Sua Licença do CriativoOS
+      <div className="grid w-full items-center gap-6 text-left lg:grid-cols-12">
+        <div className="rounded-3xl border border-white/15 bg-[#121318] p-7 shadow-2xl lg:col-span-6">
+          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3">
+              <img src="/symbol-oo-volt.svg" alt="oO" className="h-7 w-7" />
+              <span className="font-display text-xl font-bold text-white">
+                Ative Sua Licença CriativoOS
+              </span>
+            </div>
+            <span className="rounded-full bg-[#B9FC01]/15 px-3.5 py-1 font-mono text-xs font-bold text-[#B9FC01]">
+              Liberação na Hora
             </span>
           </div>
-          <span className="rounded-full bg-[#B9FC01]/15 px-3 py-1 font-mono text-[11px] text-[#B9FC01]">
-            Liberação Instantânea
-          </span>
+
+          <div className="mt-5 space-y-4">
+            <div className="rounded-2xl border border-white/10 bg-black/50 px-5 py-4">
+              <span className="block font-mono text-xs text-zinc-400">
+                1. E-MAIL USADO NA COMPRA
+              </span>
+              <span className="mt-1 block text-lg font-semibold text-white">
+                seu-email@dominio.com
+              </span>
+            </div>
+            <div className="rounded-2xl border border-[#B9FC01]/50 bg-[#B9FC01]/5 px-5 py-4">
+              <span className="block font-mono text-xs font-bold text-[#B9FC01]">
+                2. CHAVE RECEBIDA POR E-MAIL
+              </span>
+              <span className="mt-1 block font-mono text-lg font-extrabold text-white">
+                CRIA-AGIL-XXXX-XXXX-XXXX
+              </span>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-5 space-y-3 text-left">
-          <div className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-xs">
-            <span className="block font-mono text-[10px] text-zinc-500">
-              E-MAIL USADO NA COMPRA
-            </span>
-            <span className="text-zinc-200">seu-email@dominio.com</span>
-          </div>
-          <div className="rounded-xl border border-[#B9FC01]/50 bg-[#B9FC01]/5 px-4 py-3 text-xs">
-            <span className="block font-mono text-[10px] text-[#B9FC01]">
-              SUA CHAVE RECEBIDA POR E-MAIL
-            </span>
-            <span className="font-mono font-bold text-white">
-              CRIA-AGIL-XXXX-XXXX-XXXX
-            </span>
-          </div>
-        </div>
-
-        <div className="mt-5 grid grid-cols-3 gap-2 text-center text-[11px]">
-          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2.5">
-            <div className="font-bold text-white">Individual</div>
-            <div className="text-zinc-400">2 marcas · 9 Criativos Base</div>
-          </div>
-          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-2.5">
-            <div className="font-bold text-white">Agência 10</div>
-            <div className="text-zinc-400">10 marcas · 12 Criativos</div>
-          </div>
-          <div className="rounded-xl border border-[#B9FC01]/60 bg-[#B9FC01]/10 p-2.5">
-            <div className="font-bold text-[#B9FC01]">Agência Ilimitada</div>
-            <div className="text-zinc-200">Ilimitado · Todos os 15</div>
-          </div>
+        <div className="grid gap-4 lg:col-span-6">
+          {[
+            {
+              title: "Individual · 2 Marcas / 2 PCs",
+              desc: "9 Criativos Base + Operador de PC + Navegador + 253 Apps",
+              hero: false,
+            },
+            {
+              title: "Agência 10 · 10 Clientes / 3 PCs",
+              desc: "12 Criativos (Base + Rosto Real, Concorrentes e PDFs)",
+              hero: false,
+            },
+            {
+              title: "Agência Ilimitada · Clientes Sem Fim / 5 PCs",
+              desc: "Todos os 15 Criativos completos incluindo Diretores de Vídeo Reels",
+              hero: true,
+            },
+          ].map((p) => (
+            <div
+              key={p.title}
+              className={`rounded-2xl border p-5 ${
+                p.hero
+                  ? "border-[#B9FC01]/65 bg-[#13190E]"
+                  : "border-white/15 bg-[#12151D]"
+              }`}
+            >
+              <div
+                className={`font-display text-xl font-extrabold ${
+                  p.hero ? "text-[#B9FC01]" : "text-white"
+                }`}
+              >
+                {p.title}
+              </div>
+              <div className="mt-1 text-base text-zinc-200">{p.desc}</div>
+            </div>
+          ))}
         </div>
       </div>
     );
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid w-full gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {[
         {
-          n: "Passo 1",
+          n: "01",
           icon: Cpu,
           t: "Escolha Sua IA",
-          d: "Ative as 10 inteligências artificiais gratuitas já inclusas ou entre com seu ChatGPT, Claude, Gemini ou Grok.",
+          bullets: ["10 modelos gratuitos inclusos", "Ou conecte ChatGPT / Claude / Gemini"],
         },
         {
-          n: "Passo 2",
+          n: "02",
           icon: Upload,
-          t: "Fotos e Sua Marca",
-          d: "Selecione sua pasta de fotos reais, seu logotipo e as cores da sua empresa em poucos segundos.",
+          t: "Fotos & Logo",
+          bullets: ["Aponte sua pasta de fotos reais", "Trave cores e logotipo da marca"],
         },
         {
-          n: "Passo 3",
+          n: "03",
           icon: Instagram,
-          t: "Apps e Instagram",
-          d: "Conecte seu perfil comercial do Instagram e aplicativos como Google Drive, Planilhas ou Notion com 1 clique.",
+          t: "Instagram & Apps",
+          bullets: ["Conecte seu perfil comercial", "Ative Drive, Planilhas ou Notion"],
         },
         {
-          n: "Passo 4",
+          n: "04",
           icon: MessageSquare,
           t: "Seu WhatsApp",
-          d: "Leia o QR Code com o celular para pedir tarefas no PC, criar posts e aprovar publicações de onde estiver.",
+          bullets: ["Leia o QR Code no celular", "Peça e aprove tudo por mensagem"],
         },
       ].map((step) => {
         const Icon = step.icon;
         return (
           <div
             key={step.n}
-            className="rounded-3xl border border-white/10 bg-[#141416] p-5 text-left"
+            className="flex flex-col justify-between rounded-3xl border border-white/15 bg-[#12151D] p-6 text-left sm:p-7"
           >
-            <div className="flex items-center justify-between">
-              <span className="rounded-full bg-[#B9FC01] px-2.5 py-0.5 font-mono text-[10px] font-bold text-[#0D0D0D]">
-                {step.n}
-              </span>
-              <Icon className="h-5 w-5 text-[#B9FC01]" />
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="rounded-full bg-[#B9FC01] px-3 py-1 font-mono text-xs font-extrabold text-[#0D0D0D]">
+                  PASSO {step.n}
+                </span>
+                <Icon className="h-6 w-6 text-[#B9FC01]" />
+              </div>
+              <h4 className="mt-4 font-display text-2xl font-extrabold text-white">
+                {step.t}
+              </h4>
+              <ul className="mt-3 space-y-2 text-base text-zinc-200">
+                {step.bullets.map((b) => (
+                  <li key={b}>• {b}</li>
+                ))}
+              </ul>
             </div>
-            <h4 className="mt-4 font-display text-base font-bold text-white">
-              {step.t}
-            </h4>
-            <p className="mt-1.5 text-xs leading-relaxed text-zinc-400">
-              {step.d}
-            </p>
-            <div className="mt-3 flex items-center gap-1 font-mono text-[10px] text-[#B9FC01]">
-              <CheckCircle2 className="h-3.5 w-3.5" /> Configurado em segundos
+            <div className="mt-5 flex items-center gap-1.5 font-mono text-xs font-bold text-[#B9FC01]">
+              <CheckCircle2 className="h-4 w-4" /> Pronto em segundos
             </div>
           </div>
         );
