@@ -37,6 +37,9 @@ export const Header: React.FC = () => {
           <a href="#planos" className="transition hover:text-[#B9FC01]">
             Planos
           </a>
+          <a href="/changelog" className="transition hover:text-[#B9FC01]">
+            Changelog
+          </a>
         </nav>
 
         <SpecularButton href="#planos" size="md" variant="volt" className="!py-2.5 !px-5 !text-xs sm:!text-sm">

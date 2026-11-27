@@ -10,7 +10,12 @@ Ecossistema comercial do **CriativoOS v1.0.3** desenvolvido em React 19 + Vite +
 - **`/meu-roteiro`** — Teleprompter sincronizado com os 20 slides e 4 Atos.
 - **`/kit-whatsapp`** — Central com as mensagens formatadas para WhatsApp e cópia em 1 clique.
 - **`/obrigado`** — Página pós-compra oficial com instruções dos instaladores **`CriativoOS v1.0.3`**.
+- **`/changelog`** - Página pública oficial de notas de versão (`v1.0.0` até a release atual), com filtros, busca e âncoras por versão (`#v1-0-9`).
 - **`/api/health`** — Endpoint JSON de healthcheck compatível com Express, Docker, Easypanel, Hostinger, aaPanel e Vercel.
+
+## Contrato Obrigatório de Changelog por Release
+
+Sempre que uma nova versão do CriativoOS for lançada (`npm run release:bump` ou nova tag `vX.Y.Z` no repositório principal), atualize `src/data/changelogData.ts` (inserindo a nova versão no topo com âncora `#vX-Y-Z` e sem travessões), atualize `<lastmod>` em `public/sitemap.xml`, execute `npm run typecheck; npm run build; npm run verify` e faça commit + push deste repositório.
 
 ## Desenvolvimento Local
 

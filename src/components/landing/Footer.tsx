@@ -18,20 +18,23 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-400">
-          <a href="#motor-computador" className="hover:text-[#B9FC01]">
+          <a href="/#motor-computador" className="hover:text-[#B9FC01]">
             Operador de PC
           </a>
-          <a href="#infra-vps" className="hover:text-[#B9FC01]">
+          <a href="/#infra-vps" className="hover:text-[#B9FC01]">
             PC + Nuvem 24h
           </a>
-          <a href="#para-quem-e" className="hover:text-[#B9FC01]">
+          <a href="/#para-quem-e" className="hover:text-[#B9FC01]">
             Agências &amp; Empresas
           </a>
-          <a href="#equipe" className="hover:text-[#B9FC01]">
+          <a href="/#equipe" className="hover:text-[#B9FC01]">
             Os 15 Criativos
           </a>
-          <a href="#planos" className="hover:text-[#B9FC01]">
+          <a href="/#planos" className="hover:text-[#B9FC01]">
             Planos Oficiais
+          </a>
+          <a href="/changelog" className="hover:text-[#B9FC01]">
+            Changelog
           </a>
           <a href={SUPPORT_CENTER_URL} className="hover:text-[#B9FC01]">
             Central de Suporte

@@ -55,6 +55,7 @@ export const SITE_URLS = {
   presenterScript: "/meu-roteiro",
   whatsappKit: "/kit-whatsapp",
   thankYou: "/obrigado",
+  changelog: "/changelog",
   supportCenter: "/suporte",
   supportAdmin: "/suporte/admin",
 } as const;

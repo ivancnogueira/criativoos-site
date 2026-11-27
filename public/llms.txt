@@ -21,6 +21,7 @@ Idioma principal: Portugues do Brasil (pt-BR)
 - [Para Quem E e Modo Agencia Multi-Cliente](https://criativoos.com.br/#para-quem-e): Segmentos atendidos, isolamento total por marca e matematica de retorno no primeiro contrato.
 - [Os 15 Especialistas Autonomos](https://criativoos.com.br/#equipe): Lista completa dos especialistas de estrategia, copy, design, carrossel, anuncios, stories, consistencia facial, video Reels, roteiro, metricas, entregaveis e integracao Meta.
 - [Planos e Licencas Anuais Oficiais](https://criativoos.com.br/#planos): Licenca Individual (12x de R$ 32,15 ou R$ 297/ano), Agencia 10 (12x de R$ 97,09 ou R$ 897/ano) e Agencia Ilimitada (12x de R$ 107,91 ou R$ 997/ano) com garantia incondicional de 7 dias.
+- [Changelog Oficial CriativoOS](https://criativoos.com.br/changelog): Historico completo de versoes, novidades, melhorias e correcoes do CriativoOS.
 - [Perguntas Frequentes (FAQ)](https://criativoos.com.br/#faq): Respostas diretas sobre modelos gratuitos, nuvem 24h, seguranca, rosto real e aprovacao no Instagram.
 
 ## Documentacao Detalhada para RAG e Respostas Completas

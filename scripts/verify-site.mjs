@@ -96,6 +96,7 @@ async function run() {
     ...walkFiles(path.join(ROOT, "src/components")),
     ...walkFiles(path.join(ROOT, "src/pages")),
     path.join(ROOT, "src/data/criativosRoster.ts"),
+    path.join(ROOT, "src/data/changelogData.ts"),
     path.join(ROOT, "src/data/keynoteSlidesData.ts"),
     path.join(ROOT, "src/data/presenterScriptData.ts"),
     path.join(ROOT, "src/config/campaignLinks.ts"),
@@ -118,13 +119,17 @@ async function run() {
   assert.ok(campaignLinksSrc.includes("R$ 897"), "Preço oficial R$ 897 ausente");
   assert.ok(campaignLinksSrc.includes("R$ 997"), "Preço oficial R$ 997 ausente");
 
-  const homeFiles = fs.readdirSync(path.join(ROOT, "src/components/landing"));
-  for (const file of homeFiles) {
-    const content = readUtf8(path.join("src/components/landing", file));
+  const publicLeakFiles = [
+    ...fs.readdirSync(path.join(ROOT, "src/components/landing")).map((f) => path.join("src/components/landing", f)),
+    "src/data/changelogData.ts",
+    "src/pages/ChangelogPage.tsx",
+  ];
+  for (const relFile of publicLeakFiles) {
+    const content = readUtf8(relFile);
     for (const forbidden of ["R$ 47", "R$ 87", "R$ 177", "R$ 197"]) {
       assert.ok(
         !content.includes(forbidden),
-        `Preço promocional '${forbidden}' vazou na Home pública (${file})`
+        `Preço promocional '${forbidden}' vazou em página/dado público (${relFile})`
       );
     }
   }
@@ -171,6 +176,7 @@ async function run() {
 
     for (const route of [
       "/",
+      "/changelog",
       "/apresentacao-migracao",
       "/apresentacao-black",
       "/apresentacao",
@@ -185,8 +191,8 @@ async function run() {
       const html = await res.text();
       assert.ok(html.includes("CriativoOS"), `HTML da rota ${route} inválido`);
       const xRobots = res.headers.get("x-robots-tag");
-      if (route === "/") {
-        assert.ok(!xRobots, `Rota / não deve possuir X-Robots-Tag bloqueante (${xRobots})`);
+      if (route === "/" || route === "/changelog") {
+        assert.ok(!xRobots, `Rota pública ${route} não deve possuir X-Robots-Tag bloqueante (${xRobots})`);
       } else {
         assert.equal(xRobots, "noindex, nofollow", `Rota privada ${route} precisa retornar X-Robots-Tag: noindex, nofollow`);
       }

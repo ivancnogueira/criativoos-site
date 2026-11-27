@@ -1,0 +1,282 @@
+export type ChangelogCategory = "added" | "changed" | "fixed" | "security";
+
+export type ChangelogFilter = "all" | ChangelogCategory;
+
+export interface ChangelogGroup {
+  type: ChangelogCategory;
+  heading: string;
+  items: string[];
+}
+
+export interface ChangelogRelease {
+  version: string;
+  anchor: string;
+  date: string;
+  summary: string;
+  notices?: string[];
+  groups: ChangelogGroup[];
+}
+
+export const CHANGELOG_CATEGORY_META: Record<
+  ChangelogCategory,
+  { label: string; dotClass: string; badgeClass: string }
+> = {
+  added: {
+    label: "Novidades",
+    dotClass: "bg-[#B9FC01] shadow-[0_0_10px_rgba(185,252,1,0.65)]",
+    badgeClass: "border-[#B9FC01]/30 bg-[#B9FC01]/10 text-[#B9FC01]",
+  },
+  changed: {
+    label: "Melhorias",
+    dotClass: "bg-[#38BDF8] shadow-[0_0_10px_rgba(56,189,248,0.55)]",
+    badgeClass: "border-sky-400/30 bg-sky-400/10 text-sky-300",
+  },
+  fixed: {
+    label: "Correções",
+    dotClass: "bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]",
+    badgeClass: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
+  },
+  security: {
+    label: "Segurança",
+    dotClass: "bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.5)]",
+    badgeClass: "border-amber-400/30 bg-amber-400/10 text-amber-300",
+  },
+};
+
+export const CRIATIVOOS_CHANGELOG_RELEASES: readonly ChangelogRelease[] = [
+  {
+    version: "v1.0.9",
+    anchor: "v1-0-9",
+    date: "2026-11-27",
+    summary:
+      "Atualização automática silenciosa com reinício assistido em 1 clique no Windows, macOS e Linux, instalação independente do motor Codex sem exigir Node.js e resolução dinâmica do modelo padrão para novos Criativos.",
+    notices: [
+      "Clique em **Reiniciar para atualizar** na barra superior do aplicativo para aplicar o pacote já baixado, ou confira novas versões das CLIs na aba **Provedores**.",
+    ],
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Auto-update silencioso com reinício em 1 clique:** o `AutoUpdateService` baixa o pacote em segundo plano e exibe a ação **Reiniciar para atualizar**, com instalador assistido em Windows, macOS (`.zip`) e Linux (`.AppImage`).",
+          "**Codex CLI standalone:** instalação e atualização direta do binário oficial da Codex CLI sem precisar ter Node.js ou `npm` instalados no computador.",
+          "**Banner dedicado de atualização de CLIs:** barra superior discreta informando quando há nova versão disponível para os motores conectados, com botão direto para atualizar na tela de Provedores.",
+          "**Suporte a imagens em modelos ChatGPT e Codex:** novos modelos multimodais agora reconhecem automaticamente o envio de referências visuais (`suporta_imagem`).",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Modelo padrão dinâmico para novos Criativos:** ao criar um agente ou iniciar uma rotina, o sistema escolhe automaticamente um modelo ativo da sua conta conectada ou do OpenCode gratuito, evitando referências a modelos antigos descontinuados.",
+          "**Limpeza automática do cache de modelos:** após atualizar o runtime de qualquer provedor, o `models_cache.json` é renovado para exibir os modelos recém-liberados.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.8",
+    anchor: "v1-0-8",
+    date: "2026-11-27",
+    summary:
+      "Motor universal de tarefas em segundo plano com auto-despertar reativo para renderizações de vídeo, pesquisas profundas e fluxos demorados sem travar a conversa principal.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Motor universal de background jobs:** comandos demorados, renderizações Remotion/FFmpeg e automações externas agora rodam de forma assíncrona em segundo plano (`background-job-service`).",
+          "**Auto-despertar reativo entre turnos:** assim que uma tarefa em segundo plano termina, o Criativo responsável desperta automaticamente com o resultado pronto e continua a entrega na mesma thread.",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Roteamento inteligente de espera:** o chat permanece livre para novas perguntas ou outros Criativos enquanto tarefas pesadas seguem executando em paralelo.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.7",
+    anchor: "v1-0-7",
+    date: "2026-11-26",
+    summary:
+      "Atualização ponta a ponta com feedback visual animado, streaming em tempo real por blocos e melhorias de confiabilidade na entrega de pacotes multiplataforma.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Update Beam no banner de atualização:** nova animação de progresso indicando verificação, download e prontidão da nova versão dentro do Cockpit.",
+          "**Streaming por blocos e etapas reais no ACP:** cada chamada de ferramenta, leitura e geração aparece como etapa estruturada em tempo real durante o turno do agente.",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Esteira de releases multiplataforma:** validação automática de instaladores Windows, macOS e Linux antes de publicar cada nova versão.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.6",
+    anchor: "v1-0-6",
+    date: "2026-11-26",
+    summary:
+      "Turnos longos sem limite rígido de duração, detector inteligente de silêncio real, upload ampliado para 100 MB e ferramentas nativas de edição de vídeo com Remotion e FFmpeg.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Ferramentas nativas de vídeo (Remotion e FFmpeg):** corte, composição, legendas animadas e renderização 1080x1920 diretamente integradas ao estúdio de Reels.",
+          "**Upload de arquivos de até 100 MB:** envie vídeos brutos, áudios longos e pacotes de referências direto no chat ou nos fluxos de produção.",
+          "**Watchdog de inatividade real (`turn-stall-watchdog`):** remove o teto fixo de tempo total e pausa automaticamente a contagem enquanto ferramentas MCP, ACP ou renders de vídeo estão ativos.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Compensação de hibernação do sistema:** suspensões rápidas do notebook não disparam falsos timeouts ao retomar o computador.",
+          "**Isolamento de conexões ACP por agente:** falhas pontuais em um Criativo não interferem nas sessões simultâneas dos demais.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.5",
+    anchor: "v1-0-5",
+    date: "2026-11-26",
+    summary:
+      "Descoberta automática dos modelos reais da sua conta ChatGPT, atualização programada das CLIs a cada 24 horas e execução discreta no Windows sem janelas de terminal.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Lista real de modelos ChatGPT via conta conectada:** o seletor exibe exatamente os modelos liberados para o seu plano conectado.",
+          "**Atualização automática das CLIs a cada 24h:** mantém os runtimes dos provedores sempre compatíveis sem intervenção manual.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Execução silenciosa no Windows:** elimina janelas piscando do `cmd.exe` ao iniciar agentes e checagens em segundo plano.",
+          "**Sanitização de tabelas no chat:** garante formatação limpa e previsível mesmo em relatórios extensos de concorrentes e métricas.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.4",
+    anchor: "v1-0-4",
+    date: "2026-11-25",
+    summary:
+      "Auto-instalação local e detecção multiplataforma blindada para a Antigravity CLI, com fallback resiliente de download em Windows, macOS e Linux.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Auto-instalador multiplataforma da Antigravity CLI:** detecta binários existentes no sistema ou baixa localmente com fallback automático em caso de instabilidade de rede.",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Painel de contas conectadas por provedor:** exibição mais clara de status, cotas e reconexão rápida na seção de Provedores.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.3",
+    anchor: "v1-0-3",
+    date: "2026-11-22",
+    summary:
+      "Consolidação completa da identidade CriativoOS e do vocabulário de Criativos em toda a interface, skills de conteúdo e documentação operacional.",
+    groups: [
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Vocabulário unificado CriativoOS:** todas as telas, menus, skills base, especialistas bônus e diretórios de vídeo refletem a nomenclatura oficial de Criativos e Marcas.",
+          "**Guardrail automático de consistência:** checagem automatizada integrada ao ciclo de build e testes para preservar integridade de marca e isolamento de dados.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.2",
+    anchor: "v1-0-2",
+    date: "2026-11-22",
+    summary:
+      "Padronização definitiva dos diretórios de dados e nomes de executáveis oficiais do CriativoOS em Windows, macOS e Linux.",
+    notices: [
+      "Ao atualizar a partir da `v1.0.1`, confirme se o diretório de trabalho das suas marcas está apontado para a pasta padrão **CriativoOS**.",
+    ],
+    groups: [
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Caminhos nativos unificados:** dados locais passam a residir em `CriativoOS` no AppData/Config do sistema, com executável `CriativoOS` padronizado entre plataformas.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.1",
+    anchor: "v1-0-1",
+    date: "2026-11-22",
+    summary:
+      "Grande evolução arquitetural e visual do CriativoOS: novo Design System Obsidian, Volt e Cobalt, busca global Ctrl+K, calendário editorial, Safe Zones 4:5 e 9:16, segurança reforçada e recursos avançados para agências.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Calendário Editorial, Galeria Meta e Editor Visual 4:5 e 9:16:** visualize pautas do mês, acompanhe métricas de posts publicados e valide enquadramento com Safe Zones de Feed e Reels/Stories.",
+          "**Busca Global (`Ctrl+K`) e Descoberta Lazy de Ferramentas:** navegue instantaneamente entre Criativos, conversas e configurações enquanto os modelos carregam apenas as ferramentas necessárias por turno.",
+          "**Auto-compactação de contexto e transferência entre provedores:** sessões longas resumem decisões automaticamente e permitem trocar de IA sem perder o fio da campanha.",
+          "**Navegador Inteligente Avançado:** detecção automática de bloqueios/CAPTCHA com pausa para intervenção humana, políticas de navegação e gravação opcional de sessão.",
+          "**Colaboração e Escala de Agência:** controle de acesso por papéis (Team API/RBAC), migrador completo de instância local para VPS 24h, feed `.ics` de rotinas, mensageria multicanal e cofre estruturado de logins com autofill aprovado.",
+          "**Operador de Computador (CUA) e Deep Links (`criativo://`):** automação visual no desktop com botão de parada imediata (kill-switch), temas externos em JSON e monitor de recursos do host.",
+        ],
+      },
+      {
+        type: "security",
+        heading: "Segurança",
+        items: [
+          "**Hardening do aplicativo Desktop e Cofre:** Política de Segurança de Conteúdo (CSP), validação estrita de canais IPC, proteção da chave mestra no keychain do sistema operacional e catálogo de erros amigáveis `CRV-*`.",
+        ],
+      },
+    ],
+  },
+  {
+    version: "v1.0.0",
+    anchor: "v1-0-0",
+    date: "2026-11-18",
+    summary:
+      "Lançamento público inaugural do CriativoOS para Windows, macOS, Linux e servidor 24h em VPS/Docker, reunindo os 15 Criativos especializados, navegador inteligente, rotinas visuais e aprovação pelo WhatsApp.",
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Equipe completa de 15 Criativos autônomos:** especialistas de estratégia, copy, design de carrossel, posts, anúncios, stories, consistência de rosto real, roteiros, edição de vídeo Reels, métricas e entrega.",
+          "**Cockpit local e Nuvem 24h:** instale no seu computador ou rode 24 horas por dia em servidor VPS Linux/Docker com atualização integrada via banner no aplicativo.",
+          "**Navegador Inteligente e +253 aplicativos conectados:** automação web com perfis persistentes, proxy por marca, tabelas compartilhadas isoladas, memória persistente FTS5 e workflows visuais em grafo.",
+          "**WhatsApp integrado e 10 IAs gratuitas incluídas:** envie comandos e aprove criações direto no WhatsApp com suporte multi-número e rotação multi-conta entre provedores.",
+        ],
+      },
+    ],
+  },
+];

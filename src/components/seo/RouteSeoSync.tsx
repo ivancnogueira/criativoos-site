@@ -56,6 +56,14 @@ const ROUTE_SEO_MAP: Record<string, RouteSeoMeta> = {
     robots: "noindex, nofollow",
     canonicalPath: "/obrigado",
   },
+  "/changelog": {
+    title: "CriativoOS | Changelog e Notas de Versao",
+    description:
+      "Acompanhe todas as atualizacoes do CriativoOS da versao mais recente a mais antiga: novidades, melhorias, correcoes e orientacoes apos atualizar.",
+    robots:
+      "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    canonicalPath: "/changelog",
+  },
   "/suporte": {
     title: "CriativoOS | Central de Suporte e Tickets",
     description: "Central oficial de autoatendimento e abertura de chamados CriativoOS.",
