@@ -45,6 +45,42 @@ export const CHANGELOG_CATEGORY_META: Record<
 
 export const CRIATIVOOS_CHANGELOG_RELEASES: readonly ChangelogRelease[] = [
   {
+    version: "v1.1.0",
+    anchor: "v1-1-0",
+    date: "2026-11-27",
+    summary:
+      "Grande virada Base-10 do CriativoOS com Estabilidade em Escala, Workflows Pro com templates e campos tipados, Cockpit Pro multi-split e multimonitor, voz resiliente e pacote completo Meta Graph API 2026 com Trial Reels, Primeiro Comentario e Inteligencia de Retencao.",
+    notices: [
+      "Todos os novos recursos e melhorias do ciclo v1.0.1 (Fases 41 a 46) estao consolidados nos instaladores da versao **v1.1.0** para Windows, macOS e Linux.",
+    ],
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Workflows Pro:** 4 templates prontos de marketing, botao Organizar (Tidy up), saidas estruturadas (`{{campo}}`), condicoes deterministicas sem custo de IA, geracao de midia em lote (Batch 4x) e importacao/exportacao portavel `.workflow.json`.",
+          "**Cockpit Pro e Voz Resiliente:** painel lateral multi-split vertical (ate 3 grupos), janela separada do navegador para multi-monitor, graficos empilhados por provedor (`90d` e `1 ano`), VAD anti-silencio, ditado longo ate 10 minutos, cursores colaborativos em workflows e preview `.docx` nativo.",
+          "**Meta Graph API 2026 e Retencao:** publicacao como **Trial Reels** (`>= 1.000` seguidores), agendamento de **Primeiro Comentario** com aprovacao humana, **Exclusao Controlada** auditada, coleta de **Skip Rate (3s)** e **Reposts**, alem do motor de **Melhor Horario para Postar** integrado ao Calendario Editorial.",
+          "**Escala e Estabilidade:** Auto-Unload inteligente de abas ociosas sob pressao de RAM com reidratacao sob demanda e Pool Multi-Conta configuravel em modo **Spread** ou **Fill first**.",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Runtime e Banco de Dados:** payload ACP ampliado ate 256 MB, cache SQLite ate 64 MB com limpeza em lote indexada, compactacao preventiva de cache de prompt 1h (`>= 200K` tokens) e sidebar inicial enxuta com filtros `Todas`, `Nao lidas` e `Pastas`.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Sincronizacao em Tempo Real e Clean-Room:** atualizacao instantanea de abas suspensas via WebSocket (`browser:tab_unloaded`) e substituicao integral de seletores nativos por controles Carbon Dark acessiveis.",
+        ],
+      },
+    ],
+  },
+  {
     version: "v1.0.9",
     anchor: "v1-0-9",
     date: "2026-11-27",
