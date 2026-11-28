@@ -25,25 +25,25 @@ export interface PlanOfferSpec {
 
 export const CRIATIVOOS_RELEASE = {
   githubRepo: "ivancnogueira/criativo-studio",
-  version: "v1.0.4",
-  releasePageUrl: "https://github.com/ivancnogueira/criativo-studio/releases/tag/v1.0.4",
-  windowsFilename: "CriativoOS-Setup-1.0.4.exe",
+  version: "v1.1.1",
+  releasePageUrl: "https://github.com/ivancnogueira/criativo-studio/releases/tag/v1.1.1",
+  windowsFilename: "CriativoOS-Setup-1.1.1.exe",
   windowsUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-Setup-1.0.4.exe",
-  macDmgFilename: "CriativoOS-1.0.4-universal.dmg",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/CriativoOS-Setup-1.1.1.exe",
+  macDmgFilename: "CriativoOS-1.1.1-universal.dmg",
   macDmgUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-universal.dmg",
-  macZipFilename: "CriativoOS-1.0.4-universal.zip",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/CriativoOS-1.1.1-universal.dmg",
+  macZipFilename: "CriativoOS-1.1.1-universal.zip",
   macZipUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-universal.zip",
-  linuxAppImageFilename: "CriativoOS-1.0.4-x86_64.AppImage",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/CriativoOS-1.1.1-universal.zip",
+  linuxAppImageFilename: "CriativoOS-1.1.1-x86_64.AppImage",
   linuxAppImageUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-x86_64.AppImage",
-  linuxTarGzFilename: "CriativoOS-1.0.4-x86_64.tar.gz",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/CriativoOS-1.1.1-x86_64.AppImage",
+  linuxTarGzFilename: "CriativoOS-1.1.1-x86_64.tar.gz",
   linuxTarGzUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/CriativoOS-1.0.4-x86_64.tar.gz",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/CriativoOS-1.1.1-x86_64.tar.gz",
   checksumsUrl:
-    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.0.4/SHA256SUMS.txt",
+    "https://github.com/ivancnogueira/criativo-studio/releases/download/v1.1.1/SHA256SUMS.txt",
 } as const;
 
 export const SITE_URLS = {

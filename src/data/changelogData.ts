@@ -45,6 +45,35 @@ export const CHANGELOG_CATEGORY_META: Record<
 
 export const CRIATIVOOS_CHANGELOG_RELEASES: readonly ChangelogRelease[] = [
   {
+    version: "v1.1.1",
+    anchor: "v1-1-1",
+    date: "2026-11-27",
+    summary:
+      "Correcao definitiva do loop de inicializacao e splash, execucao 100% silenciosa no Windows sem janelas CMD e chegada dos Fluxos Instagram [BETA] com Automacao Comentario para Direct multi-etapa na janela de 24h.",
+    notices: [
+      "Os instaladores da versao **v1.1.1** para Windows, macOS e Linux ja estao publicados e prontos para atualizacao automatica ou download direto.",
+    ],
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Automacao Comentario para Direct [BETA]:** novo espaco dentro de **Automacoes** com sub-sidebar recolhivel (**Fluxos Criativos** | **Fluxos Instagram BETA**), regras por palavra-chave, exclusao negativa, escopo por post, aprovacao humana opcional e Simulador Dry-Run.",
+          "**Fluxos Multi-Etapa na Janela de 24h:** envio sequencial de mensagens, delays, coleta para CRM, ramificacao por botoes, cartoes de entregaveis HTTPS, disparo de workflows e handoff para Criativo de IA dentro da janela oficial de 24h com limite de 200 req/h.",
+          "**3 Modos de Recepcao e Entregaveis Seguros:** Polling local com recuperacao de 7 dias, Webhook Direto HMAC-SHA256, Relay Zero-Trust no Painel Central (sem armazenar tokens Meta), publicacao publica HTTPS (GitHub Pages ou Showcase sob dominio valido sem expor IP) e ferramentas MCP com rascunhos sempre pausados.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Fim do Loop de Boot e Splash:** timeout defensivo nas leituras HTTP iniciais (15s sem bloquear mutacoes longas), sondagens de CLIs e cotas movidas para segundo plano, instancia unica de preloader e auto-recuperacao automatica do Daemon (`ensureRunning`) pelo Watchdog Desktop.",
+          "**Windows 100% Silencioso:** eliminacao de janelas de console CMD saltando na abertura ou ao acessar Configuracoes com `windowsHide: true` global e deduplicacao em voo no catalogo OpenCode.",
+        ],
+      },
+    ],
+  },
+  {
     version: "v1.1.0",
     anchor: "v1-1-0",
     date: "2026-11-27",
