@@ -45,6 +45,42 @@ export const CHANGELOG_CATEGORY_META: Record<
 
 export const CRIATIVOOS_CHANGELOG_RELEASES: readonly ChangelogRelease[] = [
   {
+    version: "v1.1.3",
+    anchor: "v1-1-3",
+    date: "2026-11-28",
+    summary:
+      "Motor Universal Multiplataforma para respostas instantaneas e ultra-economicas em todos os provedores, eliminacao definitiva do Windows Terminal no Codex/Claude e correcao integral do auto-update 'Atualizar e reiniciar' no Windows.",
+    notices: [
+      "A atualizacao **v1.1.3** unifica a reducao de tokens em conversas simples para ChatGPT/Codex, Claude, Gemini/Antigravity, OpenCode, API Direta e Ollama, alem de corrigir a instalacao automatica silenciosa no Windows.",
+    ],
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Motor Universal Multiplataforma:** novo motor centralizado de politica de turno aplica historico curto, esforco baixo, diretorio isolado e bloqueio de ferramentas/MCPs ociosos em modo leve de forma uniforme para todos os provedores (Codex/ChatGPT, Claude CLI, Antigravity/Gemini, OpenCode, APIs diretas e modelos locais).",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Turnos Leves Ainda Mais Enxutos e Rapidos:** Codex App Server com instruções base compactas e recursos internos pesados desativados, Claude CLI com isolamento de fontes externas e esforco `low` (com compatibilidade automatica), e remoção de diretrizes extensas desnecessarias em OpenCode, Antigravity e Ollama.",
+          "**Auto-Update em Streaming & Cache SHA-256:** download do instalador com barra de progresso real e reaproveitamento instantaneo quando o pacote integro ja estiver validado em disco.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Zero Windows Terminal em Turnos Codex/Claude:** desempacotamento direto dos binarios nativos reais (`vendor/<arch>/bin/codex.exe` e `@anthropic-ai/claude-code-<plat>`), evitando que o wrapper JavaScript abra janelas pretas de terminal ou dispare re-downloads no boot.",
+          "**Correcao do 'Atualizar e reiniciar' no Windows:** encerramento completo de processos filhos na pasta de instalacao antes do NSIS silencioso (`/S /currentuser --updated`), log dedicado, retry automatico e reabertura confiavel na versao nova.",
+          "**Limpeza das Etapas no Chat:** removida a exibicao indevida da etapa interna `[userMessage]` na lista de ferramentas do Codex App Server.",
+        ],
+      },
+    ],
+  },
+  {
     version: "v1.1.2",
     anchor: "v1-1-2",
     date: "2026-11-28",
