@@ -45,6 +45,42 @@ export const CHANGELOG_CATEGORY_META: Record<
 
 export const CRIATIVOOS_CHANGELOG_RELEASES: readonly ChangelogRelease[] = [
   {
+    version: "v1.1.2",
+    anchor: "v1-1-2",
+    date: "2026-11-28",
+    summary:
+      "Execucao Enxuta Cross-Platform, Lazy MCP Universal, fim definitivo das janelas pretas CMD no Windows, resiliencia anti-sumico de agentes/provedores na interface e sessoes quentes persistentes para ChatGPT/Codex, Claude, OpenCode e Antigravity.",
+    notices: [
+      "A atualizacao **v1.1.2** otimiza drasticamente o tempo de resposta e o consumo de tokens em saudações e conversas continuas em todos os provedores suportados.",
+    ],
+    groups: [
+      {
+        type: "added",
+        heading: "Novidades",
+        items: [
+          "**Motor Persistente Codex App Server:** ChatGPT/Codex CLI agora executa em servidor JSON-RPC persistente (`codex app-server --listen stdio://`) com reuso de thread, streaming em tempo real, compactacao nativa (`thread/compact/start`) e fallback automatico para `codex exec`.",
+          "**Sessoes Persistentes Multi-Provedor:** Claude CLI (`ENABLE_TOOL_SEARCH=true`, `--strict-mcp-config`, `--disallowedTools` e `--resume` com recuperacao automatica), OpenCode ACP e Antigravity ACP passam a reutilizar sessoes aquecidas por conversa e configuracao ativa.",
+          "**Lazy MCP Universal & Handoff 32k:** ferramentas especializadas agora sao descobertas sob demanda via `tool_search` (ja entregando schemas e guias), `tool_describe` e `tool_call`, com compactacao real (`/compact`) limitada a pacote deterministico de 32.000 caracteres.",
+        ],
+      },
+      {
+        type: "changed",
+        heading: "Melhorias",
+        items: [
+          "**Turnos Leves Ultra-Enxutos:** saudacoes e conversas simples (como `'oi'`) nao injetam dezenas de schemas MCP, arquivos extensos de marca ou regras visuais desnecessarias, derrubando a latencia e evitando geracao involuntaria de imagens.",
+        ],
+      },
+      {
+        type: "fixed",
+        heading: "Correções",
+        items: [
+          "**Silencio Total no Windows (Zero CMD Popups):** resolucao direta de binarios nativos `.exe` (sem wrappers intermediarios), migracao automatica de runtimes `npm` legados para standalone e `windowsHide: true` absoluto inclusive em fluxos OAuth e ACP.",
+          "**Fim do Sumico de Agentes e Provedores na Interface:** snapshot `stale-while-revalidate` em SQLite com timeout de 4s por sonda, fallback local sem rede quando APIs externas oscilam, protecao de hidratacao no frontend e isolamento Crashpad/Watchdog no daemon Desktop.",
+        ],
+      },
+    ],
+  },
+  {
     version: "v1.1.1",
     anchor: "v1-1-1",
     date: "2026-11-27",
